@@ -83,12 +83,12 @@ body {  /* Tag Selector */
   background-color: #ff2e63;
   overflow: hidden;
   display: inline-block;
-  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .sideWipeContainer .leftSideWipe {
   transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   left: -27%;
 } .sideWipeContainer .rightSideWipe {
-  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   left: 126%;
 }
 
@@ -125,15 +125,14 @@ body {  /* Tag Selector */
 /*--------------------------------------------*/
 
 .myLogo {  /* Navbar Logo Class Selector */
-  color: #08d9d6;
+  color: #00adb5;
   font-size: 2rem;   /* (50px font-size / 2560px width */
   overflow: hidden;
-  transition: all 1000ms cubic-bezier(0.875, 0.005, 0.135, 1.000);
 } .middleLine {
   color: #ff2e63;
 } .textAlter {
   text-decoration: underline;
-  color: #252a34;
+  color: #222831;
 }
 
 .myLogo.expandPadding {
@@ -175,7 +174,7 @@ body {  /* Tag Selector */
 }
 
 .myLogo.offblink {
-  color: #08d9d6;
+  color: #00adb5;
   max-height: 0;
 }
 
@@ -227,6 +226,7 @@ body {  /* Tag Selector */
 
 /* navbar links Basic Layout Section */
 a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+  color: #393e46;
   font-size: 1rem;  /* (18px font-size / 2560px width */
   padding: 6px 2px 6px;  /* top right/left bottom */
   transition-duration: 0.45s;
@@ -312,12 +312,12 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   background-color: #ff2e63;
   overflow: hidden;
   z-index: 4;
-  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
 } .titleBar .leftSideWipe {  /* When the bar is on the left side, we want it to switch to the right side instantly. */
   transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
   left: -27%;
 } .titleBar .rightSideWipe {  /* Then the bar is on the right side, we want it to switch to the left side slowly. */
-  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   left: 126%;
 }
 
@@ -380,7 +380,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   margin: 0;
   background-color: #08d9d6;
   overflow: hidden;
-  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .RevealCard .sideWipe2 {
   height: 3px;
   bottom: 0;
@@ -389,12 +389,12 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   margin: 0;
   background-color: #08d9d6;
   overflow: hidden;
-  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .RevealCard .leftSideWipe {
   transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   left: -27%;
 } .RevealCard .rightSideWipe {
-  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   left: 126%;
 }
 
@@ -404,15 +404,14 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   position: relative;
   margin: 0;
   background-color: #08d9d6;
-  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .RevealCard .upVertWipe {
   transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   top: -300px;
 } .RevealCard .downVertWipe {
-  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   top: 600px;
 } .RevealCard .upVertWipe1 {
-  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   top: -300px;
 } .RevealCard .downVertWipe1 {
   transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
@@ -581,7 +580,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .IndexLgContainer .transition1 {
-  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .IndexLgContainer .transition2 {
   transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
@@ -599,12 +598,11 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   top: 50%;
   left: 3%;
   z-index: 2;
-  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), top 0ms linear;
 }
 
 .indexQuote .card-title {
   color: #eaeaea;
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 /* The normal text shadow */
@@ -648,27 +646,27 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
     16px 0 0px #eaeaea,
     17px 0 0px #eaeaea,
     18px 0 0px #eaeaea,
-    19px 0 0px #08d9d6,
-    20px 0 0px #eaeaea,
-    21px 0 0px #08d9d6,
-    22px 0 0px #eaeaea,
-    23px 0 8px #08d9d6,
-    24px 0 0px #eaeaea,
-    25px 0 0px #08d9d6,
-    26px 0 0px #eaeaea,
-    27px 0 0px #08d9d6,
-    28px 0 0px #eaeaea,
-    29px 0 0px #08d9d6,
-    30px 0 0px #eaeaea,
-    31px 0 0px #08d9d6,
-    32px 0 0px #eaeaea,
-    33px 0 0px #08d9d6,
-    34px 0 0px #eaeaea,
-    35px 0 0px #08d9d6,
-    36px 0 0px #eaeaea,
-    37px 0 0px #08d9d6,
-    38px 0 0px #eaeaea,
-    39px 0 0px #08d9d6
+    19px 0 0px #252a34,
+    20px 0 0px #ff2e63,
+    21px 0 0px #252a34,
+    22px 0 0px #ff2e63,
+    23px 0 8px #252a34,
+    24px 0 0px #ff2e63,
+    25px 0 0px #252a34,
+    26px 0 0px #ff2e63,
+    27px 0 0px #252a34,
+    28px 0 0px #ff2e63,
+    29px 0 0px #252a34,
+    30px 0 0px #ff2e63,
+    31px 0 0px #252a34,
+    32px 0 0px #ff2e63,
+    33px 0 0px #252a34,
+    34px 0 0px #ff2e63,
+    35px 0 0px #252a34,
+    36px 0 0px #ff2e63,
+    37px 0 0px #252a34,
+    38px 0 0px #ff2e63,
+    39px 0 0px #252a34
   ;
 }
 
@@ -737,7 +735,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 .TwoColSec .LeftColSide {
   white-space: normal;
   text-align: left;
-  color: #252a34;
+  color: #222831;
   margin: 0;
   padding: 7% 35% 15% 5%;
   font-size: 2.2rem;
@@ -749,9 +747,9 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   white-space: normal;
   text-align: left;
   margin: 0;
-  color: #252a34;
+  color: #222831;
   padding: 7% 7% 30% 6%;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: all 0ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
@@ -789,7 +787,6 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   width: 30%;
   margin: 10% 25% 10% 10%;
   margin-top: 10px;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
 }
 
 @media (max-width: 767px) {
@@ -817,7 +814,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
       padding: 3% 8%;  /* top/bottom left/right */
       margin: 0;
       height: auto;
-      background-color: #252a34;
+      background-color: #222831;
       font-size: 1.25rem;  /* (18px font-size / 2560px width */
       text-decoration: none;
     }
@@ -1403,7 +1400,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .revealDiv {
-  transition: transform 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
 
   max-width: 2560px;
   opacity: 100%;
@@ -1418,12 +1415,26 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .FeatPgh.revealDiv {
-  transition: transform 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
 
   max-width: 2560px;
   opacity: 100%;
   transform: rotateY(0) rotateZ(0);
 }
+
+.FeaturedTextDiv .btn {
+  transition: all 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+}
+
+.myLogo {
+  transition: all 2000ms cubic-bezier(0.875, 0.005, 0.135, 1.000);
+}
+
+.indexQuote {
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), top 0ms linear;
+}
+
+
 
 
 

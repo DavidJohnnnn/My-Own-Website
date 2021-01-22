@@ -73,15 +73,19 @@ imageFilt(0);
 
 // Reveal the logo when opening the website
 var offset = 0;
+
+
 setTimeout(function () {
   $(".myLogo").removeClass("hiddenPadding offblink").addClass("expandPadding onLink");
 }, offset + 1000);
+
 
 // Reveal the links and navbar toggler when opening the website
 var i;
 for (i=0; i< 7; i++) {
   linkReveal(offset + 1200, i);
 }
+
 setTimeout(function () {
   $(".titleBar").removeClass("offblink").addClass("onLink");
   $(".navbar").removeClass("offblink").addClass("onLink");
@@ -111,14 +115,11 @@ boxshadowEff(4600);
 // The title, links bar, Quote box shadow and side wipes (vertical lines) used throughout will go on interval.
 
 setInterval(function() {
-  linksAnimate(3000);
+  titleSparkle(0);
+  boxshadowEff(8000);
+  linksAnimate(2000);
   sideWipe(2000);
-}, 7000);
-
-setInterval(function() {
-  titleSparkle(3000);
-  boxshadowEff(3000);
-}, 10500);
+}, 12000);
 
 
 /*##################################################*/
@@ -220,7 +221,7 @@ function titleSparkle(offset) {
 
   setTimeout(function () {
     $(".myLogo").removeClass("blink");
-  }, offset + 1300);
+  }, offset + 2000);
 }
 
 function boxshadowEff(offset) {
@@ -236,7 +237,7 @@ function boxshadowEff(offset) {
     $(".IndexLgContainer .indexQuote").removeClass("qtextShadowHover").addClass("qtextShadow");
 
     $(".pg2LgContainer .boxQuote").removeClass("boxShadowExp").removeClass("qtextShadowHover");
-  }, offset + 2000);
+  }, offset + 3000);
 }
 
 function imageFilt(offset) {
@@ -263,7 +264,7 @@ function linksAnimate(offset) {
 
   setTimeout(function () {
     $(".titleBar .navbar-toggler").removeClass("offblink").addClass("onLink");
-  }, offset + 1000);
+  }, offset + 5000); // offset + 1000);
 
   for (i=0; i< 7; i++) {
     linkBlink(offset, i);
@@ -302,7 +303,7 @@ function sideWipe(offset) {
 
     $(".vertWipe").eq(2).removeClass("downVertWipe").addClass("upVertWipe");
     $(".vertWipe").eq(3).removeClass("upVertWipe1").addClass("downVertWipe1");
-  }, offset + 2500);
+  }, offset + 4000); // offset + 2500);
 
   setTimeout(function () {
     $(".sideWipe").removeClass("leftSideWipe").addClass("rightSideWipe");
@@ -314,7 +315,7 @@ function sideWipe(offset) {
 
     $(".vertWipe").eq(2).removeClass("upVertWipe").addClass("downVertWipe");
     $(".vertWipe").eq(3).removeClass("downVertWipe1").addClass("upVertWipe1");
-  }, offset + 2550);
+  }, offset + 4050); // offset + 2550);
 
   setTimeout(function () {
     $(".sideWipe").removeClass("rightSideWipe").addClass("leftSideWipe");
@@ -326,7 +327,7 @@ function sideWipe(offset) {
 
     $(".vertWipe").eq(2).removeClass("downVertWipe").addClass("upVertWipe");
     $(".vertWipe").eq(3).removeClass("upVertWipe1").addClass("downVertWipe1");
-  }, offset + 5050);
+  }, offset + 8050); // offset + 5050);
 
 }
 
