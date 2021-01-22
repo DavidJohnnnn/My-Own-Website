@@ -18,6 +18,12 @@ CSS timing function tool: https://matthewlein.com/tools/ceaser
   #08d9d6 - green
   #252a34 - black
 
+  New color scheme:
+  #222831 - Black
+  #393e46 - dark gray
+  #00adb5 - blue
+  #eeeeee - white
+
 */
 
 /*##################################################*/
@@ -25,7 +31,7 @@ CSS timing function tool: https://matthewlein.com/tools/ceaser
 /*##################################################*/
 
 body {  /* Tag Selector */
-  background-color: #eaeaea;  /* Background of website */
+  background-color: #eeeeee;  /* Background of website */
   text-align: center;  /* Aligning all text to the left unless specified  except where necessary */
   font-family: 'Work Sans', sans-serif;
   margin: auto;
@@ -117,7 +123,7 @@ body {  /* Tag Selector */
 
 .navbar {
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-  background-color: #eaeaea!important;
+  background-color: #eeeeee!important;
 }
 
 /*--------------------------------------------*/
@@ -125,18 +131,17 @@ body {  /* Tag Selector */
 /*--------------------------------------------*/
 
 .myLogo {  /* Navbar Logo Class Selector */
-  color: #00adb5;
+  color: #222831;
   font-size: 2rem;   /* (50px font-size / 2560px width */
   overflow: hidden;
 } .middleLine {
   color: #ff2e63;
 } .textAlter {
-  text-decoration: underline;
-  color: #222831;
+  color: #eeeeee;
 }
 
 .myLogo.expandPadding {
-  padding: 8px 20px 8px 20px;  /* top right bottom left */
+  padding: 12px 20px;  /* top right bottom left */
 } .myLogo.hiddenPadding {
   padding: 0 0 0 0;
 }
@@ -169,12 +174,12 @@ body {  /* Tag Selector */
 /*--------------------------------------------*/
 /* navbar Logo Animation */
 /*--------------------------------------------*/
-.title-A, .title-Very, .middleLine, .title-Special, .textAlter {
+.title-A, .textAlter {
   transition: all 750ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
 }
 
 .myLogo.offblink {
-  color: #00adb5;
+  color: #222831;  /* This affects logo's first color*/
   max-height: 0;
 }
 
@@ -182,58 +187,78 @@ body {  /* Tag Selector */
   max-height: 100px;
 }
 
+.myLogo.onLink .textAlter {
+  text-shadow:
+  1px 0 #00adb5,
+  2px 0 #00adb5,
+  3px 0 #00adb5,
+  4px 0 #00adb5,
+  5px 0 #00adb5,
+  6px 0 #00adb5;
+}
+
 .myLogo.blink {
   max-height: 100px;
-  color: #eaeaea;
+  color: #eeeeee;
+}
+
+.myLogo.blink .title-A {
   text-shadow:
   1px 0 white,
   2px 0 white,
-  3px 0 white,
+  3px 0 #393e46,
   4px 0 white,
-  5px 0 white,
+  5px 0 #393e46,
   6px 0 white,
-  7px 0 white,
-  8px 0 white,
-  9px 0 white,
-  10px 0 white,
-  11px 0 white,
-  12px 0 #252a34,
-  13px 0 #252a34,
-  14px 0 #252a34,
-  15px 0 #252a34,
-  16px 0 #252a34,
-  17px 0 #252a34,
-  18px 0 #252a34,
-  19px 0 #252a34,
-  20px 0 #eaeaea,
-  21px 0 #ff2e63,
-  22px 0 #eaeaea,
-  23px 0 #ff2e63,
-  24px 0 #eaeaea,
-  25px 0 #ff2e63,
-  26px 0 #eaeaea,
-  27px 0 #ff2e63,
-  28px 0 #eaeaea,
-  29px 0 #ff2e63,
-  30px 0 #eaeaea,
-  31px 0 #ff2e63;
+  7px 0 #393e46,
+  8px 0 white;
 }
 
+.myLogo.blink .textAlter {
+  text-shadow:
+  1px 0 white,
+  2px 0 white,
+  3px 0 #00adb5,
+  4px 0 white,
+  5px 0 #00adb5,
+  6px 0 white,
+  7px 0 #00adb5,
+  8px 0 white,
+  9px 0 #00adb5,
+  10px 0 white,
+  11px 0 #00adb5,
+  12px 0 #00adb5,
+  13px 0 #00adb5,
+  14px 0 #00adb5;
+}
 
 /*--------------------------------------------*/
 /* Links */
 /*--------------------------------------------*/
 
 /* navbar links Basic Layout Section */
+.navbar-light .navbar-nav .nav-link {
+  color: #222831;
+}
+
+.navbar-light .navbar-nav .nav-link .fa-home{
+  color: #00adb5;
+}
+
+.navbar-nav .btn-secondary{
+  color: white;
+  background-color: #00adb5;
+  border-color: #00adb5;
+}
+
 a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-  color: #393e46;
   font-size: 1rem;  /* (18px font-size / 2560px width */
-  padding: 6px 2px 6px;  /* top right/left bottom */
+  padding: 10px 2px 14px;  /* top right/left bottom */
   transition-duration: 0.45s;
 } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
-  border: #08d9d6 solid;
+  border: #00adb5 solid;
   border-width: 1px 0;  /* top right bottom left */
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* navbar links Responsive Section */
@@ -300,7 +325,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 /*--------------------------------------------*/
-/* Links */
+/* Navbar sideWipe animation */
 /*--------------------------------------------*/
 
 .titleBar .sideWipe {
@@ -454,8 +479,8 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   padding: 10px 0;
   margin: 0;
   max-height: auto;
-  color: #eaeaea;
-  background-color: #eaeaea;
+  color: #eeeeee;
+  background-color: #eeeeee;
   font-size: 9.375rem;
   text-shadow: 2px 2px #ff2e63;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
@@ -469,7 +494,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 .RevealCard .container-fluid .card.Text {
 
   max-height: 1000px;
-  color: #eaeaea;
+  color: #eeeeee;
   background-color: #ff2e63;
 }
 
@@ -494,13 +519,13 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   max-height: 0;
   padding: 0;
   font-size: 0;
-  background-color: #eaeaea;
+  background-color: #eeeeee;
   border-bottom: 0 solid #252a34;
 } .RevealCard .container-fluid .card .card-text.textReveal {
   max-height: 1000px;
   padding: 25px 20px;
   color: #252a34;
-  background-color: #eaeaea;
+  background-color: #eeeeee;
   border-bottom: 3px solid #252a34;
 }
 
@@ -601,7 +626,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .indexQuote .card-title {
-  color: #eaeaea;
+  color: #eeeeee;
   font-size: 6rem;
 }
 
@@ -628,24 +653,24 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 /* The hover text shadow */
 .indexQuote.qtextShadowHover {
   text-shadow:
-    1px 0 0px #eaeaea,
-    2px 0 0px #eaeaea,
-    3px 0 0px #eaeaea,
-    4px 0 0px #eaeaea,
-    5px 0 0px #eaeaea,
-    6px 0 0px #eaeaea,
-    7px 0 0px #eaeaea,
-    8px 0 0px #eaeaea,
-    9px 0 0px #eaeaea,
-    10px 0 0px #eaeaea,
-    11px 0 0px #eaeaea,
-    12px 0 0px #eaeaea,
-    13px 0 0px #eaeaea,
-    14px 0 0px #eaeaea,
-    15px 0 0px #eaeaea,
-    16px 0 0px #eaeaea,
-    17px 0 0px #eaeaea,
-    18px 0 0px #eaeaea,
+    1px 0 0px #eeeeee,
+    2px 0 0px #eeeeee,
+    3px 0 0px #eeeeee,
+    4px 0 0px #eeeeee,
+    5px 0 0px #eeeeee,
+    6px 0 0px #eeeeee,
+    7px 0 0px #eeeeee,
+    8px 0 0px #eeeeee,
+    9px 0 0px #eeeeee,
+    10px 0 0px #eeeeee,
+    11px 0 0px #eeeeee,
+    12px 0 0px #eeeeee,
+    13px 0 0px #eeeeee,
+    14px 0 0px #eeeeee,
+    15px 0 0px #eeeeee,
+    16px 0 0px #eeeeee,
+    17px 0 0px #eeeeee,
+    18px 0 0px #eeeeee,
     19px 0 0px #252a34,
     20px 0 0px #ff2e63,
     21px 0 0px #252a34,
@@ -729,7 +754,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 .TwoColSec .ColSide {
   background-color: white;
   height: auto;
-  border-color: #eaeaea;
+  border-color: #eeeeee;
 }
 
 .TwoColSec .LeftColSide {
@@ -977,48 +1002,48 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 .pg2LgContainer .boxShadowExp {
   box-shadow:
     1px 1px #08d9d6,
-    2px 2px #eaeaea,
+    2px 2px #eeeeee,
     3px 3px #08d9d6,
-    4px 4px #eaeaea,
+    4px 4px #eeeeee,
     5px 5px #08d9d6,
-    6px 6px #eaeaea,
+    6px 6px #eeeeee,
     7px 7px #08d9d6,
-    8px 8px #eaeaea,
+    8px 8px #eeeeee,
     9px 9px #08d9d6,
-    10px 10px #eaeaea,
+    10px 10px #eeeeee,
     11px 11px #08d9d6,
-    12px 12px #eaeaea,
+    12px 12px #eeeeee,
     13px 13px #08d9d6,
-    14px 14px #eaeaea,
+    14px 14px #eeeeee,
     15px 15px #08d9d6,
-    16px 16px #eaeaea,
+    16px 16px #eeeeee,
     17px 17px #08d9d6,
-    18px 18px #eaeaea,
+    18px 18px #eeeeee,
     19px 19px #08d9d6,
-    20px 20px #eaeaea,
+    20px 20px #eeeeee,
     21px 21px #08d9d6,
-    22px 22px #eaeaea,
+    22px 22px #eeeeee,
     23px 23px #08d9d6,
-    24px 24px #eaeaea,
+    24px 24px #eeeeee,
     25px 25px #08d9d6,
-    26px 26px #eaeaea,
+    26px 26px #eeeeee,
     27px 27px #08d9d6,
-    28px 28px #eaeaea,
+    28px 28px #eeeeee,
     29px 29px #08d9d6,
-    30px 30px #eaeaea,
+    30px 30px #eeeeee,
     31px 31px #08d9d6,
-    32px 32px #eaeaea,
+    32px 32px #eeeeee,
     33px 33px #08d9d6,
-    34px 34px #eaeaea,
+    34px 34px #eeeeee,
     35px 35px #08d9d6,
-    36px 36px #eaeaea,
+    36px 36px #eeeeee,
     37px 37px #08d9d6,
-    38px 38px #eaeaea,
+    38px 38px #eeeeee,
     39px 39px #08d9d6;
 }
 
 .pg2LgContainer .qtextShadowHover {
-  color: #eaeaea;
+  color: #eeeeee;
   text-shadow:
     1px 1px 3px red, -1px -1px 3px red,
     2px 2px 3px deeppink, -2px -2px 3px deeppink,
@@ -1229,7 +1254,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 
 .FeatTitleUsers {
   text-shadow: 2px 2px #252a34;
-  color: #eaeaea;
+  color: #eeeeee;
   margin-top: 100px;
   font-size: 5.375rem;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
