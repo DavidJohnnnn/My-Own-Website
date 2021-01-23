@@ -403,7 +403,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   width: 25%;
   position: absolute;
   margin: 0;
-  background-color: #08d9d6;
+  background-color: #393e46;
   overflow: hidden;
   transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .RevealCard .sideWipe2 {
@@ -412,7 +412,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   width: 25%;
   position: absolute;
   margin: 0;
-  background-color: #08d9d6;
+  background-color: #393e46;
   overflow: hidden;
   transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .RevealCard .leftSideWipe {
@@ -428,7 +428,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   width: 5px;
   position: relative;
   margin: 0;
-  background-color: #08d9d6;
+  background-color: #393e46;
 } .RevealCard .upVertWipe {
   transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   top: -300px;
@@ -444,20 +444,18 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .RevealCard .verticalLine {
-  background-color: #252a34;
+  background-color: white;
   position: relative;
   height: 300px;
-  width: 3px;
+  width: 10px;
   top: 0;
   margin: auto;
   overflow: hidden;
-}
-
-.RevealCard .verticalLine2 {
-  background-color: #252a34;
+} .RevealCard .verticalLine2 {
+  background-color: white;
   position: relative;
   height: 300px;
-  width: 3px;
+  width: 10px;
   bottom: 0;
   margin: auto;
   overflow: hidden;
@@ -470,8 +468,8 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .RevealCard .container-fluid .card {
-  border: 3px solid #252a34;
-  border-width: 3px 0 0;
+  border: 3px solid white;
+  border-width: 10px 0 0;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
@@ -482,20 +480,20 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   color: #eeeeee;
   background-color: #eeeeee;
   font-size: 9.375rem;
-  text-shadow: 2px 2px #ff2e63;
+  text-shadow: 2px 2px #00adb5;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 .RevealCard .container-fluid:hover .card-title {
-  text-shadow: 2px 2px #08d9d6;
-  color: #252a34;
+  text-shadow: 2px 2px #00adb5;
+  color: #393e46;
 }
 
 .RevealCard .container-fluid .card.Text {
 
   max-height: 1000px;
   color: #eeeeee;
-  background-color: #ff2e63;
+  background-color: #00adb5;
 }
 
 .RevealCard .container-fluid .card .fas.fa-plus {
@@ -520,13 +518,13 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   padding: 0;
   font-size: 0;
   background-color: #eeeeee;
-  border-bottom: 0 solid #252a34;
+  border-bottom: 0 solid #393e46;
 } .RevealCard .container-fluid .card .card-text.textReveal {
   max-height: 1000px;
   padding: 25px 20px;
-  color: #252a34;
+  color: #393e46;
   background-color: #eeeeee;
-  border-bottom: 3px solid #252a34;
+  border-bottom: 3px solid #393e46;
 }
 
 @media (max-width: 1199px) {
