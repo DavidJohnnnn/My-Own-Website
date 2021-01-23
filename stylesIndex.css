@@ -587,7 +587,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 /* Large Image Container Div specific animation */
 /*--------------------------------------------*/
 .IndexLgContainer .lgContainerInit {
-  background-image: url("001_IndexImages/MountainMosaic3.jpg");
+  background-image: url("001_IndexImages/MountainMosaic4.jpg");
   background-size: 1000% 1000%;
   background-position: right bottom;
   background-attachment: fixed;
@@ -596,7 +596,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .IndexLgContainer .lgContainerFinal {
-  background-image: url("001_IndexImages/MountainMosaic3.jpg");
+  background-image: url("001_IndexImages/MountainMosaic4.jpg");
   background-size: 100% 120%;
   background-position: top 0%;
   background-attachment: fixed;
@@ -792,12 +792,12 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .FeaturedImgIndex {
-  background-image: url("001_IndexImages/Abstract1Filt2.jpg");
+  background-image: url("001_IndexImages/Abstract1Filt3.jpg");
 }
 
 .FeaturedTextDiv .FeatPgh {
   margin: 10% 25% 5% 10%;
-  color: #252a34;
+  color: #00adb5;
   line-height: 50px;
   text-align: left;
   font-size: 3.5rem;
@@ -812,6 +812,10 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   width: 30%;
   margin: 10% 25% 10% 10%;
   margin-top: 10px;
+}
+
+.FeaturedTextDiv .btn {
+  color: #222831!important;
 }
 
 @media (max-width: 767px) {
@@ -933,7 +937,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .pg2LgContainer .lgContainerInit {
-  background-image: url("002_Images/spaceImage1.jpg");
+  background-image: url("002_Images/spaceImage4.jpg");
   background-size: 1000% 1000%;
   background-position: center bottom;
   background-attachment: fixed;
@@ -942,7 +946,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .pg2LgContainer .lgContainerFinal {
-  background-image: url("002_Images/spaceImage1.jpg");
+  background-image: url("002_Images/spaceImage4.jpg");
   background-size: 100% 112%;
   background-position: center 0%;
   background-attachment: fixed;
@@ -1241,7 +1245,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .FeaturedUsers.Second {
-  background-image: url("003_Images/Carousel2.jpg");
+  background-image: url("003_Images/Carousel2_1.jpg");
 }
 
 .FeaturedUsers.Third {
@@ -1249,12 +1253,16 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   background-position: center;
 }
 
-
-
-
 .FeatTitleUsers {
-  text-shadow: 2px 2px #252a34;
-  color: #eeeeee;
+  text-shadow:
+    2px 2px #eeeeee,
+    3px 3px #eeeeee,
+    4px 4px #eeeeee,
+    5px 5px #eeeeee,
+    6px 6px #eeeeee,
+    7px 7px #222831,
+    8px 8px #eeeeee;
+  color: #222831;
   margin-top: 100px;
   font-size: 5.375rem;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
