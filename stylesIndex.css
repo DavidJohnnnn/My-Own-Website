@@ -75,18 +75,18 @@ body {  /* Tag Selector */
 .sideWipeContainer {
   overflow: hidden;
   position: absolute;
-  height: 3px;
+  height: 5px;
   max-width: inherit;
   width: 100%;
   bottom: 0;
   margin: 0;
 } .sideWipeContainer .sideWipe1 {
-  height: 3px;
+  height: 5px;
   bottom: 0;
   width: 25%;
   position: absolute;
   margin: 0;
-  background-color: #ff2e63;
+  background-color: #222831;
   overflow: hidden;
   display: inline-block;
   transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
@@ -292,7 +292,13 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .btn.btn-secondary {
+  transition: all 1000ms linear; /* custom */
   border-radius: 50px;
+}
+
+.btn.btn-secondary:hover {
+  transition: all 1000ms linear; /* custom */
+  border-radius: 0px;
 }
 
 
@@ -329,12 +335,12 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 /*--------------------------------------------*/
 
 .titleBar .sideWipe {
-  height: 3px;
+  height: 5px;
   bottom: 0;
   width: 25%;
   position: absolute;
   margin: 0;
-  background-color: #ff2e63;
+  background-color: #222831;
   overflow: hidden;
   z-index: 4;
   transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
@@ -398,21 +404,21 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .RevealCard .sideWipe1 {
-  height: 3px;
+  height: 6px;
   top: 0;
   width: 25%;
   position: absolute;
   margin: 0;
-  background-color: #393e46;
+  background-color: #08d9d6;
   overflow: hidden;
   transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .RevealCard .sideWipe2 {
-  height: 3px;
+  height: 6px;
   bottom: 0;
   width: 25%;
   position: absolute;
   margin: 0;
-  background-color: #393e46;
+  background-color: #08d9d6;
   overflow: hidden;
   transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .RevealCard .leftSideWipe {
@@ -428,7 +434,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   width: 5px;
   position: relative;
   margin: 0;
-  background-color: #393e46;
+  background-color: #08d9d6;
 } .RevealCard .upVertWipe {
   transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   top: -300px;
@@ -444,7 +450,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .RevealCard .verticalLine {
-  background-color: white;
+  background-color: #222831;
   position: relative;
   height: 300px;
   width: 10px;
@@ -452,7 +458,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   margin: auto;
   overflow: hidden;
 } .RevealCard .verticalLine2 {
-  background-color: white;
+  background-color: #222831;
   position: relative;
   height: 300px;
   width: 10px;
@@ -468,8 +474,8 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .RevealCard .container-fluid .card {
-  border: 3px solid white;
-  border-width: 10px 0 0;
+  border: 0;
+  border-top: 10px solid #222831;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
@@ -477,20 +483,23 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   padding: 10px 0;
   margin: 0;
   max-height: auto;
-  color: #eeeeee;
+  color: #393e46;
   background-color: #eeeeee;
   font-size: 9.375rem;
+  font-weight: 100;
   text-shadow: 2px 2px #00adb5;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
-.RevealCard .container-fluid:hover .card-title {
-  text-shadow: 2px 2px #00adb5;
-  color: #393e46;
+.RevealCard .cardSec:hover .card-title {
+  color: #00adb5;
+  text-shadow:
+    2px 2px #393e46,
+    3px 3px #393e46,
+    4px 4px #393e46;
 }
 
 .RevealCard .container-fluid .card.Text {
-
   max-height: 1000px;
   color: #eeeeee;
   background-color: #00adb5;
@@ -513,6 +522,16 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
+.RevealCard .container-fluid .card .card-text small {
+  display: block;
+  font-size: 0.7rem;
+  line-height: 1.75;
+}
+
+.RevealCard .container-fluid .card .card-text .btn {
+  font-size: 0.5rem;
+}
+
 .RevealCard .container-fluid .card .fas.fa-plus.plusHide {
   max-height: 0;
   padding: 0;
@@ -524,7 +543,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   padding: 25px 20px;
   color: #393e46;
   background-color: #eeeeee;
-  border-bottom: 3px solid #393e46;
+  border-bottom: 10px solid #393e46;
 }
 
 @media (max-width: 1199px) {
@@ -624,34 +643,35 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .indexQuote .card-title {
-  color: #eeeeee;
   font-size: 6rem;
 }
 
 /* The normal text shadow */
 .indexQuote.qtextShadow {
+  color: #222831;
   text-shadow:
-    1px 0 #252a34,
-    2px 0 #252a34,
-    3px 0 #252a34,
-    4px 0 #252a34,
-    5px 0 #252a34,
-    6px 0 #252a34,
-    7px 0 #252a34,
-    8px 0 #252a34,
-    9px 0 #252a34,
-    10px 0 #252a34,
-    11px 0 #252a34,
-    12px 0 #252a34,
-    13px 0 #252a34,
-    14px 0 #252a34
+    1px 0 #00adb5,
+    2px 0 #00adb5,
+    3px 0 #00adb5,
+    4px 0 #00adb5,
+    5px 0 #00adb5,
+    6px 0 #00adb5,
+    7px 0 #00adb5,
+    8px 0 #00adb5,
+    9px 0 #00adb5,
+    10px 0 #00adb5,
+    11px 0 #222831,
+    12px 0 #222831,
+    13px 0 #222831,
+    14px 0 #222831
   ;
 }
 
 /* The hover text shadow */
 .indexQuote.qtextShadowHover {
+  color: #00adb5;
   text-shadow:
-    1px 0 0px #eeeeee,
+    /*1px 0 0px #eeeeee,
     2px 0 0px #eeeeee,
     3px 0 0px #eeeeee,
     4px 0 0px #eeeeee,
@@ -669,27 +689,56 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
     16px 0 0px #eeeeee,
     17px 0 0px #eeeeee,
     18px 0 0px #eeeeee,
-    19px 0 0px #252a34,
-    20px 0 0px #ff2e63,
-    21px 0 0px #252a34,
-    22px 0 0px #ff2e63,
-    23px 0 8px #252a34,
-    24px 0 0px #ff2e63,
-    25px 0 0px #252a34,
-    26px 0 0px #ff2e63,
-    27px 0 0px #252a34,
-    28px 0 0px #ff2e63,
-    29px 0 0px #252a34,
-    30px 0 0px #ff2e63,
-    31px 0 0px #252a34,
-    32px 0 0px #ff2e63,
-    33px 0 0px #252a34,
-    34px 0 0px #ff2e63,
-    35px 0 0px #252a34,
-    36px 0 0px #ff2e63,
-    37px 0 0px #252a34,
-    38px 0 0px #ff2e63,
-    39px 0 0px #252a34
+    19px 0 0px #eeeeee,
+    20px 0 0px #00adb5,
+    21px 0 0px #222831,
+    22px 0 0px #00adb5,
+    23px 0 8px #222831,
+    24px 0 0px #00adb5,
+    25px 0 0px #222831,
+    26px 0 0px #00adb5,
+    27px 0 0px #222831,
+    28px 0 0px #00adb5,
+    29px 0 0px #222831,
+    30px 0 0px #00adb5,
+    31px 0 0px #222831,
+    32px 0 0px #00adb5,
+    33px 0 0px #222831,
+    34px 0 0px #00adb5,
+    35px 0 0px #222831,
+    36px 0 0px #00adb5,
+    37px 0 0px #222831,
+    38px 0 0px #00adb5,
+    39px 0 0px #222831*/
+
+    1px 0 0px #00adb5,
+    2px 0 0px #00adb5,
+    3px 0 0px #00adb5,
+    4px 0 0px #00adb5,
+    5px 0 0px #00adb5,
+    6px 0 0px #00adb5,
+    7px 0 0px #00adb5,
+    8px 0 0px #00adb5,
+    9px 0 0px #00adb5,
+    10px 0 0px #222831,
+    11px 0 0px #00adb5,
+    12px 0 0px #222831,
+    13px 0 0px #00adb5,
+    14px 0 0px #222831,
+    15px 0 0px #00adb5,
+    16px 0 0px #222831,
+    17px 0 0px #00adb5,
+    18px 0 0px #222831,
+    19px 0 0px #00adb5,
+    20px 0 0px #222831,
+    21px 0 0px #00adb5,
+    22px 0 0px #222831,
+    23px 0 8px #00adb5,
+    24px 0 0px #222831,
+    25px 0 0px #00adb5,
+    26px 0 0px #222831,
+    27px 0 0px #00adb5,
+    28px 0 0px #222831
   ;
 }
 
@@ -785,7 +834,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   max-width: 100%;
   background-size: cover;
   background-attachment: fixed;
-  margin: 15% auto;  /* top/bottom right/left */
+  margin: 7% auto;  /* top/bottom right/left */
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
 }
 
@@ -842,7 +891,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
       margin: 0;
       height: auto;
       background-color: #222831;
-      font-size: 1.25rem;  /* (18px font-size / 2560px width */
+      font-size: 1rem;  /* (18px font-size / 2560px width */
       text-decoration: none;
     }
 
@@ -1437,6 +1486,21 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   opacity: 100%;
   transform: rotateY(0) rotateZ(0);
 }
+
+.Ichi.hideDiv {
+  max-width: 0;
+  opacity: 0;
+  transform: rotateY(-90deg) rotateZ(-15deg);
+}
+
+.Ichi.revealDiv {
+  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+
+  max-width: 2560px;
+  opacity: 100%;
+  transform: rotateY(0) rotateZ(0);
+}
+
 
 /* Revealing Purpose boxes */
 .FeatPgh.hideDiv {
