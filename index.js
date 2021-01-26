@@ -22,41 +22,47 @@ $(document).on('mousemove', function(e){
   var rotate1 = 'rotate(' + ran + 'deg)'; // Rotation effect var
 
   $('.mouseDiv').css({
-    left:  e.pageX,
-    top:   e.pageY,
-    transform: rotate1
+    left:  e.pageX + 3,
+    top:   e.pageY + 3,
   });
 });
 
 // The mouse div will disappear outside the viewport and reappear when within the viewport
 $(document).hover(
-  function () { // Mouse enter
-    $(".mouseDiv").removeClass("mouseDiv-font0");
-    $(".mouseDiv").addClass("mouseDiv-fontNorm");
-  }, function () { // mouse leave
+  function () { }, function () { // mouse leave
     $(".mouseDiv").removeClass("mouseDiv-fontNorm");
     $(".mouseDiv").addClass("mouseDiv-font0");
   }
 );
 
 // The mouse div will disappear within the anchor links and reappear when not over the anchor links
-$('a').hover(
+$('.indexQuote a').hover(
   function () { // Mouse enter
-    $(".mouseDiv").removeClass("mouseDiv-fontNorm");
-    $(".mouseDiv").addClass("mouseDiv-font0");
-  }, function () { // mouse leave
     $(".mouseDiv").removeClass("mouseDiv-font0");
     $(".mouseDiv").addClass("mouseDiv-fontNorm");
+  }, function () { // mouse leave
+    $(".mouseDiv").removeClass("mouseDiv-fontNorm");
+    $(".mouseDiv").addClass("mouseDiv-font0");
   }
 );
 
 $('.titleBar').hover(
   function () { // Mouse enter
-    $(".mouseDiv").removeClass("mouseDiv-fontNorm");
-    $(".mouseDiv").addClass("mouseDiv-font0");
-  }, function () { // mouse leave
     $(".mouseDiv").removeClass("mouseDiv-font0");
     $(".mouseDiv").addClass("mouseDiv-fontNorm");
+  }, function () { // mouse leave
+    $(".mouseDiv").removeClass("mouseDiv-fontNorm");
+    $(".mouseDiv").addClass("mouseDiv-font0");
+  }
+);
+
+$('.boxQuote').hover(
+  function () { // Mouse enter
+    $(".mouseDiv").removeClass("mouseDiv-font0");
+    $(".mouseDiv").addClass("mouseDiv-fontNorm");
+  }, function () { // mouse leave
+    $(".mouseDiv").removeClass("mouseDiv-fontNorm");
+    $(".mouseDiv").addClass("mouseDiv-font0");
   }
 );
 
