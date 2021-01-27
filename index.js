@@ -190,7 +190,7 @@ $(document).on( "scroll", function () {
 
   let intViewportHeight = window.innerHeight;
 
-  var newPosition = 50 - (($(window).scrollTop() - distanceFromTop) / intViewportHeight) * 15 + "%";
+  var newPosition = 50 - (($(window).scrollTop() - distanceFromTop) / intViewportHeight) * 45 + "%";
 
   var newPosition1 = 55 - (($(window).scrollTop() - distanceFromTop) / intViewportHeight) * 15 + "%";
 
