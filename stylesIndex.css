@@ -164,6 +164,8 @@ body {  /* Tag Selector */
   }
 }
 
+
+
 /*--------------------------------------------*/
 /* navbar Logo Animation */
 /*--------------------------------------------*/
@@ -764,7 +766,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   }
 } @media (max-width: 1199px) {
   .indexQuote .card-title {
-    font-size: 1.75rem;
+    font-size: 3.8rem;
   }
 
   .indexQuote {
@@ -774,7 +776,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 
 } @media (max-width: 767px) {
   .indexQuote .card-title {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
   }
 
   .indexQuote {
