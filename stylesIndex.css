@@ -145,7 +145,7 @@ body {  /* Tag Selector */
 }
 
 .navbar.onLink {
-  max-height: 200px;
+  max-height: 1000px;
   border-bottom: 1px gainsboro solid;
 }
 

@@ -3,7 +3,7 @@
 /*##################################################*/
 $(window).on('resize', function(){
   var winWidth = $(this)[0].innerWidth;
-  console.log(winWidth);
+  // console.log(winWidth);
 
   $("body").css({
     "max-width": winWidth
@@ -201,7 +201,7 @@ $(document).on( "scroll", function () {
   $(".indexQuote").css({
     "top":   newPosition
   });
-  console.log(newPosition);
+  // console.log(newPosition);
 
   $(".boxQuote").css({
     "top":   newPosition1
