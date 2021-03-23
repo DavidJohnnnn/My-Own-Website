@@ -908,8 +908,8 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
       text-decoration: none;
     }
 
-    .bottomDiv .col-sm-6 {
-      text-align: left;
+    .bottomDiv {
+      text-align: right;
       color: #eeeeee;
     }
 
@@ -1541,7 +1541,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .indexQuote {
-  transition: all 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), top 0ms linear;
+  transition: all 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), top 300ms cubic-bezier(0.250, 0.460, 0.000, 1.000);;
 }
 
 

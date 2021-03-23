@@ -3,7 +3,7 @@
 /*##################################################*/
 $(window).on('resize', function(){
   var winWidth = $(this)[0].innerWidth;
-  // console.log(winWidth);
+  console.log(winWidth);
 
   $("body").css({
     "max-width": winWidth
@@ -79,7 +79,12 @@ imageFilt(0);
 
 // Reveal the logo when opening the website
 var offset = 0;
+var winWidth = $(this)[0].innerWidth;
+console.log(winWidth);
 
+$("body").css({
+  "max-width": winWidth
+});
 
 setTimeout(function () {
   $(".myLogo").removeClass("hiddenPadding offblink").addClass("expandPadding onLink");
