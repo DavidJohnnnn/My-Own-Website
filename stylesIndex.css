@@ -663,20 +663,20 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 .indexQuote.qtextShadow {
   color: #222831;
   text-shadow:
-    1px 0 #00adb5,
-    2px 0 #00adb5,
-    3px 0 #00adb5,
-    4px 0 #00adb5,
-    5px 0 #00adb5,
-    6px 0 #00adb5,
-    7px 0 #00adb5,
-    8px 0 #00adb5,
-    9px 0 #00adb5,
-    10px 0 #00adb5,
-    11px 0 #222831,
-    12px 0 #222831,
-    13px 0 #222831,
-    14px 0 #222831
+    1px 1px #00adb5,
+    2px 2px #00adb5,
+    3px 3px #00adb5,
+    4px 4px #00adb5,
+    5px 5px #00adb5,
+    6px 6px #00adb5,
+    7px 7px #00adb5,
+    8px 8px #00adb5,
+    9px 9px #00adb5,
+    10px 10px #00adb5,
+    11px 11px #222831,
+    12px 12px #222831,
+    13px 13px #222831,
+    14px 14px #222831
   ;
 }
 
@@ -724,34 +724,34 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
     38px 0 0px #00adb5,
     39px 0 0px #222831*/
 
-    1px 0 0px #00adb5,
-    2px 0 0px #00adb5,
-    3px 0 0px #00adb5,
-    4px 0 0px #00adb5,
-    5px 0 0px #00adb5,
-    6px 0 0px #00adb5,
-    7px 0 0px #00adb5,
-    8px 0 0px #00adb5,
-    9px 0 0px #00adb5,
-    10px 0 0px #222831,
-    11px 0 0px #00adb5,
-    12px 0 0px #222831,
-    13px 0 0px #00adb5,
-    14px 0 0px #222831,
-    15px 0 0px #00adb5,
-    16px 0 0px #222831,
-    17px 0 0px #00adb5,
-    18px 0 0px #222831,
-    19px 0 0px #00adb5,
-    20px 0 0px #222831,
-    21px 0 0px #00adb5,
-    22px 0 0px #222831,
-    23px 0 8px #00adb5,
-    24px 0 0px #222831,
-    25px 0 0px #00adb5,
-    26px 0 0px #222831,
-    27px 0 0px #00adb5,
-    28px 0 0px #222831
+    1px -1px 0px #00adb5,
+    2px -2px 0px #00adb5,
+    3px -3px 0px #00adb5,
+    4px -4px 0px #00adb5,
+    5px -5px 0px #00adb5,
+    6px -6px 0px #00adb5,
+    7px -7px 0px #00adb5,
+    8px -8px 0px #00adb5,
+    9px -9px 0px #00adb5,
+    10px -10px 0px #222831,
+    11px -11px 0px #00adb5,
+    12px -12px 0px #222831,
+    13px -13px 0px #00adb5,
+    14px -14px 0px #222831,
+    15px -15px 0px #00adb5,
+    16px -16px 0px #222831,
+    17px -17px 0px #00adb5,
+    18px -18px 0px #222831,
+    19px -19px 0px #00adb5,
+    20px -20px 0px #222831,
+    21px -21px 0px #00adb5,
+    22px -22px 0px #222831,
+    23px -23px 8px #00adb5,
+    24px -24px 0px #222831,
+    25px -25px 0px #00adb5,
+    26px -26px 0px #222831,
+    27px -27px 0px #00adb5,
+    28px -28px 0px #222831
   ;
 }
 
@@ -1541,10 +1541,12 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .indexQuote {
-  transition: all 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), top 300ms cubic-bezier(0.250, 0.460, 0.000, 1.000);;
+  transition: all 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), top 300ms cubic-bezier(0.250, 0.460, 0.000, 1.000);
 }
 
-
+.pg2LgContainer .boxQuote {
+  transition: all 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), top 300ms cubic-bezier(0.250, 0.460, 0.000, 1.000);
+}
 
 
 

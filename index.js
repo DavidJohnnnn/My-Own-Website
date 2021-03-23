@@ -197,7 +197,7 @@ $(document).on( "scroll", function () {
 
   var newPosition = 50 - (($(window).scrollTop() - distanceFromTop) / intViewportHeight) * 45 + "%";
 
-  var newPosition1 = 55 - (($(window).scrollTop() - distanceFromTop) / intViewportHeight) * 15 + "%";
+  var newPosition1 = 50 - (($(window).scrollTop() - distanceFromTop) / intViewportHeight) * 25 + "%";
 
   var newDimensions = (100 + ($(window).scrollTop() - distanceFromTop) * 20) + "% " + (120 + ($(window).scrollTop() / intViewportHeight) * 20) + "%";
 
