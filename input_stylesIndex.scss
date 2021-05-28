@@ -43,28 +43,7 @@ body {  /* Tag Selector */
   max-width: 1440px;
 }
 
-/*##################################################*/
-/* Mouse Div Selectors */
-/*##################################################*/
 
-.mouseDiv {
-  text-align: left;
-  font-size: 0.7rem;
-  position: absolute;
-  z-index: 10;
-  transition: all 1000ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-/*--------------------------------------------*/
-/* mouse div size control */
-/*--------------------------------------------*/
-.mouseDiv-font0 {
-  height: 0;
-} .mouseDiv-fontNorm {
-  height: 100px;
-}
 
 /*##################################################*/
 /* Side Wipe Animation Selectors */
@@ -78,24 +57,29 @@ body {  /* Tag Selector */
   width: 100%;
   bottom: 0;
   margin: 0;
-} .sideWipeContainer .sideWipe1 {
-  height: 5px;
-  bottom: 0;
-  width: 25%;
-  position: absolute;
-  margin: 0;
-  background-color: $mainBlack;
-  overflow: hidden;
-  display: inline-block;
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .sideWipeContainer .leftSideWipe {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  left: -27%;
-} .sideWipeContainer .rightSideWipe {
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  left: 126%;
-}
 
+  .sideWipe1 {
+    height: 5px;
+    bottom: 0;
+    width: 25%;
+    position: absolute;
+    margin: 0;
+    background-color: $mainBlack;
+    overflow: hidden;
+    display: inline-block;
+    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  }
+
+  .leftSideWipe {
+    transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+    left: -27%;
+  }
+
+  .rightSideWipe {
+    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+    left: 126%;
+  }
+}
 /*##################################################*/
 /* Unique Div: titleNavBarBox */
 /*##################################################*/
@@ -103,20 +87,16 @@ body {  /* Tag Selector */
 .titleBar {
   padding: 0;
   overflow: hidden;
-}
 
-/*--------------------------------------------*/
-/* Page Title Stuff */
-/*--------------------------------------------*/
-
-.titleBar .container-fluid {
-  padding: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 4;
-  overflow: hidden;
+  .container-fluid {  // Page Title Stuff
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    overflow: hidden;
+  }
 }
 
 .navbar {
@@ -210,51 +190,51 @@ body {  /* Tag Selector */
 
 .myLogo.onLink {
   max-height: 100px;
-}
 
-.myLogo.onLink .textAlter {
-  text-shadow:
-  1px 0 $PrimaryColor,
-  2px 0 $PrimaryColor,
-  3px 0 $PrimaryColor,
-  4px 0 $PrimaryColor,
-  5px 0 $PrimaryColor,
-  6px 0 $PrimaryColor;
+  .textAlter {
+    text-shadow:
+    1px 0 $PrimaryColor,
+    2px 0 $PrimaryColor,
+    3px 0 $PrimaryColor,
+    4px 0 $PrimaryColor,
+    5px 0 $PrimaryColor,
+    6px 0 $PrimaryColor;
+  }
 }
 
 .myLogo.blink {
   max-height: 100px;
   color: $mainWhite;
-}
 
-.myLogo.blink .title-A {
-  text-shadow:
-  1px 0 white,
-  2px 0 white,
-  3px 0 $mainBlack,
-  4px 0 white,
-  5px 0 $mainBlack,
-  6px 0 white,
-  7px 0 $mainBlack,
-  8px 0 white;
-}
+  .title-A {
+    text-shadow:
+    1px 0 white,
+    2px 0 white,
+    3px 0 $mainBlack,
+    4px 0 white,
+    5px 0 $mainBlack,
+    6px 0 white,
+    7px 0 $mainBlack,
+    8px 0 white;
+  }
 
-.myLogo.blink .textAlter {
-  text-shadow:
-  1px 0 white,
-  2px 0 white,
-  3px 0 $PrimaryColor,
-  4px 0 white,
-  5px 0 $PrimaryColor,
-  6px 0 white,
-  7px 0 $PrimaryColor,
-  8px 0 white,
-  9px 0 $PrimaryColor,
-  10px 0 white,
-  11px 0 $PrimaryColor,
-  12px 0 $PrimaryColor,
-  13px 0 $PrimaryColor,
-  14px 0 $PrimaryColor;
+  .textAlter {
+    text-shadow:
+    1px 0 white,
+    2px 0 white,
+    3px 0 $PrimaryColor,
+    4px 0 white,
+    5px 0 $PrimaryColor,
+    6px 0 white,
+    7px 0 $PrimaryColor,
+    8px 0 white,
+    9px 0 $PrimaryColor,
+    10px 0 white,
+    11px 0 $PrimaryColor,
+    12px 0 $PrimaryColor,
+    13px 0 $PrimaryColor,
+    14px 0 $PrimaryColor;
+  }
 }
 
 /*--------------------------------------------*/
@@ -296,18 +276,22 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   transform: rotateX(-360deg);
 }
 
-.navbar-nav .btn-secondary{
-  transition: all 500ms linear; /* custom */
-  color: white;
-  background-color: $PrimaryColor;
-  border-color: white;
-  border-radius: 50%;
-}
-.navbar-nav .btn-secondary:hover {
-  color: $PrimaryColor;
-  background-color: white;
-  border-color: $PrimaryColor;
-  border-radius: 50%;
+.navbar-nav {
+
+  .btn-secondary{
+    transition: all 500ms linear; /* custom */
+    color: white;
+    background-color: $PrimaryColor;
+    border-color: white;
+    border-radius: 50%;
+  }
+
+  .btn-secondary:hover {
+    color: $PrimaryColor;
+    background-color: white;
+    border-color: $PrimaryColor;
+    border-radius: 50%;
+  }
 }
 
 /*--------------------------------------------*/
@@ -339,57 +323,65 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 /* navbar links Responsive Section */
 /*--------------------------------------------*/
 
-/* 4K viewport (>1441px) */
+$hoverFactor: 1.09;
+
+// 4K viewport (>1441px)
 @media (min-width: 1441px) {
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;  /* top right/left bottom */
+  a.Links:link{  // Tag + Class Selector affecting the top side links.
+    padding: 10px 2px 14px;  // top right/left bottom
     font-size: 0.95vw;
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  } a.Links:hover {  // Class Selector: Color changes (both link box and text) when the mouse hovers over the link box
     font-size: 1.05vw;
   }
 
-  .navbar-nav .btn-secondary{
-    font-size: 1.1vw;
+
+  .navbar-nav {
+    .btn-secondary {
+      font-size: 1.1vw;
+    }
+    .btn-secondary:hover {
+      font-size: ($hoverFactor * 1.1)vw;
+    }
   }
 
-  .navbar-nav .btn-secondary:hover {
-    font-size: 1.2vw;
-  }
 }
 
-/* Laptop L viewport (1440px - 1025px) and Laptop viewport (1024px - 769px) */
+// Laptop L viewport (1440px - 1025px) and Laptop viewport (1024px - 769px)
 @media (max-width: 1440px) and (min-width: 1200px){
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;  /* top right/left bottom */
-    font-size: 0.95vw;  /* (18px font-size / 2560px width */
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  a.Links:link {
+    padding: 10px 2px 14px;
+    font-size: 0.95vw;
+  } a.Links:hover {
     font-size: 1.05vw;
   }
 
-  .navbar-nav .btn-secondary{
-    font-size: 1.1vw;
+  .navbar-nav {
+    .btn-secondary {
+      font-size: 1.1vw;
+    }
+    .btn-secondary:hover {
+      font-size: ($hoverFactor * 1.1)vw;
+    }
   }
 
-  .navbar-nav .btn-secondary:hover {
-    font-size: 1.2vw;
-  }
 }
 
 @media (max-width: 1199px) and (min-width: 769px){
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;  /* top right/left bottom */
-    font-size: 0.95vw;  /* (18px font-size / 2560px width */
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  a.Links:link {
+    padding: 10px 2px 14px;
+    font-size: 0.95vw;
+  } a.Links:hover {
     font-size: 1.05vw;
   }
 
-  .navbar-nav .btn-secondary{
-    margin: 15px 0 0;  /* top right/left bottom */
-    font-size: 1.1vw;
-  }
-
-  .navbar-nav .btn-secondary:hover {
-    font-size: 1.2vw;
+  .navbar-nav {
+    .btn-secondary {
+      margin: 15px 0 0;
+      font-size: 1.1vw;
+    }
+    .btn-secondary:hover {
+      font-size: ($hoverFactor * 1.1)vw;
+    }
   }
 
   .navbar-toggler {
@@ -397,22 +389,23 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   }
 }
 
-/* Tablet viewport (768px - 426px) */
+// Tablet viewport (768px - 426px)
 @media (max-device-width: 768px) and (min-device-width: 426px){
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;  /* top right/left bottom */
-    font-size: 1.4vw;  /* (18px font-size / 2560px width */
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  a.Links:link {
+    padding: 10px 2px 14px;
+    font-size: 1.4vw;
+  } a.Links:hover {
     font-size: 1.5vw;
   }
 
-  .navbar-nav .btn-secondary{
-    margin: 15px 0 0;  /* top right/left bottom */
-    font-size: 1.4vw;
-  }
-
-  .navbar-nav .btn-secondary:hover {
-    font-size: 1.6vw;
+  .navbar-nav {
+    .btn-secondary {
+      margin: 15px 0 0;
+      font-size: 1.4vw;
+    }
+    .btn-secondary:hover {
+      font-size: ($hoverFactor * 1.4)vw;
+    }
   }
 
   .navbar-toggler {
@@ -420,22 +413,23 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   }
 }
 
-/* Mobile L viewport (425px - 376px) */
+// Mobile L viewport (425px - 376px)
 @media (max-device-width: 425px) and (min-device-width: 376px) {
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;  /* top right/left bottom */
-    font-size: 2vw;  /* (18px font-size / 2560px width */
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
-    font-size: 2.1vw;
-  }
-
-  .navbar-nav .btn-secondary{
-    margin: 25px 0 0;  /* top right/left bottom */
+  a.Links:link {
+    padding: 10px 2px 14px;
     font-size: 2vw;
+  } a.Links:hover {
+    font-size: 2.1vw;
   }
 
-  .navbar-nav .btn-secondary:hover {
-    font-size: 2.1vw;
+  .navbar-nav {
+    .btn-secondary {
+      margin: 25px 0 0;
+      font-size: 2vw;
+    }
+    .btn-secondary:hover {
+      font-size: ($hoverFactor * 2)vw;
+    }
   }
 
   .navbar-toggler {
@@ -443,30 +437,29 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   }
 }
 
-/* Mobile M viewport (375px - 321px) and Mobile S viewport (>320px) */
+// Mobile M viewport (375px - 321px) and Mobile S viewport (>320px)
 @media (max-device-width: 375px) and (min-device-width: 0px) {
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;  /* top right/left bottom */
-    font-size: 2vw;  /* (18px font-size / 2560px width */
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  a.Links:link {
+    padding: 10px 2px 14px;
+    font-size: 2vw;
+  } a.Links:hover {
     font-size: 2.1vw;
   }
 
-  .navbar-nav .btn-secondary{
-    margin: 25px 0 0;  /* top right/left bottom */
-    font-size: 3vw;
-  }
-
-  .navbar-nav .btn-secondary:hover {
-    font-size: 3.1vw;
+  .navbar-nav {
+    .btn-secondary {
+      margin: 25px 0 0;
+      font-size: 3vw;
+    }
+    .btn-secondary:hover {
+      font-size: ($hoverFactor * 3)vw;
+    }
   }
 
   .navbar-toggler {
     font-size: 5vw;
   }
 }
-
-/*  */
 
 
 
