@@ -438,17 +438,12 @@ a.Links:hover {
   z-index: 4;
   transition: all 7000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
 }
-
 .titleBar .leftSideWipe {
-  /* When the bar is on the left side, we want it to switch to the right side instantly. */
   transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
   left: -27%;
 }
-
 .titleBar .rightSideWipe {
-  /* Then the bar is on the right side, we want it to switch to the left side slowly. */
   transition: all 7000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
   left: 126%;
 }
 
@@ -459,7 +454,6 @@ a.Links:hover {
   /* Class Selector: Outer Div containing Purpose text boxes */
   margin: 0 auto;
 }
-
 .lgContainerDiv .container-fluid {
   height: 35rem;
   padding: 0;
@@ -501,79 +495,60 @@ a.Links:hover {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-
 .RevealCard .Title {
   overflow: hidden;
 }
-
 .RevealCard .sideWipe1 {
   height: 6px;
   top: 0;
   width: 25%;
   position: absolute;
   margin: 0;
-  background-color: #08d9d6;
+  background-color: #00adb5;
   overflow: hidden;
   transition: all 7000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
 }
-
 .RevealCard .sideWipe2 {
   height: 6px;
   bottom: 0;
   width: 25%;
   position: absolute;
   margin: 0;
-  background-color: #08d9d6;
+  background-color: #00adb5;
   overflow: hidden;
   transition: all 7000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
 }
-
 .RevealCard .leftSideWipe {
   transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
   left: -27%;
 }
-
 .RevealCard .rightSideWipe {
   transition: all 7000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
   left: 126%;
 }
-
 .RevealCard .vertWipe {
   height: 300px;
   width: 5px;
   position: relative;
   margin: 0;
-  background-color: #08d9d6;
+  background-color: #00adb5;
 }
-
 .RevealCard .upVertWipe {
   transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
   top: -300px;
 }
-
 .RevealCard .downVertWipe {
   transition: all 4000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
   top: 600px;
 }
-
 .RevealCard .upVertWipe1 {
   transition: all 4000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
   top: -300px;
 }
-
 .RevealCard .downVertWipe1 {
   transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
   top: 600px;
 }
-
 .RevealCard .verticalLine {
   background-color: #222831;
   position: relative;
@@ -583,7 +558,6 @@ a.Links:hover {
   margin: auto;
   overflow: hidden;
 }
-
 .RevealCard .verticalLine2 {
   background-color: #222831;
   position: relative;
@@ -593,43 +567,32 @@ a.Links:hover {
   margin: auto;
   overflow: hidden;
 }
-
 .RevealCard .container-fluid {
   margin: 9% auto;
-  /* top/bottom right/left */
   width: 60%;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-
 .RevealCard .container-fluid .card {
   border: 0;
   border-top: 10px solid #222831;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-
 .RevealCard .container-fluid .card-title {
   padding: 10px 0;
   margin: 0;
   max-height: auto;
-  color: #393e46;
+  color: #222831;
   background-color: #eeeeee;
   font-size: 9.375rem;
   font-weight: 100;
   text-shadow: 2px 2px #00adb5;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-
-.RevealCard .cardSec:hover .card-title {
-  color: #00adb5;
-  text-shadow: 2px 2px #393e46, 3px 3px #393e46, 4px 4px #393e46;
-}
-
 .RevealCard .container-fluid .card.Text {
   max-height: 1000px;
   color: #eeeeee;
   background-color: #00adb5;
 }
-
 .RevealCard .container-fluid .card .fas.fa-plus {
   padding: 10px 0;
   font-size: 1rem;
@@ -637,7 +600,20 @@ a.Links:hover {
   max-height: 10000px;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-
+.RevealCard .container-fluid .card .fas.fa-plus.plusHide {
+  max-height: 0;
+  padding: 0;
+  font-size: 0;
+  background-color: #eeeeee;
+  border-bottom: 0 solid #222831;
+}
+.RevealCard .container-fluid .card .card-text.textReveal {
+  max-height: 1000px;
+  padding: 25px 20px;
+  color: #222831;
+  background-color: #eeeeee;
+  border-bottom: 10px solid #222831;
+}
 .RevealCard .container-fluid .card .card-text {
   max-height: 0;
   padding: 0 20px;
@@ -646,42 +622,26 @@ a.Links:hover {
   text-align: left;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-
 .RevealCard .container-fluid .card .card-text small {
   display: block;
   font-size: 0.9rem;
   line-height: 1.75;
 }
-
 .RevealCard .container-fluid .card .card-text .btn {
   font-size: 0.8rem;
 }
-
-.RevealCard .container-fluid .card .fas.fa-plus.plusHide {
-  max-height: 0;
-  padding: 0;
-  font-size: 0;
-  background-color: #eeeeee;
-  border-bottom: 0 solid #393e46;
-}
-
-.RevealCard .container-fluid .card .card-text.textReveal {
-  max-height: 1000px;
-  padding: 25px 20px;
-  color: #393e46;
-  background-color: #eeeeee;
-  border-bottom: 10px solid #393e46;
+.RevealCard .cardSec:hover .card-title {
+  color: #00adb5;
+  text-shadow: 2px 2px #222831, 3px 3px #222831, 4px 4px #222831;
 }
 
 @media (max-width: 1199px) {
   .RevealCard .container-fluid .card-title {
     font-size: 8.375rem;
   }
-
   .RevealCard .container-fluid .card .fas.fa-plus {
     font-size: 1rem;
   }
-
   .RevealCard .container-fluid .card .card-text {
     font-size: 1.35rem;
   }
@@ -690,11 +650,9 @@ a.Links:hover {
   .RevealCard .container-fluid .card-title {
     font-size: 7.375rem;
   }
-
   .RevealCard .container-fluid .card .fas.fa-plus {
     font-size: 0.8rem;
   }
-
   .RevealCard .container-fluid .card .card-text {
     font-size: 1.3rem;
   }
@@ -703,11 +661,9 @@ a.Links:hover {
   .RevealCard .container-fluid .card-title {
     font-size: 5.375rem;
   }
-
   .RevealCard .container-fluid .card .fas.fa-plus {
     font-size: 0.65rem;
   }
-
   .RevealCard .container-fluid .card .card-text {
     font-size: 1.2rem;
   }
@@ -716,11 +672,9 @@ a.Links:hover {
   .RevealCard .container-fluid .card-title {
     font-size: 4.375rem;
   }
-
   .RevealCard .container-fluid .card .fas.fa-plus {
     font-size: 0.5rem;
   }
-
   .RevealCard .container-fluid .card .card-text {
     font-size: 1.1rem;
   }
@@ -739,7 +693,6 @@ a.Links:hover {
   filter: brightness(50%);
   border-radius: 50%;
 }
-
 .IndexLgContainer .lgContainerFinal {
   background-image: url("001_IndexImages/MountainMosaic4.jpg");
   background-size: 100% 120%;
@@ -748,22 +701,14 @@ a.Links:hover {
   filter: brightness(100%);
   border-radius: 0%;
 }
-
 .IndexLgContainer .transition1 {
   transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
 }
-
 .IndexLgContainer .transition2 {
   transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
 }
 
-/*--------------------------------------------*/
-/* indexQuote parallax quote  */
-/*--------------------------------------------*/
 .indexQuote {
-  /* Original formatting of the indexQuote (adjusting the card's default formatting */
   border: none;
   background-color: transparent;
   overflow: hidden;
@@ -799,20 +744,32 @@ a.Links:hover {
   font-size: 6rem;
 }
 
-/* The normal text shadow */
 .indexQuote.qtextShadow {
   color: #222831;
   text-shadow: 1px 1px #00adb5, 2px 2px #00adb5, 3px 3px #00adb5, 4px 4px #00adb5, 5px 5px #00adb5, 6px 6px #00adb5, 7px 7px #00adb5, 8px 8px #00adb5, 9px 9px #00adb5, 10px 10px #00adb5, 11px 11px #222831, 12px 12px #222831, 13px 13px #222831, 14px 14px #222831;
 }
 
-/* The hover text shadow */
 .indexQuote.qtextShadowHover {
   color: #00adb5;
-  text-shadow: 1px -1px 0px #00adb5, 2px -2px 0px #00adb5, 3px -3px 0px #00adb5, 4px -4px 0px #00adb5, 5px -5px 0px #00adb5, 6px -6px 0px #00adb5, 7px -7px 0px #00adb5, 8px -8px 0px #00adb5, 9px -9px 0px #00adb5, 10px -10px 0px #222831, 11px -11px 0px #00adb5, 12px -12px 0px #222831, 13px -13px 0px #00adb5, 14px -14px 0px #222831, 15px -15px 0px #00adb5, 16px -16px 0px #222831, 17px -17px 0px #00adb5, 18px -18px 0px #222831, 19px -19px 0px #00adb5, 20px -20px 0px #222831, 21px -21px 0px #00adb5, 22px -22px 0px #222831, 23px -23px 8px #00adb5, 24px -24px 0px #222831, 25px -25px 0px #00adb5, 26px -26px 0px #222831, 27px -27px 0px #00adb5, 28px -28px 0px #222831;
+  text-shadow: 1px -1px #00adb5, 2px -2px #00adb5, 3px -3px #00adb5, 4px -4px #00adb5, 5px -5px #00adb5, 6px -6px #00adb5, 7px -7px #00adb5, 8px -8px #00adb5, 9px -9px #00adb5, 10px -10px #222831, 11px -11px #00adb5, 12px -12px #222831, 13px -13px #00adb5, 14px -14px #222831, 15px -15px #00adb5, 16px -16px #222831, 17px -17px #00adb5, 18px -18px #222831, 19px -19px #00adb5, 20px -20px #222831, 21px -21px #00adb5, 22px -22px #222831, 23px -23px #00adb5, 24px -24px #222831, 25px -25px #00adb5, 26px -26px #222831, 27px -27px #00adb5, 28px -28px #222831;
 }
 
-/* IndexQuote Container Responsive Section */
 @media (min-width: 1441px) {
+  .indexQuote.displayQuote {
+    max-height: 1000px;
+  }
+  .indexQuote.displayQuote .card-title {
+    font-size: 8rem;
+  }
+
+  .indexQuote.displayNone {
+    max-height: 0;
+    transform: translate3d(100px, 0, 100px) rotateX(45deg) rotateZ(-30deg);
+  }
+  .indexQuote.displayNone .card-title {
+    font-size: 0;
+  }
+
   .indexQuote .card-title {
     font-size: 8rem;
   }
@@ -848,14 +805,23 @@ a.Links:hover {
     right: 10%;
   }
 }
-/* These handle the indexQuote animation when the page opens */
+.indexQuote .card-title {
+  font-size: 6rem;
+}
+
 .indexQuote.displayQuote {
   max-height: 1000px;
+}
+.indexQuote.displayQuote card-title {
+  font-size: 6rem;
 }
 
 .indexQuote.displayNone {
   max-height: 0;
   transform: translate3d(100px, 0, 100px) rotateX(45deg) rotateZ(-30deg);
+}
+.indexQuote.displayNone card-title {
+  font-size: 0;
 }
 
 /*##################################################*/

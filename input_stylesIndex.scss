@@ -467,22 +467,26 @@ $hoverFactor: 1.09;
 /* Navbar sideWipe animation */
 /*--------------------------------------------*/
 
-.titleBar .sideWipe {
-  height: 5px;
-  bottom: 0;
-  width: 25%;
-  position: absolute;
-  margin: 0;
-  background-color: $mainBlack;
-  overflow: hidden;
-  z-index: 4;
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
-} .titleBar .leftSideWipe {  /* When the bar is on the left side, we want it to switch to the right side instantly. */
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
-  left: -27%;
-} .titleBar .rightSideWipe {  /* Then the bar is on the right side, we want it to switch to the left side slowly. */
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  left: 126%;
+.titleBar {
+  .sideWipe {
+    height: 5px;
+    bottom: 0;
+    width: 25%;
+    position: absolute;
+    margin: 0;
+    background-color: $mainBlack;
+    overflow: hidden;
+    z-index: 4;
+    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+  }
+  .leftSideWipe {  // When the bar is on the left side, we want it to switch to the right side instantly.
+    transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+    left: -27%;
+  }
+  .rightSideWipe {  // Then the bar is on the right side, we want it to switch to the left side slowly.
+    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); // custom
+    left: 126%;
+  }
 }
 
 /*##################################################*/
@@ -491,11 +495,11 @@ $hoverFactor: 1.09;
 
 .lgContainerDiv {  /* Class Selector: Outer Div containing Purpose text boxes */
   margin: 0 auto;
-}
 
-.lgContainerDiv .container-fluid {
-  height: 35rem;
-  padding: 0;
+  .container-fluid {
+    height: 35rem;
+    padding: 0;
+  }
 }
 
 .noFilt {
@@ -522,212 +526,13 @@ $hoverFactor: 1.09;
   }
 }
 
-/*##################################################*/
-/* Unique Div: RevealCard Div */
-/*##################################################*/
 
-.RevealCard {
-  overflow-x: hidden;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
+// ################################################## //
+// Unique Div: RevealCard Div //
+// ################################################## //
 
-.RevealCard .Title {
-  overflow: hidden;
-}
+@import 'revealCard';
 
-.RevealCard .sideWipe1 {
-  height: 6px;
-  top: 0;
-  width: 25%;
-  position: absolute;
-  margin: 0;
-  background-color: #08d9d6;
-  overflow: hidden;
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .RevealCard .sideWipe2 {
-  height: 6px;
-  bottom: 0;
-  width: 25%;
-  position: absolute;
-  margin: 0;
-  background-color: #08d9d6;
-  overflow: hidden;
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .RevealCard .leftSideWipe {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  left: -27%;
-} .RevealCard .rightSideWipe {
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  left: 126%;
-}
-
-.RevealCard .vertWipe {
-  height: 300px;
-  width: 5px;
-  position: relative;
-  margin: 0;
-  background-color: #08d9d6;
-} .RevealCard .upVertWipe {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  top: -300px;
-} .RevealCard .downVertWipe {
-  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  top: 600px;
-} .RevealCard .upVertWipe1 {
-  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  top: -300px;
-} .RevealCard .downVertWipe1 {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  top: 600px;
-}
-
-.RevealCard .verticalLine {
-  background-color: $mainBlack;
-  position: relative;
-  height: 300px;
-  width: 10px;
-  top: 0;
-  margin: auto;
-  overflow: hidden;
-} .RevealCard .verticalLine2 {
-  background-color: $mainBlack;
-  position: relative;
-  height: 300px;
-  width: 10px;
-  bottom: 0;
-  margin: auto;
-  overflow: hidden;
-}
-
-.RevealCard .container-fluid {
-  margin: 9% auto;  /* top/bottom right/left */
-  width: 60%;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.RevealCard .container-fluid .card {
-  border: 0;
-  border-top: 10px solid $mainBlack;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.RevealCard .container-fluid .card-title {
-  padding: 10px 0;
-  margin: 0;
-  max-height: auto;
-  color: #393e46;
-  background-color: $mainWhite;
-  font-size: 9.375rem;
-  font-weight: 100;
-  text-shadow: 2px 2px $PrimaryColor;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.RevealCard .cardSec:hover .card-title {
-  color: $PrimaryColor;
-  text-shadow:
-    2px 2px #393e46,
-    3px 3px #393e46,
-    4px 4px #393e46;
-}
-
-.RevealCard .container-fluid .card.Text {
-  max-height: 1000px;
-  color: $mainWhite;
-  background-color: $PrimaryColor;
-}
-
-.RevealCard .container-fluid .card .fas.fa-plus {
-  padding: 10px 0;
-  font-size: 1rem;
-  overflow: hidden;
-  max-height: 10000px;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.RevealCard .container-fluid .card .card-text {
-  max-height: 0;
-  padding: 0 20px;
-  font-size: 1.45rem;
-  overflow: hidden;
-  text-align: left;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.RevealCard .container-fluid .card .card-text small {
-  display: block;
-  font-size: 0.9rem;
-  line-height: 1.75;
-}
-
-.RevealCard .container-fluid .card .card-text .btn {
-  font-size: 0.8rem;
-}
-
-.RevealCard .container-fluid .card .fas.fa-plus.plusHide {
-  max-height: 0;
-  padding: 0;
-  font-size: 0;
-  background-color: $mainWhite;
-  border-bottom: 0 solid #393e46;
-} .RevealCard .container-fluid .card .card-text.textReveal {
-  max-height: 1000px;
-  padding: 25px 20px;
-  color: #393e46;
-  background-color: $mainWhite;
-  border-bottom: 10px solid #393e46;
-}
-
-@media (max-width: 1199px) {
-  .RevealCard .container-fluid .card-title {
-    font-size: 8.375rem;
-  }
-
-  .RevealCard .container-fluid .card .fas.fa-plus {
-    font-size: 1rem;
-  }
-
-  .RevealCard .container-fluid .card .card-text {
-    font-size: 1.35rem;
-  }
-} @media (max-width: 991px) {
-  .RevealCard .container-fluid .card-title {
-    font-size: 7.375rem;
-  }
-
-  .RevealCard .container-fluid .card .fas.fa-plus {
-    font-size: 0.8rem;
-  }
-
-  .RevealCard .container-fluid .card .card-text {
-    font-size: 1.3rem;
-  }
-} @media (max-width: 767px) {
-  .RevealCard .container-fluid .card-title {
-    font-size: 5.375rem;
-  }
-
-  .RevealCard .container-fluid .card .fas.fa-plus {
-    font-size: 0.65rem;
-  }
-
-  .RevealCard .container-fluid .card .card-text {
-    font-size: 1.2rem;
-  }
-} @media (max-width: 575px) {
-  .RevealCard .container-fluid .card-title {
-    font-size: 4.375rem;
-  }
-
-  .RevealCard .container-fluid .card .fas.fa-plus {
-    font-size: 0.5rem;
-  }
-
-  .RevealCard .container-fluid .card .card-text {
-    font-size: 1.1rem;
-  }
-}
 
 /*##################################################*/
 /* Unique Div: Large Image Container Div (index.html) */
@@ -736,34 +541,39 @@ $hoverFactor: 1.09;
 /*--------------------------------------------*/
 /* Large Image Container Div specific animation */
 /*--------------------------------------------*/
-.IndexLgContainer .lgContainerInit {
-  background-image: url("001_IndexImages/MountainMosaic4.jpg");
-  background-size: 100% 120%;
-  background-position: right bottom;
-  background-attachment: fixed;
-  filter: brightness(50%);
-  border-radius: 50%;
+.IndexLgContainer {
+  .lgContainerInit {
+    background: {
+      image: url("001_IndexImages/MountainMosaic4.jpg");
+      size: 100% 120%;
+      position: right bottom;
+      attachment: fixed;
+    }
+    filter: brightness(50%);
+    border-radius: 50%;
+  }
+  .lgContainerFinal {
+    background: {
+      image: url("001_IndexImages/MountainMosaic4.jpg");
+      size: 100% 120%;
+      position: top 0%;
+      attachment: fixed;
+    }
+    filter: brightness(100%);
+    border-radius: 0%;
+  }
+  .transition1 {
+    transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+  }
+  .transition2 {
+    transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease;
+  }
 }
 
-.IndexLgContainer .lgContainerFinal {
-  background-image: url("001_IndexImages/MountainMosaic4.jpg");
-  background-size: 100% 120%;
-  background-position: top 0%;
-  background-attachment: fixed;
-  filter: brightness(100%);
-  border-radius: 0%;
-}
-
-.IndexLgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .IndexLgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
-}
-
-/*--------------------------------------------*/
-/* indexQuote parallax quote  */
-/*--------------------------------------------*/
-.indexQuote {  /* Original formatting of the indexQuote (adjusting the card's default formatting */
+//--------------------------------------------//
+// indexQuote parallax quote  //
+//--------------------------------------------//
+.indexQuote {  // Original formatting of the indexQuote (adjusting the card's default formatting
   border: none;
   background-color: transparent;
   overflow: hidden;
@@ -797,104 +607,65 @@ $hoverFactor: 1.09;
   font-size: 6rem;
 }
 
-/* The normal text shadow */
+// The normal text shadow
 .indexQuote.qtextShadow {
   color: $mainBlack;
-  text-shadow:
-    1px 1px $PrimaryColor,
-    2px 2px $PrimaryColor,
-    3px 3px $PrimaryColor,
-    4px 4px $PrimaryColor,
-    5px 5px $PrimaryColor,
-    6px 6px $PrimaryColor,
-    7px 7px $PrimaryColor,
-    8px 8px $PrimaryColor,
-    9px 9px $PrimaryColor,
-    10px 10px $PrimaryColor,
-    11px 11px $mainBlack,
-    12px 12px $mainBlack,
-    13px 13px $mainBlack,
-    14px 14px $mainBlack
-  ;
+  $shadows: ();
+  @for $i from 1 through 14 {
+    $temp: $i + px;
+    @if $i >= 11 {
+      $ithShadow: $temp $temp $mainBlack;
+      $shadows: append($shadows, $ithShadow, comma)
+    } @else {
+      $ithShadow: $temp $temp $PrimaryColor;
+      $shadows: append($shadows, $ithShadow, comma)
+    }
+  }
+  text-shadow: $shadows;
 }
 
-/* The hover text shadow */
+// The hover text shadow
 .indexQuote.qtextShadowHover {
   color: $PrimaryColor;
-  text-shadow:
-    /*1px 0 0px $mainWhite,
-    2px 0 0px $mainWhite,
-    3px 0 0px $mainWhite,
-    4px 0 0px $mainWhite,
-    5px 0 0px $mainWhite,
-    6px 0 0px $mainWhite,
-    7px 0 0px $mainWhite,
-    8px 0 0px $mainWhite,
-    9px 0 0px $mainWhite,
-    10px 0 0px $mainWhite,
-    11px 0 0px $mainWhite,
-    12px 0 0px $mainWhite,
-    13px 0 0px $mainWhite,
-    14px 0 0px $mainWhite,
-    15px 0 0px $mainWhite,
-    16px 0 0px $mainWhite,
-    17px 0 0px $mainWhite,
-    18px 0 0px $mainWhite,
-    19px 0 0px $mainWhite,
-    20px 0 0px $PrimaryColor,
-    21px 0 0px $mainBlack,
-    22px 0 0px $PrimaryColor,
-    23px 0 8px $mainBlack,
-    24px 0 0px $PrimaryColor,
-    25px 0 0px $mainBlack,
-    26px 0 0px $PrimaryColor,
-    27px 0 0px $mainBlack,
-    28px 0 0px $PrimaryColor,
-    29px 0 0px $mainBlack,
-    30px 0 0px $PrimaryColor,
-    31px 0 0px $mainBlack,
-    32px 0 0px $PrimaryColor,
-    33px 0 0px $mainBlack,
-    34px 0 0px $PrimaryColor,
-    35px 0 0px $mainBlack,
-    36px 0 0px $PrimaryColor,
-    37px 0 0px $mainBlack,
-    38px 0 0px $PrimaryColor,
-    39px 0 0px $mainBlack*/
 
-    1px -1px 0px $PrimaryColor,
-    2px -2px 0px $PrimaryColor,
-    3px -3px 0px $PrimaryColor,
-    4px -4px 0px $PrimaryColor,
-    5px -5px 0px $PrimaryColor,
-    6px -6px 0px $PrimaryColor,
-    7px -7px 0px $PrimaryColor,
-    8px -8px 0px $PrimaryColor,
-    9px -9px 0px $PrimaryColor,
-    10px -10px 0px $mainBlack,
-    11px -11px 0px $PrimaryColor,
-    12px -12px 0px $mainBlack,
-    13px -13px 0px $PrimaryColor,
-    14px -14px 0px $mainBlack,
-    15px -15px 0px $PrimaryColor,
-    16px -16px 0px $mainBlack,
-    17px -17px 0px $PrimaryColor,
-    18px -18px 0px $mainBlack,
-    19px -19px 0px $PrimaryColor,
-    20px -20px 0px $mainBlack,
-    21px -21px 0px $PrimaryColor,
-    22px -22px 0px $mainBlack,
-    23px -23px 8px $PrimaryColor,
-    24px -24px 0px $mainBlack,
-    25px -25px 0px $PrimaryColor,
-    26px -26px 0px $mainBlack,
-    27px -27px 0px $PrimaryColor,
-    28px -28px 0px $mainBlack
-  ;
+  $shadows: ();
+  @for $i from 1 through 28 {
+    $temp: $i + px;
+    $nTemp: - + $i + px;
+
+    @if $i >= 10 {
+      @if $i % 2 == 0 {
+        $ithShadow: $temp $nTemp $mainBlack;
+        $shadows: append($shadows, $ithShadow, comma)
+      }
+      @else {
+        $ithShadow: $temp $nTemp $PrimaryColor;
+        $shadows: append($shadows, $ithShadow, comma)
+      }
+    }
+    @else {
+      $ithShadow: $temp $nTemp $PrimaryColor;
+      $shadows: append($shadows, $ithShadow, comma)
+    }
+  }
+
+  text-shadow: $shadows;
 }
 
-/* IndexQuote Container Responsive Section */
+// IndexQuote Container Responsive Section
 @media (min-width: 1441px) {
+  .indexQuote.displayQuote {
+    max-height: 1000px;
+    .card-title {
+      font-size: 8rem;
+    }
+  } .indexQuote.displayNone {
+    max-height: 0;
+    .card-title {
+      font-size: 0;
+    }
+    transform: translate3d(100px, 0, 100px) rotateX(45deg) rotateZ(-30deg);
+  }
   .indexQuote .card-title {
     font-size: 8rem;
   }
@@ -930,11 +701,22 @@ $hoverFactor: 1.09;
   }
 }
 
-/* These handle the indexQuote animation when the page opens */
+.indexQuote .card-title {
+  font-size: 6rem;
+}
+
+// These handle the indexQuote animation when the page opens //
 .indexQuote.displayQuote {
   max-height: 1000px;
-} .indexQuote.displayNone {
+  card-title {
+    font-size: 6rem;
+  }
+}
+.indexQuote.displayNone {
   max-height: 0;
+  card-title {
+    font-size: 0;
+  }
   transform: translate3d(100px, 0, 100px) rotateX(45deg) rotateZ(-30deg);
 }
 
