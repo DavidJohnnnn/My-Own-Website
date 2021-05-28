@@ -9,6 +9,7 @@ max-screen-height: 789px
 CSS timing function tool: https://matthewlein.com/tools/ceaser
 
 */
+
 /*
 
   Main Color Scheme:
@@ -24,16 +25,20 @@ CSS timing function tool: https://matthewlein.com/tools/ceaser
   #eeeeee - white
 
 */
+
+$mainWhite: #eeeeee;
+$mainBlack: #222831;
+$PrimaryColor: #00adb5;
+
+
 /*##################################################*/
 /* Tag Selectors */
 /*##################################################*/
-body {
-  /* Tag Selector */
-  background-color: #eeeeee;
-  /* Background of website */
-  text-align: center;
-  /* Aligning all text to the left unless specified  except where necessary */
-  font-family: "Work Sans", sans-serif;
+
+body {  /* Tag Selector */
+  background-color: $mainWhite;  /* Background of website */
+  text-align: center;  /* Aligning all text to the left unless specified  except where necessary */
+  font-family: 'Work Sans', sans-serif;
   margin: auto;
   max-width: 1440px;
 }
@@ -41,12 +46,13 @@ body {
 /*##################################################*/
 /* Mouse Div Selectors */
 /*##################################################*/
+
 .mouseDiv {
   text-align: left;
   font-size: 0.7rem;
   position: absolute;
   z-index: 10;
-  transition: all 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 1000ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
   overflow: hidden;
   white-space: nowrap;
 }
@@ -56,15 +62,14 @@ body {
 /*--------------------------------------------*/
 .mouseDiv-font0 {
   height: 0;
-}
-
-.mouseDiv-fontNorm {
+} .mouseDiv-fontNorm {
   height: 100px;
 }
 
 /*##################################################*/
 /* Side Wipe Animation Selectors */
 /*##################################################*/
+
 .sideWipeContainer {
   overflow: hidden;
   position: absolute;
@@ -73,36 +78,28 @@ body {
   width: 100%;
   bottom: 0;
   margin: 0;
-}
-
-.sideWipeContainer .sideWipe1 {
+} .sideWipeContainer .sideWipe1 {
   height: 5px;
   bottom: 0;
   width: 25%;
   position: absolute;
   margin: 0;
-  background-color: #222831;
+  background-color: $mainBlack;
   overflow: hidden;
   display: inline-block;
-  transition: all 7000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.sideWipeContainer .leftSideWipe {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .sideWipeContainer .leftSideWipe {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   left: -27%;
-}
-
-.sideWipeContainer .rightSideWipe {
-  transition: all 7000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+} .sideWipeContainer .rightSideWipe {
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   left: 126%;
 }
 
 /*##################################################*/
 /* Unique Div: titleNavBarBox */
 /*##################################################*/
+
 .titleBar {
   padding: 0;
   overflow: hidden;
@@ -111,6 +108,7 @@ body {
 /*--------------------------------------------*/
 /* Page Title Stuff */
 /*--------------------------------------------*/
+
 .titleBar .container-fluid {
   padding: 0;
   position: fixed;
@@ -122,37 +120,30 @@ body {
 }
 
 .navbar {
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  background-color: #eeeeee !important;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  background-color: $mainWhite!important;
 }
 
 /*--------------------------------------------*/
 /* navbar Logo Basic Classes */
 /*--------------------------------------------*/
-.myLogo {
-  /* Navbar Logo Class Selector */
-  color: #222831;
-  font-size: 2rem;
-  /* (50px font-size / 2560px width */
+
+.myLogo {  /* Navbar Logo Class Selector */
+  color: $mainBlack;
+  font-size: 2rem;   /* (50px font-size / 2560px width */
   overflow: hidden;
-}
-
-.middleLine {
+} .middleLine {
   color: #ff2e63;
-}
-
-.textAlter {
+} .textAlter {
   color: #ffffff;
 }
 
 .myLogo.expandPadding {
-  padding: 12px 20px;
-  /* top right bottom left */
-}
-
-.myLogo.hiddenPadding {
+  padding: 12px 20px;  /* top right bottom left */
+} .myLogo.hiddenPadding {
   padding: 0 0 0 0;
 }
+
 
 .navbar.offblink {
   border-bottom: 0 gainsboro solid;
@@ -166,58 +157,54 @@ body {
 /*--------------------------------------------*/
 /* navbar Logo Responsive Section */
 /*--------------------------------------------*/
+
 /* 4K viewport (>1441px) */
 @media (min-width: 1441px) {
-  .myLogo {
-    /* Tag + Class Selector affecting the top side links. */
-    font-size: 2.5vw;
-    /* (50px font-size / 2560px width */
+  .myLogo {  /* Tag + Class Selector affecting the top side links. */
+    font-size: 2.5vw;   /* (50px font-size / 2560px width */
   }
 }
+
 /* Laptop L viewport (1440px - 1025px) and Laptop viewport (1024px - 769px) */
-@media (max-width: 1440px) and (min-width: 769px) {
-  .myLogo {
-    /* Tag + Class Selector affecting the top side links. */
-    font-size: 2vw;
-    /* (18px font-size / 2560px width */
+@media (max-width: 1440px) and (min-width: 769px){
+  .myLogo {  /* Tag + Class Selector affecting the top side links. */
+    font-size: 2vw;  /* (18px font-size / 2560px width */
   }
 }
+
 /* Tablet viewport (768px - 426px) */
-@media (max-device-width: 768px) and (min-device-width: 426px) {
-  .myLogo {
-    /* Tag + Class Selector affecting the top side links. */
-    font-size: 3vw;
-    /* (18px font-size / 2560px width */
+@media (max-device-width: 768px) and (min-device-width: 426px){
+  .myLogo {  /* Tag + Class Selector affecting the top side links. */
+    font-size: 3vw;  /* (18px font-size / 2560px width */
   }
 }
+
 /* Mobile L viewport (425px - 376px) */
 @media (max-device-width: 425px) and (min-device-width: 376px) {
-  .myLogo {
-    /* Tag + Class Selector affecting the top side links. */
-    font-size: 5vw;
-    /* (18px font-size / 2560px width */
+  .myLogo {  /* Tag + Class Selector affecting the top side links. */
+    font-size: 5vw;  /* (18px font-size / 2560px width */
   }
 }
+
 /* Mobile M viewport (375px - 321px) and Mobile S viewport (>320px) */
 @media (max-device-width: 375px) and (min-device-width: 0px) {
-  .myLogo {
-    /* Tag + Class Selector affecting the top side links. */
-    font-size: 6vw;
-    /* (18px font-size / 2560px width */
+  .myLogo {  /* Tag + Class Selector affecting the top side links. */
+    font-size: 6vw;  /* (18px font-size / 2560px width */
   }
 }
+
 /*  */
+
+
 /*--------------------------------------------*/
 /* navbar Logo Animation */
 /*--------------------------------------------*/
 .title-A, .textAlter {
-  transition: all 750ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
+  transition: all 750ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
 }
 
 .myLogo.offblink {
-  color: #222831;
-  /* This affects logo's first color*/
+  color: $mainBlack;  /* This affects logo's first color*/
   max-height: 0;
 }
 
@@ -226,54 +213,77 @@ body {
 }
 
 .myLogo.onLink .textAlter {
-  text-shadow: 1px 0 #00adb5, 2px 0 #00adb5, 3px 0 #00adb5, 4px 0 #00adb5, 5px 0 #00adb5, 6px 0 #00adb5;
+  text-shadow:
+  1px 0 $PrimaryColor,
+  2px 0 $PrimaryColor,
+  3px 0 $PrimaryColor,
+  4px 0 $PrimaryColor,
+  5px 0 $PrimaryColor,
+  6px 0 $PrimaryColor;
 }
 
 .myLogo.blink {
   max-height: 100px;
-  color: #eeeeee;
+  color: $mainWhite;
 }
 
 .myLogo.blink .title-A {
-  text-shadow: 1px 0 white, 2px 0 white, 3px 0 #222831, 4px 0 white, 5px 0 #222831, 6px 0 white, 7px 0 #222831, 8px 0 white;
+  text-shadow:
+  1px 0 white,
+  2px 0 white,
+  3px 0 $mainBlack,
+  4px 0 white,
+  5px 0 $mainBlack,
+  6px 0 white,
+  7px 0 $mainBlack,
+  8px 0 white;
 }
 
 .myLogo.blink .textAlter {
-  text-shadow: 1px 0 white, 2px 0 white, 3px 0 #00adb5, 4px 0 white, 5px 0 #00adb5, 6px 0 white, 7px 0 #00adb5, 8px 0 white, 9px 0 #00adb5, 10px 0 white, 11px 0 #00adb5, 12px 0 #00adb5, 13px 0 #00adb5, 14px 0 #00adb5;
+  text-shadow:
+  1px 0 white,
+  2px 0 white,
+  3px 0 $PrimaryColor,
+  4px 0 white,
+  5px 0 $PrimaryColor,
+  6px 0 white,
+  7px 0 $PrimaryColor,
+  8px 0 white,
+  9px 0 $PrimaryColor,
+  10px 0 white,
+  11px 0 $PrimaryColor,
+  12px 0 $PrimaryColor,
+  13px 0 $PrimaryColor,
+  14px 0 $PrimaryColor;
 }
 
 /*--------------------------------------------*/
 /* Links */
 /*--------------------------------------------*/
+
 /* navbar links Basic Layout Section */
 .navbar-light .navbar-nav .nav-link {
-  color: #222831;
+  color: $mainBlack;
 }
 
-.navbar-light .navbar-nav .nav-link .fa-home {
-  color: #00adb5;
+.navbar-light .navbar-nav .nav-link .fa-home{
+  color: $PrimaryColor;
 }
 
-a.Links:link {
-  /* Tag + Class Selector affecting the top side links. */
-  transition: all 50ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-  border: 0 #00adb5 solid;
+a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+  transition: all 50ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  border: 0 $PrimaryColor solid;
   border-width: 0;
-}
-
-a.Links:hover {
-  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
-  border-width: 1px 0;
-  /* top right bottom left */
+} a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  border-width: 1px 0;  /* top right bottom left */
 }
 
 /*--------------------------------------------*/
 /* navbar Links animation */
 /*--------------------------------------------*/
+
 .titleBar li {
-  transition: all 3000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   overflow: hidden;
   white-space: nowrap;
 }
@@ -281,26 +291,22 @@ a.Links:hover {
 .nav-item.offblink {
   max-height: 0;
   transform: rotateX(0deg);
-}
-
-.nav-item.onLink {
+} .nav-item.onLink {
   max-height: 200px;
   transform: rotateX(-360deg);
 }
 
-.navbar-nav .btn-secondary {
-  transition: all 500ms linear;
-  /* custom */
+.navbar-nav .btn-secondary{
+  transition: all 500ms linear; /* custom */
   color: white;
-  background-color: #00adb5;
+  background-color: $PrimaryColor;
   border-color: white;
   border-radius: 50%;
 }
-
 .navbar-nav .btn-secondary:hover {
-  color: #00adb5;
+  color: $PrimaryColor;
   background-color: white;
-  border-color: #00adb5;
+  border-color: $PrimaryColor;
   border-radius: 50%;
 }
 
@@ -311,11 +317,8 @@ a.Links:hover {
   border: 0 solid #08d9d6;
   border-radius: 50px;
   overflow: hidden;
-  transition: all 750ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.navbar-toggler:hover {
+  transition: all 750ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .navbar-toggler:hover {
   transform: rotate(360deg);
   border: 0px solid #08d9d6;
 }
@@ -324,34 +327,28 @@ a.Links:hover {
   font-size: 0;
   transform: rotate(360deg);
   color: #ff2e63;
-}
-
-.navbar-toggler.onLink {
+} .navbar-toggler.onLink {
   color: #08d9d6;
-}
-
-.navbar-toggler.onLink:hover {
+} .navbar-toggler.onLink:hover {
   color: #252a34;
 }
+
+
 
 /*--------------------------------------------*/
 /* navbar links Responsive Section */
 /*--------------------------------------------*/
+
 /* 4K viewport (>1441px) */
 @media (min-width: 1441px) {
-  a.Links:link {
-    /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;
-    /* top right/left bottom */
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    padding: 10px 2px 14px;  /* top right/left bottom */
     font-size: 0.95vw;
-  }
-
-  a.Links:hover {
-    /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
     font-size: 1.05vw;
   }
 
-  .navbar-nav .btn-secondary {
+  .navbar-nav .btn-secondary{
     font-size: 1.1vw;
   }
 
@@ -359,22 +356,17 @@ a.Links:hover {
     font-size: 1.2vw;
   }
 }
+
 /* Laptop L viewport (1440px - 1025px) and Laptop viewport (1024px - 769px) */
-@media (max-width: 1440px) and (min-width: 1200px) {
-  a.Links:link {
-    /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;
-    /* top right/left bottom */
-    font-size: 0.95vw;
-    /* (18px font-size / 2560px width */
-  }
-
-  a.Links:hover {
-    /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+@media (max-width: 1440px) and (min-width: 1200px){
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    padding: 10px 2px 14px;  /* top right/left bottom */
+    font-size: 0.95vw;  /* (18px font-size / 2560px width */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
     font-size: 1.05vw;
   }
 
-  .navbar-nav .btn-secondary {
+  .navbar-nav .btn-secondary{
     font-size: 1.1vw;
   }
 
@@ -382,23 +374,17 @@ a.Links:hover {
     font-size: 1.2vw;
   }
 }
-@media (max-width: 1199px) and (min-width: 769px) {
-  a.Links:link {
-    /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;
-    /* top right/left bottom */
-    font-size: 0.95vw;
-    /* (18px font-size / 2560px width */
-  }
 
-  a.Links:hover {
-    /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+@media (max-width: 1199px) and (min-width: 769px){
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    padding: 10px 2px 14px;  /* top right/left bottom */
+    font-size: 0.95vw;  /* (18px font-size / 2560px width */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
     font-size: 1.05vw;
   }
 
-  .navbar-nav .btn-secondary {
-    margin: 15px 0 0;
-    /* top right/left bottom */
+  .navbar-nav .btn-secondary{
+    margin: 15px 0 0;  /* top right/left bottom */
     font-size: 1.1vw;
   }
 
@@ -410,24 +396,18 @@ a.Links:hover {
     font-size: 2.5vw;
   }
 }
-/* Tablet viewport (768px - 426px) */
-@media (max-device-width: 768px) and (min-device-width: 426px) {
-  a.Links:link {
-    /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;
-    /* top right/left bottom */
-    font-size: 1.4vw;
-    /* (18px font-size / 2560px width */
-  }
 
-  a.Links:hover {
-    /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+/* Tablet viewport (768px - 426px) */
+@media (max-device-width: 768px) and (min-device-width: 426px){
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    padding: 10px 2px 14px;  /* top right/left bottom */
+    font-size: 1.4vw;  /* (18px font-size / 2560px width */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
     font-size: 1.5vw;
   }
 
-  .navbar-nav .btn-secondary {
-    margin: 15px 0 0;
-    /* top right/left bottom */
+  .navbar-nav .btn-secondary{
+    margin: 15px 0 0;  /* top right/left bottom */
     font-size: 1.4vw;
   }
 
@@ -439,24 +419,18 @@ a.Links:hover {
     font-size: 3vw;
   }
 }
+
 /* Mobile L viewport (425px - 376px) */
 @media (max-device-width: 425px) and (min-device-width: 376px) {
-  a.Links:link {
-    /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;
-    /* top right/left bottom */
-    font-size: 2vw;
-    /* (18px font-size / 2560px width */
-  }
-
-  a.Links:hover {
-    /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    padding: 10px 2px 14px;  /* top right/left bottom */
+    font-size: 2vw;  /* (18px font-size / 2560px width */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
     font-size: 2.1vw;
   }
 
-  .navbar-nav .btn-secondary {
-    margin: 25px 0 0;
-    /* top right/left bottom */
+  .navbar-nav .btn-secondary{
+    margin: 25px 0 0;  /* top right/left bottom */
     font-size: 2vw;
   }
 
@@ -468,24 +442,18 @@ a.Links:hover {
     font-size: 5vw;
   }
 }
+
 /* Mobile M viewport (375px - 321px) and Mobile S viewport (>320px) */
 @media (max-device-width: 375px) and (min-device-width: 0px) {
-  a.Links:link {
-    /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;
-    /* top right/left bottom */
-    font-size: 2vw;
-    /* (18px font-size / 2560px width */
-  }
-
-  a.Links:hover {
-    /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    padding: 10px 2px 14px;  /* top right/left bottom */
+    font-size: 2vw;  /* (18px font-size / 2560px width */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
     font-size: 2.1vw;
   }
 
-  .navbar-nav .btn-secondary {
-    margin: 25px 0 0;
-    /* top right/left bottom */
+  .navbar-nav .btn-secondary{
+    margin: 25px 0 0;  /* top right/left bottom */
     font-size: 3vw;
   }
 
@@ -497,40 +465,38 @@ a.Links:hover {
     font-size: 5vw;
   }
 }
+
 /*  */
+
+
+
 /*--------------------------------------------*/
 /* Navbar sideWipe animation */
 /*--------------------------------------------*/
+
 .titleBar .sideWipe {
   height: 5px;
   bottom: 0;
   width: 25%;
   position: absolute;
   margin: 0;
-  background-color: #222831;
+  background-color: $mainBlack;
   overflow: hidden;
   z-index: 4;
-  transition: all 7000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-}
-
-.titleBar .leftSideWipe {
-  /* When the bar is on the left side, we want it to switch to the right side instantly. */
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+} .titleBar .leftSideWipe {  /* When the bar is on the left side, we want it to switch to the right side instantly. */
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
   left: -27%;
-}
-
-.titleBar .rightSideWipe {
-  /* Then the bar is on the right side, we want it to switch to the left side slowly. */
-  transition: all 7000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+} .titleBar .rightSideWipe {  /* Then the bar is on the right side, we want it to switch to the left side slowly. */
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   left: 126%;
 }
 
 /*##################################################*/
 /* Unique Div: Large Image Container Div */
 /*##################################################*/
-.lgContainerDiv {
-  /* Class Selector: Outer Div containing Purpose text boxes */
+
+.lgContainerDiv {  /* Class Selector: Outer Div containing Purpose text boxes */
   margin: 0 auto;
 }
 
@@ -541,24 +507,19 @@ a.Links:hover {
 
 .noFilt {
   filter: hue-rotate(0deg);
-}
-
-.filt360 {
+} .filt360 {
   filter: hue-rotate(90deg);
 }
 
 /*--------------------------------------------*/
 /* Large Image Container animation  */
 /*--------------------------------------------*/
+
 /* The basic transition animation speeds */
 .transition1 {
-  transition: all 3000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.transition2 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
+  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
 
 /* Large Image Container Responsive Section */
@@ -567,9 +528,11 @@ a.Links:hover {
     height: 55rem;
   }
 }
+
 /*##################################################*/
 /* Unique Div: RevealCard Div */
 /*##################################################*/
+
 .RevealCard {
   overflow-x: hidden;
   margin-top: 25px;
@@ -588,11 +551,8 @@ a.Links:hover {
   margin: 0;
   background-color: #08d9d6;
   overflow: hidden;
-  transition: all 7000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.RevealCard .sideWipe2 {
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .RevealCard .sideWipe2 {
   height: 6px;
   bottom: 0;
   width: 25%;
@@ -600,19 +560,12 @@ a.Links:hover {
   margin: 0;
   background-color: #08d9d6;
   overflow: hidden;
-  transition: all 7000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.RevealCard .leftSideWipe {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .RevealCard .leftSideWipe {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   left: -27%;
-}
-
-.RevealCard .rightSideWipe {
-  transition: all 7000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+} .RevealCard .rightSideWipe {
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   left: 126%;
 }
 
@@ -622,44 +575,30 @@ a.Links:hover {
   position: relative;
   margin: 0;
   background-color: #08d9d6;
-}
-
-.RevealCard .upVertWipe {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+} .RevealCard .upVertWipe {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   top: -300px;
-}
-
-.RevealCard .downVertWipe {
-  transition: all 4000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+} .RevealCard .downVertWipe {
+  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   top: 600px;
-}
-
-.RevealCard .upVertWipe1 {
-  transition: all 4000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+} .RevealCard .upVertWipe1 {
+  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   top: -300px;
-}
-
-.RevealCard .downVertWipe1 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+} .RevealCard .downVertWipe1 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   top: 600px;
 }
 
 .RevealCard .verticalLine {
-  background-color: #222831;
+  background-color: $mainBlack;
   position: relative;
   height: 300px;
   width: 10px;
   top: 0;
   margin: auto;
   overflow: hidden;
-}
-
-.RevealCard .verticalLine2 {
-  background-color: #222831;
+} .RevealCard .verticalLine2 {
+  background-color: $mainBlack;
   position: relative;
   height: 300px;
   width: 10px;
@@ -669,16 +608,15 @@ a.Links:hover {
 }
 
 .RevealCard .container-fluid {
-  margin: 9% auto;
-  /* top/bottom right/left */
+  margin: 9% auto;  /* top/bottom right/left */
   width: 60%;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 .RevealCard .container-fluid .card {
   border: 0;
-  border-top: 10px solid #222831;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  border-top: 10px solid $mainBlack;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 .RevealCard .container-fluid .card-title {
@@ -686,22 +624,25 @@ a.Links:hover {
   margin: 0;
   max-height: auto;
   color: #393e46;
-  background-color: #eeeeee;
+  background-color: $mainWhite;
   font-size: 9.375rem;
   font-weight: 100;
-  text-shadow: 2px 2px #00adb5;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  text-shadow: 2px 2px $PrimaryColor;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 .RevealCard .cardSec:hover .card-title {
-  color: #00adb5;
-  text-shadow: 2px 2px #393e46, 3px 3px #393e46, 4px 4px #393e46;
+  color: $PrimaryColor;
+  text-shadow:
+    2px 2px #393e46,
+    3px 3px #393e46,
+    4px 4px #393e46;
 }
 
 .RevealCard .container-fluid .card.Text {
   max-height: 1000px;
-  color: #eeeeee;
-  background-color: #00adb5;
+  color: $mainWhite;
+  background-color: $PrimaryColor;
 }
 
 .RevealCard .container-fluid .card .fas.fa-plus {
@@ -709,7 +650,7 @@ a.Links:hover {
   font-size: 1rem;
   overflow: hidden;
   max-height: 10000px;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 .RevealCard .container-fluid .card .card-text {
@@ -718,7 +659,7 @@ a.Links:hover {
   font-size: 1.45rem;
   overflow: hidden;
   text-align: left;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 .RevealCard .container-fluid .card .card-text small {
@@ -735,15 +676,13 @@ a.Links:hover {
   max-height: 0;
   padding: 0;
   font-size: 0;
-  background-color: #eeeeee;
+  background-color: $mainWhite;
   border-bottom: 0 solid #393e46;
-}
-
-.RevealCard .container-fluid .card .card-text.textReveal {
+} .RevealCard .container-fluid .card .card-text.textReveal {
   max-height: 1000px;
   padding: 25px 20px;
   color: #393e46;
-  background-color: #eeeeee;
+  background-color: $mainWhite;
   border-bottom: 10px solid #393e46;
 }
 
@@ -759,8 +698,7 @@ a.Links:hover {
   .RevealCard .container-fluid .card .card-text {
     font-size: 1.35rem;
   }
-}
-@media (max-width: 991px) {
+} @media (max-width: 991px) {
   .RevealCard .container-fluid .card-title {
     font-size: 7.375rem;
   }
@@ -772,8 +710,7 @@ a.Links:hover {
   .RevealCard .container-fluid .card .card-text {
     font-size: 1.3rem;
   }
-}
-@media (max-width: 767px) {
+} @media (max-width: 767px) {
   .RevealCard .container-fluid .card-title {
     font-size: 5.375rem;
   }
@@ -785,8 +722,7 @@ a.Links:hover {
   .RevealCard .container-fluid .card .card-text {
     font-size: 1.2rem;
   }
-}
-@media (max-width: 575px) {
+} @media (max-width: 575px) {
   .RevealCard .container-fluid .card-title {
     font-size: 4.375rem;
   }
@@ -799,9 +735,11 @@ a.Links:hover {
     font-size: 1.1rem;
   }
 }
+
 /*##################################################*/
 /* Unique Div: Large Image Container Div (index.html) */
 /*##################################################*/
+
 /*--------------------------------------------*/
 /* Large Image Container Div specific animation */
 /*--------------------------------------------*/
@@ -824,20 +762,15 @@ a.Links:hover {
 }
 
 .IndexLgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.IndexLgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .IndexLgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
 
 /*--------------------------------------------*/
 /* indexQuote parallax quote  */
 /*--------------------------------------------*/
-.indexQuote {
-  /* Original formatting of the indexQuote (adjusting the card's default formatting */
+.indexQuote {  /* Original formatting of the indexQuote (adjusting the card's default formatting */
   border: none;
   background-color: transparent;
   overflow: hidden;
@@ -852,9 +785,7 @@ a.Links:hover {
 .indexQuote.qtextShadow a {
   color: inherit;
   text-decoration: none;
-}
-
-.indexQuote.qtextShadow a:hover {
+} .indexQuote.qtextShadow a:hover {
   color: inherit;
   text-decoration: none;
 }
@@ -862,12 +793,12 @@ a.Links:hover {
 .indexQuote.qtextShadowHover a {
   color: inherit;
   text-decoration: none;
-}
-
-.indexQuote.qtextShadowHover a:hover {
+} .indexQuote.qtextShadowHover a:hover {
   color: inherit;
   text-decoration: none;
 }
+
+
 
 .indexQuote .card-title {
   font-size: 6rem;
@@ -875,14 +806,98 @@ a.Links:hover {
 
 /* The normal text shadow */
 .indexQuote.qtextShadow {
-  color: #222831;
-  text-shadow: 1px 1px #00adb5, 2px 2px #00adb5, 3px 3px #00adb5, 4px 4px #00adb5, 5px 5px #00adb5, 6px 6px #00adb5, 7px 7px #00adb5, 8px 8px #00adb5, 9px 9px #00adb5, 10px 10px #00adb5, 11px 11px #222831, 12px 12px #222831, 13px 13px #222831, 14px 14px #222831;
+  color: $mainBlack;
+  text-shadow:
+    1px 1px $PrimaryColor,
+    2px 2px $PrimaryColor,
+    3px 3px $PrimaryColor,
+    4px 4px $PrimaryColor,
+    5px 5px $PrimaryColor,
+    6px 6px $PrimaryColor,
+    7px 7px $PrimaryColor,
+    8px 8px $PrimaryColor,
+    9px 9px $PrimaryColor,
+    10px 10px $PrimaryColor,
+    11px 11px $mainBlack,
+    12px 12px $mainBlack,
+    13px 13px $mainBlack,
+    14px 14px $mainBlack
+  ;
 }
 
 /* The hover text shadow */
 .indexQuote.qtextShadowHover {
-  color: #00adb5;
-  text-shadow: 1px -1px 0px #00adb5, 2px -2px 0px #00adb5, 3px -3px 0px #00adb5, 4px -4px 0px #00adb5, 5px -5px 0px #00adb5, 6px -6px 0px #00adb5, 7px -7px 0px #00adb5, 8px -8px 0px #00adb5, 9px -9px 0px #00adb5, 10px -10px 0px #222831, 11px -11px 0px #00adb5, 12px -12px 0px #222831, 13px -13px 0px #00adb5, 14px -14px 0px #222831, 15px -15px 0px #00adb5, 16px -16px 0px #222831, 17px -17px 0px #00adb5, 18px -18px 0px #222831, 19px -19px 0px #00adb5, 20px -20px 0px #222831, 21px -21px 0px #00adb5, 22px -22px 0px #222831, 23px -23px 8px #00adb5, 24px -24px 0px #222831, 25px -25px 0px #00adb5, 26px -26px 0px #222831, 27px -27px 0px #00adb5, 28px -28px 0px #222831;
+  color: $PrimaryColor;
+  text-shadow:
+    /*1px 0 0px $mainWhite,
+    2px 0 0px $mainWhite,
+    3px 0 0px $mainWhite,
+    4px 0 0px $mainWhite,
+    5px 0 0px $mainWhite,
+    6px 0 0px $mainWhite,
+    7px 0 0px $mainWhite,
+    8px 0 0px $mainWhite,
+    9px 0 0px $mainWhite,
+    10px 0 0px $mainWhite,
+    11px 0 0px $mainWhite,
+    12px 0 0px $mainWhite,
+    13px 0 0px $mainWhite,
+    14px 0 0px $mainWhite,
+    15px 0 0px $mainWhite,
+    16px 0 0px $mainWhite,
+    17px 0 0px $mainWhite,
+    18px 0 0px $mainWhite,
+    19px 0 0px $mainWhite,
+    20px 0 0px $PrimaryColor,
+    21px 0 0px $mainBlack,
+    22px 0 0px $PrimaryColor,
+    23px 0 8px $mainBlack,
+    24px 0 0px $PrimaryColor,
+    25px 0 0px $mainBlack,
+    26px 0 0px $PrimaryColor,
+    27px 0 0px $mainBlack,
+    28px 0 0px $PrimaryColor,
+    29px 0 0px $mainBlack,
+    30px 0 0px $PrimaryColor,
+    31px 0 0px $mainBlack,
+    32px 0 0px $PrimaryColor,
+    33px 0 0px $mainBlack,
+    34px 0 0px $PrimaryColor,
+    35px 0 0px $mainBlack,
+    36px 0 0px $PrimaryColor,
+    37px 0 0px $mainBlack,
+    38px 0 0px $PrimaryColor,
+    39px 0 0px $mainBlack*/
+
+    1px -1px 0px $PrimaryColor,
+    2px -2px 0px $PrimaryColor,
+    3px -3px 0px $PrimaryColor,
+    4px -4px 0px $PrimaryColor,
+    5px -5px 0px $PrimaryColor,
+    6px -6px 0px $PrimaryColor,
+    7px -7px 0px $PrimaryColor,
+    8px -8px 0px $PrimaryColor,
+    9px -9px 0px $PrimaryColor,
+    10px -10px 0px $mainBlack,
+    11px -11px 0px $PrimaryColor,
+    12px -12px 0px $mainBlack,
+    13px -13px 0px $PrimaryColor,
+    14px -14px 0px $mainBlack,
+    15px -15px 0px $PrimaryColor,
+    16px -16px 0px $mainBlack,
+    17px -17px 0px $PrimaryColor,
+    18px -18px 0px $mainBlack,
+    19px -19px 0px $PrimaryColor,
+    20px -20px 0px $mainBlack,
+    21px -21px 0px $PrimaryColor,
+    22px -22px 0px $mainBlack,
+    23px -23px 8px $PrimaryColor,
+    24px -24px 0px $mainBlack,
+    25px -25px 0px $PrimaryColor,
+    26px -26px 0px $mainBlack,
+    27px -27px 0px $PrimaryColor,
+    28px -28px 0px $mainBlack
+  ;
 }
 
 /* IndexQuote Container Responsive Section */
@@ -894,8 +909,7 @@ a.Links:hover {
   .indexQuote {
     right: 5%;
   }
-}
-@media (max-width: 1199px) {
+} @media (max-width: 1199px) {
   .indexQuote .card-title {
     font-size: 3.8rem;
   }
@@ -903,8 +917,9 @@ a.Links:hover {
   .indexQuote {
     right: 5%;
   }
-}
-@media (max-width: 767px) {
+} @media (max-width: 991px) {
+
+} @media (max-width: 767px) {
   .indexQuote .card-title {
     font-size: 2.5rem;
   }
@@ -912,8 +927,7 @@ a.Links:hover {
   .indexQuote {
     right: 10%;
   }
-}
-@media (max-width: 575px) {
+} @media (max-width: 575px) {
   .indexQuote .card-title {
     font-size: 1.2rem;
   }
@@ -922,12 +936,11 @@ a.Links:hover {
     right: 10%;
   }
 }
+
 /* These handle the indexQuote animation when the page opens */
 .indexQuote.displayQuote {
   max-height: 1000px;
-}
-
-.indexQuote.displayNone {
+} .indexQuote.displayNone {
   max-height: 0;
   transform: translate3d(100px, 0, 100px) rotateX(45deg) rotateZ(-30deg);
 }
@@ -935,6 +948,9 @@ a.Links:hover {
 /*##################################################*/
 /* Unique Div: TwoColSec div */
 /*##################################################*/
+
+.TwoColSec {}
+
 .TwoColSec .container-fluid {
   width: 100%;
   padding: 0;
@@ -943,41 +959,41 @@ a.Links:hover {
 .TwoColSec .ColSide {
   background-color: white;
   height: auto;
-  border-color: #eeeeee;
+  border-color: $mainWhite;
 }
 
 .TwoColSec .LeftColSide {
   white-space: normal;
   text-align: left;
-  color: #222831;
+  color: $mainBlack;
   margin: 0;
   padding: 7% 35% 15% 5%;
   font-size: 2.2rem;
   line-height: 30px;
-  transition: all 0ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 .TwoColSec .RightColSide {
   white-space: normal;
   text-align: left;
   margin: 0;
-  color: #222831;
+  color: $mainBlack;
   padding: 7% 7% 30% 6%;
   font-size: 1.4rem;
-  transition: all 0ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
+
 
 /*##################################################*/
 /* Unique Div: FeaturedTextDiv Div */
 /*##################################################*/
+
 .FeaturedTextDiv {
   max-width: 100%;
   background-size: cover;
   background-attachment: fixed;
-  margin: 7% auto;
-  /* top/bottom right/left */
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
+  margin: 7% auto;  /* top/bottom right/left */
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
 }
 
 .FeaturedImgIndex {
@@ -986,14 +1002,13 @@ a.Links:hover {
 
 .FeaturedTextDiv .FeatPgh {
   margin: 10% 25% 2% 10%;
-  color: #00adb5;
+  color: $PrimaryColor;
   line-height: 25px;
   text-align: left;
   font-size: 2rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 1);
   padding: 1%;
-  transition: all 500ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
+  transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
   white-space: normal;
 }
 
@@ -1005,7 +1020,7 @@ a.Links:hover {
 }
 
 .FeaturedTextDiv .btn {
-  color: #222831 !important;
+  color: $mainBlack!important;
 }
 
 @media (max-width: 767px) {
@@ -1017,112 +1032,112 @@ a.Links:hover {
     font-size: 0.9rem;
   }
 }
+
+
 /*##################################################*/
 /* Unique Div: bottomBox */
 /*##################################################*/
-.bottomBox {
-  margin-top: 100px;
-  vertical-align: bottom;
-  color: #eeeeee;
-}
 
-.bottomDiv {
-  padding: 3% 8%;
-  /* top/bottom left/right */
-  margin: 0;
-  height: auto;
-  background-color: #222831;
-  font-size: 1rem;
-  /* (18px font-size / 2560px width */
-  text-decoration: none;
-}
+    .bottomBox {
+      margin-top: 100px;
+      vertical-align: bottom;
+      color: $mainWhite;
+    }
 
-.bottomDiv {
-  text-align: right;
-  color: #eeeeee;
-}
+    .bottomDiv {
+      padding: 3% 8%;  /* top/bottom left/right */
+      margin: 0;
+      height: auto;
+      background-color: $mainBlack;
+      font-size: 1rem;  /* (18px font-size / 2560px width */
+      text-decoration: none;
+    }
 
-.bottomDiv .col-sm-2 {
-  color: #eeeeee;
-}
+    .bottomDiv {
+      text-align: right;
+      color: $mainWhite;
+    }
 
-.bottomLink {
-  color: #eeeeee;
-  text-decoration: none;
-  transition: all 500ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
+    .bottomDiv .col-sm-2 {
+      color: $mainWhite;
+    }
 
-.bottomLink:hover {
-  text-decoration: none;
-  color: #ff2e63;
-}
+    .bottomLink {
+      color: $mainWhite;
+      text-decoration: none;
+      transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    }
 
-.socialLink {
-  color: #eeeeee;
-  text-decoration: none;
-  padding: 8px;
-  border-style: none;
-  border-width: 0;
-  transition: all 500ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
+    .bottomLink:hover {
+      text-decoration: none;
+      color: #ff2e63;
+    }
 
-.socialLink:hover {
-  text-decoration: none;
-  color: #08d9d6;
-  border-width: 1px;
-  border-radius: 100%;
-  border-style: solid;
-  border-color: #08d9d6;
-}
+    .socialLink {
+      color: $mainWhite;
+      text-decoration: none;
+      padding: 8px;
+      border-style: none;
+      border-width: 0;
+      transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    }
 
-.copyrightText {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  color: #eeeeee;
-  font-size: 1rem;
-  text-align: left;
-}
+    .socialLink:hover {
+      text-decoration: none;
+      color: #08d9d6;
+      border-width: 1px;
+      border-radius: 100%;
+      border-style: solid;
+      border-color: #08d9d6;
+    }
 
-.myLogo_bottom {
-  /* Class Selector */
-  color: #08d9d6;
-  padding: 0;
-  /* top right bottom left */
-  font-size: 2rem;
-  /* (50px font-size / 2560px width */
-}
+    .copyrightText {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      color: $mainWhite;
+      font-size: 1rem;
+      text-align: left;
+    }
 
-.middleLine_bottom {
-  color: #ff2e63;
-}
+    .myLogo_bottom {  /* Class Selector */
+      color: #08d9d6;
+      padding: 0;  /* top right bottom left */
+      font-size: 2rem;   /* (50px font-size / 2560px width */
+    }
 
-.textAlter_bottom {
-  text-decoration: underline;
-  color: #eeeeee;
-}
+    .middleLine_bottom {
+      color: #ff2e63;
+    }
 
-@media (max-width: 1023px) {
-  .bottomDiv {
-    font-size: 1.25rem;
-  }
+    .textAlter_bottom {
+      text-decoration: underline;
+      color: $mainWhite;
+    }
 
-  .myLogo_bottom {
-    /* Class Selector */
-    font-size: 1.8rem;
-  }
+    @media (max-width: 1023px) {
+      .bottomDiv {
+        font-size: 1.25rem;
+      }
 
-  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-6 {
-    padding-top: 10px;
-  }
-}
+      .myLogo_bottom {  /* Class Selector */
+        font-size: 1.8rem;
+      }
+
+      .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-6 {
+        padding-top: 10px;
+      }
+    }
+
+
+
 /*##################################################*/
 /* 002.html: MY RELEVANT EXPERIENCES */
 /*##################################################*/
+
 /*--------------------------------------------*/
 /* Large Image Container Div specific animation */
 /*--------------------------------------------*/
-.lgContainerDiv {
-  /* Class Selector: Outer Div containing Purpose text boxes */
+.lgContainerDiv {  /* Class Selector: Outer Div containing Purpose text boxes */
   margin: 100px auto;
 }
 
@@ -1145,18 +1160,15 @@ a.Links:hover {
 }
 
 .pg2LgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.pg2LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .pg2LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
 
 /*--------------------------------------------*/
 /* indexQuote parallax quote  */
 /*--------------------------------------------*/
+
 .pg2LgContainer .widthZero {
   max-width: 0;
 }
@@ -1176,7 +1188,9 @@ a.Links:hover {
   background-color: white;
   overflow: hidden;
   z-index: 2;
-  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86), top 0ms ease-out;
+  transition:
+    all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860),
+    top 0ms ease-out;
 }
 
 .pg2LgContainer .boxQuote .card-title {
@@ -1195,12 +1209,57 @@ a.Links:hover {
 }
 
 .pg2LgContainer .boxShadowExp {
-  box-shadow: 1px 1px #00adb5, 2px 2px #eeeeee, 3px 3px #00adb5, 4px 4px #eeeeee, 5px 5px #00adb5, 6px 6px #eeeeee, 7px 7px #00adb5, 8px 8px #eeeeee, 9px 9px #00adb5, 10px 10px #eeeeee, 11px 11px #00adb5, 12px 12px #eeeeee, 13px 13px #00adb5, 14px 14px #eeeeee, 15px 15px #00adb5, 16px 16px #eeeeee, 17px 17px #00adb5, 18px 18px #eeeeee, 19px 19px #00adb5, 20px 20px #eeeeee, 21px 21px #00adb5, 22px 22px #eeeeee, 23px 23px #00adb5, 24px 24px #eeeeee, 25px 25px #00adb5, 26px 26px #eeeeee, 27px 27px #00adb5, 28px 28px #eeeeee, 29px 29px #00adb5, 30px 30px #eeeeee, 31px 31px #00adb5, 32px 32px #eeeeee, 33px 33px #00adb5, 34px 34px #eeeeee, 35px 35px #00adb5, 36px 36px #eeeeee, 37px 37px #00adb5, 38px 38px #eeeeee, 39px 39px #00adb5;
+  box-shadow:
+    1px 1px $PrimaryColor,
+    2px 2px $mainWhite,
+    3px 3px $PrimaryColor,
+    4px 4px $mainWhite,
+    5px 5px $PrimaryColor,
+    6px 6px $mainWhite,
+    7px 7px $PrimaryColor,
+    8px 8px $mainWhite,
+    9px 9px $PrimaryColor,
+    10px 10px $mainWhite,
+    11px 11px $PrimaryColor,
+    12px 12px $mainWhite,
+    13px 13px $PrimaryColor,
+    14px 14px $mainWhite,
+    15px 15px $PrimaryColor,
+    16px 16px $mainWhite,
+    17px 17px $PrimaryColor,
+    18px 18px $mainWhite,
+    19px 19px $PrimaryColor,
+    20px 20px $mainWhite,
+    21px 21px $PrimaryColor,
+    22px 22px $mainWhite,
+    23px 23px $PrimaryColor,
+    24px 24px $mainWhite,
+    25px 25px $PrimaryColor,
+    26px 26px $mainWhite,
+    27px 27px $PrimaryColor,
+    28px 28px $mainWhite,
+    29px 29px $PrimaryColor,
+    30px 30px $mainWhite,
+    31px 31px $PrimaryColor,
+    32px 32px $mainWhite,
+    33px 33px $PrimaryColor,
+    34px 34px $mainWhite,
+    35px 35px $PrimaryColor,
+    36px 36px $mainWhite,
+    37px 37px $PrimaryColor,
+    38px 38px $mainWhite,
+    39px 39px $PrimaryColor;
 }
 
 .pg2LgContainer .qtextShadowHover {
   color: crimson;
-  text-shadow: 1px 1px #eeeeee, 2px 2px #eeeeee, 3px 3px #000000, 4px 4px #000000, 5px 5px #000000;
+  text-shadow:
+    1px 1px $mainWhite,
+    2px 2px $mainWhite,
+    3px 3px #000000,
+    4px 4px #000000,
+    5px 5px #000000
+  ;
 }
 
 @media (min-width: 1441px) {
@@ -1213,6 +1272,7 @@ a.Links:hover {
     width: 35%;
   }
 }
+
 @media (max-width: 1199px) {
   .pg2LgContainer .boxQuote .card-title {
     font-size: 2.25rem;
@@ -1223,6 +1283,11 @@ a.Links:hover {
     width: 50%;
   }
 }
+
+@media (max-width: 991px) {
+
+}
+
 @media (max-width: 767px) {
   .pg2LgContainer .boxQuote .card-title {
     font-size: 2rem;
@@ -1233,6 +1298,7 @@ a.Links:hover {
     width: 59%;
   }
 }
+
 @media (max-width: 575px) {
   .pg2LgContainer .boxQuote .card-title {
     font-size: 2rem;
@@ -1243,13 +1309,14 @@ a.Links:hover {
     width: 75%;
   }
 }
+
 /* FourBlock: 002.html */
+
 .FourBlock {
   text-align: left;
   margin-top: 100px;
   margin-bottom: 150px;
-  transition: all 1000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+  transition: all 1000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 }
 
 .FourBlock .container-fluid {
@@ -1270,6 +1337,7 @@ a.Links:hover {
     font-size: 1.5rem;
   }
 }
+
 @media (max-width: 1440px) {
   .FourBlock .col-md-6 {
     padding: 25px 100px;
@@ -1283,6 +1351,7 @@ a.Links:hover {
     font-size: 1.25rem;
   }
 }
+
 @media (max-width: 1199px) {
   .FourBlock .col-md-6 {
     padding: 25px 75px;
@@ -1296,6 +1365,7 @@ a.Links:hover {
     font-size: 1rem;
   }
 }
+
 @media (max-width: 991px) {
   .FourBlock .col-md-6 {
     padding: 25px 50px;
@@ -1309,6 +1379,7 @@ a.Links:hover {
     font-size: 1rem;
   }
 }
+
 @media (max-width: 767px) {
   .FourBlock .col-md-6 {
     padding: 25px 40px;
@@ -1322,24 +1393,24 @@ a.Links:hover {
     font-size: 1rem;
   }
 }
+
 .FourBlockTrnstn {
-  transition: all 1000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+  transition: all 1000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 }
 
 /*##################################################*/
 /* 003.html: MY EDUCATION & SKILLS */
 /*##################################################*/
+
 /*--------------------------------------------*/
 /* Large Image Container Div specific animation */
 /*--------------------------------------------*/
-.pg3LgContainer {
-  /* Class Selector: Outer Div containing Purpose text boxes */
+
+.pg3LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
 }
 
 .pg3LgContainer .container-fluid {
-  transition: all 6000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+  transition: all 6000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 }
 
 .pg3LgContainer .lgContainerInit {
@@ -1361,13 +1432,9 @@ a.Links:hover {
 }
 
 .pg3LgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.pg3LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .pg3LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
 
 .FeaturedUsers {
@@ -1376,7 +1443,7 @@ a.Links:hover {
   background-attachment: fixed;
   height: 500px;
   margin: auto;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 .FeaturedUsers.First {
@@ -1393,12 +1460,18 @@ a.Links:hover {
 }
 
 .FeatTitleUsers {
-  text-shadow: 2px 2px #eeeeee, 3px 3px #eeeeee, 4px 4px #eeeeee, 5px 5px #eeeeee, 6px 6px #eeeeee, 7px 7px #222831, 8px 8px #eeeeee;
-  color: #222831;
+  text-shadow:
+    2px 2px $mainWhite,
+    3px 3px $mainWhite,
+    4px 4px $mainWhite,
+    5px 5px $mainWhite,
+    6px 6px $mainWhite,
+    7px 7px $mainBlack,
+    8px 8px $mainWhite;
+  color: $mainBlack;
   margin-top: 100px;
   font-size: 5.375rem;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
 }
 
 .FeatPghUsers {
@@ -1407,10 +1480,9 @@ a.Links:hover {
   text-shadow: 1px 1px #ff2e63;
   line-height: 25px;
   font-size: 1.75rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 1);
   padding: 1%;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
 }
 
 .FeaturedUsers .btn {
@@ -1418,8 +1490,7 @@ a.Links:hover {
   width: 30%;
   margin: auto;
   margin-top: 10px;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
 }
 
 @media (max-width: 767px) {
@@ -1435,20 +1506,21 @@ a.Links:hover {
     font-size: 0.9rem;
   }
 }
+
 /*##################################################*/
 /* 004.html: MY DRIVE & PHILOSOPHY */
 /*##################################################*/
+
 /*--------------------------------------------*/
 /* Large Image Container Div specific animation */
 /*--------------------------------------------*/
-.pg4LgContainer {
-  /* Class Selector: Outer Div containing Purpose text boxes */
+
+.pg4LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
 }
 
 .pg4LgContainer .container-fluid {
-  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: all 6000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  transition: all 6000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 }
 
 .pg4LgContainer .lgContainerInit {
@@ -1470,19 +1542,16 @@ a.Links:hover {
 }
 
 .pg4LgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.pg4LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .pg4LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
 
 /*--------------------------------------------*/
 /* Large Image Container Div specific animation */
 /*--------------------------------------------*/
-.FeaturedImgPg4 {
+
+.FeaturedImgPg4  {
   background-image: url("004_Images/EarthMod1.jpg");
   background-position: bottom;
 }
@@ -1490,18 +1559,17 @@ a.Links:hover {
 /*##################################################*/
 /* 005.html: MY INTERESTS */
 /*##################################################*/
-.pg5LgContainer {
-  /* Class Selector: Outer Div containing Purpose text boxes */
+
+.pg5LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
 }
 
 .pg5LgContainer .container-fluid {
-  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: all 4000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 }
 
 .pg5LgContainer .lgContainerInit {
-  background-image: url("005-Images/books1Art6.jpg");
+  background-image: url('005-Images/books1Art6.jpg');
   background-size: 1000% 1000%;
   background-position: bottom;
   filter: contrast(10000%) brightness(1000%);
@@ -1509,7 +1577,7 @@ a.Links:hover {
 }
 
 .pg5LgContainer .lgContainerFinal {
-  background-image: url("005-Images/books1Art6.jpg");
+  background-image: url('005-Images/books1Art6.jpg');
   background-size: 120% 191%;
   background-position: center;
   filter: contrast(1000%) brightness(1000%);
@@ -1517,30 +1585,25 @@ a.Links:hover {
 }
 
 .pg5LgContainer .transition1 {
-  transition: all 3000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.pg5LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
+  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .pg5LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
 
 /*##################################################*/
 /* 006.html: CONTACT ME */
 /*##################################################*/
-.pg6LgContainer {
-  /* Class Selector: Outer Div containing Purpose text boxes */
+
+.pg6LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
 }
 
 .pg6LgContainer .container-fluid {
-  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 }
 
 .pg6LgContainer .lgContainerInit {
-  background-image: url("006-Images/ProfilePic1.jpg");
+  background-image: url('006-Images/ProfilePic1.jpg');
   background-size: 4%;
   background-position: top;
   filter: contrast(100%) brightness(100%) saturate(100%) blur(10px);
@@ -1548,7 +1611,7 @@ a.Links:hover {
 }
 
 .pg6LgContainer .lgContainerFinal {
-  background-image: url("006-Images/ProfilePic1.jpg");
+  background-image: url('006-Images/ProfilePic1.jpg');
   background-size: 20%;
   background-position: center;
   background-blend-mode: lighten;
@@ -1558,18 +1621,15 @@ a.Links:hover {
 }
 
 .pg6LgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.pg6LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .pg6LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
 
 /*##################################################*/
 /* Revealing Items classes */
 /*##################################################*/
+
 /* Revealing RevealCard on scroll */
 .hideDiv {
   max-width: 0;
@@ -1578,8 +1638,8 @@ a.Links:hover {
 }
 
 .revealDiv {
-  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.15, 0.86), opacity 3000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* easeInOutCirc */
+  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+
   max-width: 2560px;
   opacity: 100%;
   transform: rotateY(0) rotateZ(0);
@@ -1592,12 +1652,13 @@ a.Links:hover {
 }
 
 .Ichi.revealDiv {
-  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.15, 0.86), opacity 3000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* easeInOutCirc */
+  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+
   max-width: 2560px;
   opacity: 100%;
   transform: rotateY(0) rotateZ(0);
 }
+
 
 /* Revealing Purpose boxes */
 .FeatPgh.hideDiv {
@@ -1607,30 +1668,31 @@ a.Links:hover {
 }
 
 .FeatPgh.revealDiv {
-  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.15, 0.86), opacity 3000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* easeInOutCirc */
+  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+
   max-width: 2560px;
   opacity: 100%;
   transform: rotateY(0) rotateZ(0);
 }
 
 .FeaturedTextDiv .btn {
-  transition: all 2500ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
+  transition: all 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
 }
 
 .myLogo {
-  transition: all 1000ms cubic-bezier(0.875, 0.005, 0.135, 1);
+  transition: all 1000ms cubic-bezier(0.875, 0.005, 0.135, 1.000);
 }
 
 .indexQuote {
-  transition: all 3000ms cubic-bezier(0.785, 0.135, 0.15, 0.86), top 300ms cubic-bezier(0.25, 0.46, 0, 1);
+  transition: all 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), top 300ms cubic-bezier(0.250, 0.460, 0.000, 1.000);
 }
 
 .pg2LgContainer .boxQuote {
-  transition: all 3000ms cubic-bezier(0.785, 0.135, 0.15, 0.86), top 300ms cubic-bezier(0.25, 0.46, 0, 1);
+  transition: all 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), top 300ms cubic-bezier(0.250, 0.460, 0.000, 1.000);
 }
 
-/**/
 
-/*# sourceMappingURL=stylesIndex.css.map */
+
+
+
+/**/
