@@ -539,38 +539,10 @@ $hoverFactor: 1.09;
 /*##################################################*/
 /* Unique Div: Large Image Container Div (index.html) */
 /*##################################################*/
-
-/*--------------------------------------------*/
-/* Large Image Container Div specific animation */
-/*--------------------------------------------*/
-.IndexLgContainer {
-  .lgContainerInit {
-    background: {
-      image: url("../images/001_IndexImages/MountainMosaic4.jpg");
-      size: 100% 120%;
-      position: right bottom;
-      attachment: fixed;
-    }
-    filter: brightness(50%);
-    border-radius: 50%;
-  }
-  .lgContainerFinal {
-    background: {
-      image: url("../images/001_IndexImages/MountainMosaic4.jpg");
-      size: 100% 120%;
-      position: top 0%;
-      attachment: fixed;
-    }
-    filter: brightness(100%);
-    border-radius: 0%;
-  }
-  .transition1 {
-    transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
-  }
-  .transition2 {
-    transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease;
-  }
-}
+$indexImage: "../images/001_IndexImages/MountainMosaic4.jpg";
+$pg2Image: "../images/002_Images/spaceImage4.jpg";
+$imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+@import 'lgContainer';
 
 //--------------------------------------------//
 // indexQuote parallax quote  //
@@ -731,40 +703,36 @@ $hoverFactor: 1.09;
 /* Unique Div: TwoColSec div */
 /*##################################################*/
 
-.TwoColSec {}
-
-.TwoColSec .container-fluid {
-  width: 100%;
-  padding: 0;
+.TwoColSec {
+  .container-fluid {
+    width: 100%;
+    padding: 0;
+  }
+  .ColSide {
+    background-color: white;
+    height: auto;
+    border-color: $mainWhite;
+  }
+  .LeftColSide {
+    white-space: normal;
+    text-align: left;
+    color: $mainBlack;
+    margin: 0;
+    padding: 7% 35% 15% 5%;
+    font-size: 2.2rem;
+    line-height: 30px;
+    transition: all 0ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  }
+  .RightColSide {
+    white-space: normal;
+    text-align: left;
+    margin: 0;
+    color: $mainBlack;
+    padding: 7% 7% 30% 6%;
+    font-size: 1.4rem;
+    transition: all 0ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  }
 }
-
-.TwoColSec .ColSide {
-  background-color: white;
-  height: auto;
-  border-color: $mainWhite;
-}
-
-.TwoColSec .LeftColSide {
-  white-space: normal;
-  text-align: left;
-  color: $mainBlack;
-  margin: 0;
-  padding: 7% 35% 15% 5%;
-  font-size: 2.2rem;
-  line-height: 30px;
-  transition: all 0ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.TwoColSec .RightColSide {
-  white-space: normal;
-  text-align: left;
-  margin: 0;
-  color: $mainBlack;
-  padding: 7% 7% 30% 6%;
-  font-size: 1.4rem;
-  transition: all 0ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
 
 /*##################################################*/
 /* Unique Div: FeaturedTextDiv Div */
@@ -776,33 +744,29 @@ $hoverFactor: 1.09;
   background-attachment: fixed;
   margin: 7% auto;  /* top/bottom right/left */
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+  .FeatPgh {
+    margin: 10% 25% 2% 10%;
+    color: $PrimaryColor;
+    line-height: 25px;
+    text-align: left;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 1%;
+    transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+    white-space: normal;
+  }
+  .btn {
+    font-size: 1.5rem;
+    width: 30%;
+    margin: 10% 25% 10% 10%;
+    margin-top: 10px;
+  }
+  .btn {
+    color: $mainBlack!important;
+  }
 }
-
 .FeaturedImgIndex {
   background-image: url("../images/001_IndexImages/Abstract1Filt3.jpg");
-}
-
-.FeaturedTextDiv .FeatPgh {
-  margin: 10% 25% 2% 10%;
-  color: $PrimaryColor;
-  line-height: 25px;
-  text-align: left;
-  font-size: 2rem;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 1%;
-  transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
-  white-space: normal;
-}
-
-.FeaturedTextDiv .btn {
-  font-size: 1.5rem;
-  width: 30%;
-  margin: 10% 25% 10% 10%;
-  margin-top: 10px;
-}
-
-.FeaturedTextDiv .btn {
-  color: $mainBlack!important;
 }
 
 @media (max-width: 767px) {
@@ -820,95 +784,91 @@ $hoverFactor: 1.09;
 /* Unique Div: bottomBox */
 /*##################################################*/
 
-    .bottomBox {
-      margin-top: 100px;
-      vertical-align: bottom;
-      color: $mainWhite;
-    }
+.bottomBox {
+  margin-top: 100px;
+  vertical-align: bottom;
+  color: $mainWhite;
+}
 
-    .bottomDiv {
-      padding: 3% 8%;  /* top/bottom left/right */
-      margin: 0;
-      height: auto;
-      background-color: $mainBlack;
-      font-size: 1rem;  /* (18px font-size / 2560px width */
-      text-decoration: none;
-    }
+.bottomDiv {
+  padding: 3% 8%;  /* top/bottom left/right */
+  margin: 0;
+  height: auto;
+  background-color: $mainBlack;
+  font-size: 1rem;  /* (18px font-size / 2560px width */
+  text-decoration: none;
+  text-align: right;
+  color: $mainWhite;
+  .col-sm-2 {
+    color: $mainWhite;
+  }
+}
 
-    .bottomDiv {
-      text-align: right;
-      color: $mainWhite;
-    }
+.bottomLink {
+  color: $mainWhite;
+  text-decoration: none;
+  transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
 
-    .bottomDiv .col-sm-2 {
-      color: $mainWhite;
-    }
+.bottomLink:hover {
+  text-decoration: none;
+  color: $SecondaryColor;
+}
 
-    .bottomLink {
-      color: $mainWhite;
-      text-decoration: none;
-      transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-    }
+.socialLink {
+  color: $mainWhite;
+  text-decoration: none;
+  padding: 8px;
+  border-style: none;
+  border-width: 0;
+  transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
 
-    .bottomLink:hover {
-      text-decoration: none;
-      color: $SecondaryColor;
-    }
+.socialLink:hover {
+  text-decoration: none;
+  color: #08d9d6;
+  border-width: 1px;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: #08d9d6;
+}
 
-    .socialLink {
-      color: $mainWhite;
-      text-decoration: none;
-      padding: 8px;
-      border-style: none;
-      border-width: 0;
-      transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-    }
+.copyrightText {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: $mainWhite;
+  font-size: 1rem;
+  text-align: left;
+}
 
-    .socialLink:hover {
-      text-decoration: none;
-      color: #08d9d6;
-      border-width: 1px;
-      border-radius: 100%;
-      border-style: solid;
-      border-color: #08d9d6;
-    }
+.myLogo_bottom {  /* Class Selector */
+  color: #08d9d6;
+  padding: 0;  /* top right bottom left */
+  font-size: 2rem;   /* (50px font-size / 2560px width */
+}
 
-    .copyrightText {
-      margin-top: 25px;
-      margin-bottom: 25px;
-      color: $mainWhite;
-      font-size: 1rem;
-      text-align: left;
-    }
+.middleLine_bottom {
+  color: $SecondaryColor;
+}
 
-    .myLogo_bottom {  /* Class Selector */
-      color: #08d9d6;
-      padding: 0;  /* top right bottom left */
-      font-size: 2rem;   /* (50px font-size / 2560px width */
-    }
+.textAlter_bottom {
+  text-decoration: underline;
+  color: $mainWhite;
+}
 
-    .middleLine_bottom {
-      color: $SecondaryColor;
-    }
+@media (max-width: 1023px) {
+  .bottomDiv {
+    font-size: 1.25rem;
+  }
 
-    .textAlter_bottom {
-      text-decoration: underline;
-      color: $mainWhite;
-    }
+  .myLogo_bottom {  /* Class Selector */
+    font-size: 1.8rem;
+  }
 
-    @media (max-width: 1023px) {
-      .bottomDiv {
-        font-size: 1.25rem;
-      }
-
-      .myLogo_bottom {  /* Class Selector */
-        font-size: 1.8rem;
-      }
-
-      .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-6 {
-        padding-top: 10px;
-      }
-    }
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-6 {
+    padding-top: 10px;
+  }
+}
 
 
 
@@ -917,178 +877,107 @@ $hoverFactor: 1.09;
 /*##################################################*/
 
 /*--------------------------------------------*/
-/* Large Image Container Div specific animation */
-/*--------------------------------------------*/
-.lgContainerDiv {  /* Class Selector: Outer Div containing Purpose text boxes */
-  margin: 100px auto;
-}
-
-.pg2LgContainer .lgContainerInit {
-  background-image: url("../images/002_Images/spaceImage4.jpg");
-  background-size: 100% 112%;
-  background-position: center bottom;
-  background-attachment: fixed;
-  filter: brightness(80%);
-  border-radius: 50%;
-}
-
-.pg2LgContainer .lgContainerFinal {
-  background-image: url("../images/002_Images/spaceImage4.jpg");
-  background-size: 100% 112%;
-  background-position: center 0%;
-  background-attachment: fixed;
-  filter: brightness(125%);
-  border-radius: 0%;
-}
-
-.pg2LgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .pg2LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
-}
-
-/*--------------------------------------------*/
 /* indexQuote parallax quote  */
 /*--------------------------------------------*/
 
-.pg2LgContainer .widthZero {
-  max-width: 0;
-}
-
-.pg2LgContainer .widthFull {
-  max-width: 50px;
-}
-
-.pg2LgContainer .boxQuote {
-  display: inline-block;
-  width: 44%;
-  text-align: left;
-  position: absolute;
-  right: 7%;
-  top: 55%;
-  border: none;
-  background-color: white;
-  overflow: hidden;
-  z-index: 2;
-  transition:
-    all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860),
-    top 0ms ease-out;
-}
-
-.pg2LgContainer .boxQuote .card-title {
-  font-size: 2rem;
-  padding: 10px 25px;
-}
-
-.pg2LgContainer .boxQuote.displayQuote {
-  max-height: 300px;
-  border-radius: 0;
-}
-
-.pg2LgContainer .boxQuote.displayNone {
-  max-height: 0;
-  border-radius: 100%;
-}
-
-.pg2LgContainer .boxShadowExp {
-  box-shadow:
-    1px 1px $PrimaryColor,
-    2px 2px $mainWhite,
-    3px 3px $PrimaryColor,
-    4px 4px $mainWhite,
-    5px 5px $PrimaryColor,
-    6px 6px $mainWhite,
-    7px 7px $PrimaryColor,
-    8px 8px $mainWhite,
-    9px 9px $PrimaryColor,
-    10px 10px $mainWhite,
-    11px 11px $PrimaryColor,
-    12px 12px $mainWhite,
-    13px 13px $PrimaryColor,
-    14px 14px $mainWhite,
-    15px 15px $PrimaryColor,
-    16px 16px $mainWhite,
-    17px 17px $PrimaryColor,
-    18px 18px $mainWhite,
-    19px 19px $PrimaryColor,
-    20px 20px $mainWhite,
-    21px 21px $PrimaryColor,
-    22px 22px $mainWhite,
-    23px 23px $PrimaryColor,
-    24px 24px $mainWhite,
-    25px 25px $PrimaryColor,
-    26px 26px $mainWhite,
-    27px 27px $PrimaryColor,
-    28px 28px $mainWhite,
-    29px 29px $PrimaryColor,
-    30px 30px $mainWhite,
-    31px 31px $PrimaryColor,
-    32px 32px $mainWhite,
-    33px 33px $PrimaryColor,
-    34px 34px $mainWhite,
-    35px 35px $PrimaryColor,
-    36px 36px $mainWhite,
-    37px 37px $PrimaryColor,
-    38px 38px $mainWhite,
-    39px 39px $PrimaryColor;
-}
-
-.pg2LgContainer .qtextShadowHover {
-  color: crimson;
-  text-shadow:
-    1px 1px $mainWhite,
-    2px 2px $mainWhite,
-    3px 3px #000000,
-    4px 4px #000000,
-    5px 5px #000000
-  ;
-}
-
-@media (min-width: 1441px) {
-  .pg2LgContainer .boxQuote .card-title {
-    font-size: 3.5rem;
+.pg2LgContainer {
+  .widthZero {
+    max-width: 0;
   }
-
-  .pg2LgContainer .boxQuote {
-    right: 5%;
-    width: 35%;
+  .widthFull {
+    max-width: 50px;
   }
-}
-
-@media (max-width: 1199px) {
-  .pg2LgContainer .boxQuote .card-title {
-    font-size: 2.25rem;
+  .boxQuote {
+    display: inline-block;
+    width: 44%;
+    text-align: left;
+    position: absolute;
+    right: 7%;
+    top: 55%;
+    border: none;
+    background-color: white;
+    overflow: hidden;
+    z-index: 2;
+    transition:
+      all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860),
+      top 0ms ease-out;
   }
-
-  .pg2LgContainer .boxQuote {
-    right: 5%;
-    width: 50%;
-  }
-}
-
-@media (max-width: 991px) {
-
-}
-
-@media (max-width: 767px) {
-  .pg2LgContainer .boxQuote .card-title {
+  .boxQuote .card-title {
     font-size: 2rem;
+    padding: 10px 25px;
+  }
+  .boxQuote.displayQuote {
+    max-height: 300px;
+    border-radius: 0;
+  }
+  .boxQuote.displayNone {
+    max-height: 0;
+    border-radius: 100%;
   }
 
-  .pg2LgContainer .boxQuote {
-    right: 10%;
-    width: 59%;
+  .boxShadowExp {
+    $bShadows: ();
+    @for $i from 1 through 50 {
+      $temp: $i + px;
+      @if $i % 2 == 0 {
+        $ithShadow: $temp $temp $mainWhite;
+        $bShadows: append($bShadows, $ithShadow, comma)
+      } @else {
+        $ithShadow: $temp $temp $SecondaryColor;
+        $bShadows: append($bShadows, $ithShadow, comma)
+      }
+    }
+    box-shadow: $bShadows;
   }
-}
 
-@media (max-width: 575px) {
-  .pg2LgContainer .boxQuote .card-title {
-    font-size: 2rem;
+  .qtextShadowHover {
+    color: crimson;
+    text-shadow:
+      1px 1px $mainWhite,
+      2px 2px $mainWhite,
+      3px 3px #000000,
+      4px 4px #000000,
+      5px 5px #000000
+    ;
   }
 
-  .pg2LgContainer .boxQuote {
-    right: 10%;
-    width: 75%;
+  @media (min-width: 1441px) {
+    .boxQuote .card-title {
+      font-size: 3.5rem;
+    }
+    .boxQuote {
+      right: 5%;
+      width: 35%;
+    }
+  }
+  @media (max-width: 1199px) {
+    .boxQuote .card-title {
+      font-size: 2.25rem;
+    }
+    .boxQuote {
+      right: 5%;
+      width: 50%;
+    }
+  }
+  @media (max-width: 991px) {
+  }
+  @media (max-width: 767px) {
+    .boxQuote .card-title {
+      font-size: 2rem;
+    }
+    .boxQuote {
+      right: 10%;
+      width: 59%;
+    }
+  }
+  @media (max-width: 575px) {
+    .boxQuote .card-title {
+      font-size: 2rem;
+    }
+    .boxQuote {
+      right: 10%;
+      width: 75%;
+    }
   }
 }
 

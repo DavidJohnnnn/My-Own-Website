@@ -1,0 +1,66 @@
+/*##################################################*/
+/* Unique Div: Large Image Container Div (index.html) */
+/*##################################################*/
+
+//--------------------------------------------//
+// Large Image Container Div specific animation //
+//--------------------------------------------//
+.IndexLgContainer {
+  .lgContainerInit {
+    background: {
+      image: url($indexImage);
+      size: 100% 120%;
+      position: right bottom;
+      attachment: fixed;
+    }
+    filter: brightness(50%);
+    border-radius: 50%;
+  }
+  .lgContainerFinal {
+    background: {
+      image: url($indexImage);
+      size: 100% 120%;
+      position: top 0%;
+      attachment: fixed;
+    }
+    filter: brightness(100%);
+    border-radius: 0%;
+  }
+  .transition1 {
+    transition: $imgTransition;
+  }
+  .transition2 {
+    transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease;
+  }
+}
+
+//--------------------------------------------//
+// Large Image Container Div specific animation //
+//--------------------------------------------//
+.lgContainerDiv {  // Class Selector: Outer Div containing Purpose text boxes
+  margin: 100px auto;
+}
+
+.pg2LgContainer .lgContainerInit {
+  background-image: url($pg2Image);
+  background-size: 100% 112%;
+  background-position: center bottom;
+  background-attachment: fixed;
+  filter: brightness(80%);
+  border-radius: 50%;
+}
+
+.pg2LgContainer .lgContainerFinal {
+  background-image: url($pg2Image);
+  background-size: 100% 112%;
+  background-position: center 0%;
+  background-attachment: fixed;
+  filter: brightness(125%);
+  border-radius: 0%;
+}
+
+.pg2LgContainer .transition1 {
+  transition: $imgTransition;
+} .pg2LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease;
+}
