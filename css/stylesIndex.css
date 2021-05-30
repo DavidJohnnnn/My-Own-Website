@@ -107,7 +107,7 @@ body {
 }
 
 .middleLine {
-  color: #ff2e63;
+  color: #393e46;
 }
 
 .textAlter {
@@ -238,7 +238,7 @@ a.Links:hover {
 /* navbar Links animation */
 /*--------------------------------------------*/
 .titleBar li {
-  transition: all 3000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
+  transition: all 4000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
   /* custom */
   overflow: hidden;
   white-space: nowrap;
@@ -288,7 +288,7 @@ a.Links:hover {
 .navbar-toggler.offblink {
   font-size: 0;
   transform: rotate(360deg);
-  color: #ff2e63;
+  color: #393e46;
 }
 
 .navbar-toggler.onLink {
@@ -686,7 +686,7 @@ a.Links:hover {
 /* Large Image Container Div specific animation */
 /*--------------------------------------------*/
 .IndexLgContainer .lgContainerInit {
-  background-image: url("001_IndexImages/MountainMosaic4.jpg");
+  background-image: url("../images/001_IndexImages/MountainMosaic4.jpg");
   background-size: 100% 120%;
   background-position: right bottom;
   background-attachment: fixed;
@@ -694,7 +694,7 @@ a.Links:hover {
   border-radius: 50%;
 }
 .IndexLgContainer .lgContainerFinal {
-  background-image: url("001_IndexImages/MountainMosaic4.jpg");
+  background-image: url("../images/001_IndexImages/MountainMosaic4.jpg");
   background-size: 100% 120%;
   background-position: top 0%;
   background-attachment: fixed;
@@ -718,6 +718,7 @@ a.Links:hover {
   top: 50%;
   left: 3%;
   z-index: 2;
+  padding-top: 30px;
 }
 
 .indexQuote.qtextShadow a {
@@ -873,7 +874,7 @@ a.Links:hover {
 }
 
 .FeaturedImgIndex {
-  background-image: url("001_IndexImages/Abstract1Filt3.jpg");
+  background-image: url("../images/001_IndexImages/Abstract1Filt3.jpg");
 }
 
 .FeaturedTextDiv .FeatPgh {
@@ -946,7 +947,7 @@ a.Links:hover {
 
 .bottomLink:hover {
   text-decoration: none;
-  color: #ff2e63;
+  color: #393e46;
 }
 
 .socialLink {
@@ -985,7 +986,7 @@ a.Links:hover {
 }
 
 .middleLine_bottom {
-  color: #ff2e63;
+  color: #393e46;
 }
 
 .textAlter_bottom {
@@ -1019,7 +1020,7 @@ a.Links:hover {
 }
 
 .pg2LgContainer .lgContainerInit {
-  background-image: url("002_Images/spaceImage4.jpg");
+  background-image: url("../images/002_Images/spaceImage4.jpg");
   background-size: 100% 112%;
   background-position: center bottom;
   background-attachment: fixed;
@@ -1028,7 +1029,7 @@ a.Links:hover {
 }
 
 .pg2LgContainer .lgContainerFinal {
-  background-image: url("002_Images/spaceImage4.jpg");
+  background-image: url("../images/002_Images/spaceImage4.jpg");
   background-size: 100% 112%;
   background-position: center 0%;
   background-attachment: fixed;
@@ -1235,7 +1236,7 @@ a.Links:hover {
 }
 
 .pg3LgContainer .lgContainerInit {
-  background-image: url("003_Images/FlowerMod5.jpg");
+  background-image: url("../images/003_Images/FlowerMod5.jpg");
   background-size: 100% 159%;
   background-attachment: fixed;
   background-position: bottom;
@@ -1244,7 +1245,7 @@ a.Links:hover {
 }
 
 .pg3LgContainer .lgContainerFinal {
-  background-image: url("003_Images/FlowerMod5.jpg");
+  background-image: url("../images/003_Images/FlowerMod5.jpg");
   background-size: 100% 159%;
   background-attachment: fixed;
   background-position: center right;
@@ -1272,15 +1273,15 @@ a.Links:hover {
 }
 
 .FeaturedUsers.First {
-  background-image: url("003_Images/TreesMod.jpg");
+  background-image: url("../images/003_Images/TreesMod.jpg");
 }
 
 .FeaturedUsers.Second {
-  background-image: url("003_Images/carousel2_1.jpg");
+  background-image: url("../images/003_Images/carousel2_1.jpg");
 }
 
 .FeaturedUsers.Third {
-  background-image: url("003_Images/Carousel3.jpg");
+  background-image: url("../images/003_Images/Carousel3.jpg");
   background-position: center;
 }
 
@@ -1296,7 +1297,7 @@ a.Links:hover {
 .FeatPghUsers {
   margin: 25px 100px 10px;
   color: #252a34;
-  text-shadow: 1px 1px #ff2e63;
+  text-shadow: 1px 1px #393e46;
   line-height: 25px;
   font-size: 1.75rem;
   background-color: white;
@@ -1344,7 +1345,7 @@ a.Links:hover {
 }
 
 .pg4LgContainer .lgContainerInit {
-  background-image: url("004_Images/NatureNew.jpg");
+  background-image: url("../images/004_Images/NatureNew.jpg");
   background-size: 1000% 1000%;
   background-position: top left;
   filter: contrast(1000%) brightness(75%) saturate(50%) hue-rotate(180deg) rotate(720deg);
@@ -1353,7 +1354,7 @@ a.Links:hover {
 }
 
 .pg4LgContainer .lgContainerFinal {
-  background-image: url("004_Images/NatureNew1.jpg");
+  background-image: url("../images/004_Images/NatureNew1.jpg");
   background-size: 120% 191%;
   background-position: bottom center;
   filter: contrast(100%) brightness(100%) saturate(100%) hue-rotate(0deg) rotate(0deg);
@@ -1432,7 +1433,7 @@ a.Links:hover {
 }
 
 .pg6LgContainer .lgContainerInit {
-  background-image: url("006-Images/ProfilePic1.jpg");
+  background-image: url("../images/006-Images/ProfilePic1.jpg");
   background-size: 4%;
   background-position: top;
   filter: contrast(100%) brightness(100%) saturate(100%) blur(10px);
@@ -1440,7 +1441,7 @@ a.Links:hover {
 }
 
 .pg6LgContainer .lgContainerFinal {
-  background-image: url("006-Images/ProfilePic1.jpg");
+  background-image: url("../images/006-Images/ProfilePic1.jpg");
   background-size: 20%;
   background-position: center;
   background-blend-mode: lighten;
