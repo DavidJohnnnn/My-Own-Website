@@ -923,7 +923,7 @@ $hoverFactor: 1.09;
 .FourBlock {
   text-align: left;
   margin-top: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   transition: all 1000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   .container-fluid {
     margin: 100px auto;
@@ -931,7 +931,7 @@ $hoverFactor: 1.09;
   }
   @media (min-width: 1441px) {
     .col-md-6 {
-      padding: 25px 150px;
+      padding: 25px 100px;
     }
     .card-title {
       font-size: 5.375rem;
