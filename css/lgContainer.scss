@@ -1,6 +1,35 @@
-/*##################################################*/
-/* Unique Div: Large Image Container Div (index.html) */
-/*##################################################*/
+/*--------------------------------------------*/
+/* Large Image Container animation  */
+/*--------------------------------------------*/
+
+// The basic transition animation speeds //
+.transition1 {
+  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+}
+.transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
+}
+
+/* Large Image Container Responsive Section */
+@media (min-width: 1441px) {
+  .lgContainerDiv .container-fluid {
+    height: 55rem;
+  }
+}
+
+
+
+
+//##################################################//
+// Unique Div: Large Image Container Div (index.html) //
+//##################################################//
+$indexImage: "../images/001_IndexImages/MountainMosaic4.jpg";
+$pg2Image: "../images/002_Images/spaceImage4.jpg";
+$pg3Image: "../images/003_Images/FlowerMod5.jpg";
+$pg4Image: "../images/004_Images/NatureNew.jpg";
+$pg5Image: "005-Images/books1Art6.jpg";
+
+$imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
 
 //--------------------------------------------//
 // Large Image Container Div specific animation //
@@ -34,6 +63,12 @@
   }
 }
 
+
+
+//##################################################//
+// 002.html: MY RELEVANT EXPERIENCES //
+//##################################################//
+
 //--------------------------------------------//
 // Large Image Container Div specific animation //
 //--------------------------------------------//
@@ -41,26 +76,177 @@
   margin: 100px auto;
 }
 
-.pg2LgContainer .lgContainerInit {
-  background-image: url($pg2Image);
-  background-size: 100% 112%;
-  background-position: center bottom;
-  background-attachment: fixed;
-  filter: brightness(80%);
-  border-radius: 50%;
+.pg2LgContainer {
+  .lgContainerInit {
+    background: {
+      image: url($pg2Image);
+      size: 100% 112%;
+      position: center bottom;
+      attachment: fixed;
+    }
+    filter: brightness(80%);
+    border-radius: 50%;
+  }
+  .lgContainerFinal {
+    background: {
+      image: url($pg2Image);
+      size: 100% 112%;
+      position: center 0%;
+      attachment: fixed;
+    }
+    filter: brightness(125%);
+    border-radius: 0%;
+  }
+  .transition1 {
+    transition: $imgTransition;
+  }
+  .transition2 {
+    transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease;
+  }
 }
 
-.pg2LgContainer .lgContainerFinal {
-  background-image: url($pg2Image);
-  background-size: 100% 112%;
-  background-position: center 0%;
+//##################################################//
+// 003.html: MY EDUCATION & SKILLS //
+//##################################################//
+
+//--------------------------------------------//
+// Large Image Container Div specific animation //
+//--------------------------------------------//
+
+.pg3LgContainer {  // Class Selector: Outer Div containing Purpose text boxes
+  .lgContainerInit {
+    background: {
+      image: url($pg3Image);
+      size: 100% 159%;
+      attachment: fixed;
+      position: bottom;
+    }
+    filter: brightness(60%);
+    border-radius: 50%;
+  }
+  .lgContainerFinal {
+    background: {
+      image: url($pg3Image);
+      size: 100% 159%;
+      attachment: fixed;
+      position: center right;
+    }
+    filter: brightness(100%);
+    border-radius: 0%;
+  }
+  .transition1 {
+    transition: $imgTransition;
+  }
+  .transition2 {
+    transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease;
+  }
+}
+
+
+//##################################################//
+// 004.html: MY DRIVE & PHILOSOPHY //
+//##################################################//
+
+//--------------------------------------------//
+// Large Image Container Div specific animation //
+//--------------------------------------------//
+
+.pg4LgContainer {
+  .lgContainerInit {
+    background-image: url($pg4Image);
+    background-size: 1000% 1000%;
+    background-position: top left;
+    filter: contrast(1000%) brightness(75%) saturate(50%) hue-rotate(180deg) rotate(720deg);
+    background-attachment: fixed;
+    border-radius: 50%;
+  }
+  .lgContainerFinal {
+    background-image: url($pg4Image);
+    background-size: 120% 191%;
+    background-position: bottom center;
+    filter: contrast(100%) brightness(100%) saturate(100%) hue-rotate(0deg) rotate(0deg);
+    background-attachment: fixed;
+    border-radius: 0%;
+  }
+  .transition1 {
+    transition: $imgTransition;
+  }
+  .transition2 {
+    transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease;
+  }
+}
+
+//--------------------------------------------//
+// Large Image Container Div specific animation //
+//--------------------------------------------//
+
+.FeaturedImgPg4  {
+  background-image: url("004_Images/EarthMod1.jpg");
+  background-position: bottom;
+}
+
+
+/*##################################################*/
+/* 005.html: MY INTERESTS */
+/*##################################################*/
+
+.pg5LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
+  .lgContainerInit {
+    background-image: url($pg5Image);
+    background-size: 1000% 1000%;
+    background-position: bottom;
+    filter: contrast(10000%) brightness(1000%);
+    border-radius: 50%;
+  }
+
+  .lgContainerFinal {
+    background-image: url($pg5Image);
+    background-size: 120% 191%;
+    background-position: center;
+    filter: contrast(1000%) brightness(1000%);
+    border-radius: 0%;
+  }
+
+  .transition1 {
+    transition: $imgTransition;
+  }
+  .transition2 {
+    transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
+  }
+}
+
+//##################################################//
+/* 006.html: CONTACT ME */
+/*##################################################*/
+
+.pg6LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
+}
+
+.pg6LgContainer .container-fluid {
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+}
+
+.pg6LgContainer .lgContainerInit {
+  background-image: url('../images/006-Images/ProfilePic1.jpg');
+  background-size: 4%;
+  background-position: top;
+  filter: contrast(100%) brightness(100%) saturate(100%) blur(10px);
+  border-radius: 100%;
+}
+
+.pg6LgContainer .lgContainerFinal {
+  background-image: url('../images/006-Images/ProfilePic1.jpg');
+  background-size: 20%;
+  background-position: center;
+  background-blend-mode: lighten;
   background-attachment: fixed;
-  filter: brightness(125%);
+  filter: contrast(100%) brightness(100%) saturate(100%) blur(0px);
   border-radius: 0%;
 }
 
-.pg2LgContainer .transition1 {
-  transition: $imgTransition;
-} .pg2LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease;
+.pg6LgContainer .transition1 {
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .pg6LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }

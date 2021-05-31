@@ -8,10 +8,6 @@ max-screen-height: 789px
 
 CSS timing function tool: https://matthewlein.com/tools/ceaser
 
-*/
-
-/*
-
   Main Color Scheme:
   #eaeaea - white
   #ff2e63 - red
@@ -26,15 +22,15 @@ CSS timing function tool: https://matthewlein.com/tools/ceaser
 
 */
 
-$mainWhite: #eeeeee;
-$mainBlack: #222831;
-$PrimaryColor: #00adb5;
-$SecondaryColor: #393e46;
 
 
 /*##################################################*/
 /* Tag Selectors */
 /*##################################################*/
+$mainWhite: #eeeeee;
+$mainBlack: #222831;
+$PrimaryColor: #00adb5;
+$SecondaryColor: #393e46;
 
 body {  /* Tag Selector */
   background-color: $mainWhite;  /* Background of website */
@@ -45,10 +41,10 @@ body {  /* Tag Selector */
 }
 
 
-
 /*##################################################*/
 /* Side Wipe Animation Selectors */
 /*##################################################*/
+$sideWipeSpeed: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
 
 .sideWipeContainer {
   overflow: hidden;
@@ -68,7 +64,7 @@ body {  /* Tag Selector */
     background-color: $mainBlack;
     overflow: hidden;
     display: inline-block;
-    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+    transition: $sideWipeSpeed; /* custom */
   }
 
   .leftSideWipe {
@@ -77,7 +73,7 @@ body {  /* Tag Selector */
   }
 
   .rightSideWipe {
-    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+    transition: $sideWipeSpeed; /* custom */
     left: 126%;
   }
 }
@@ -85,6 +81,12 @@ body {  /* Tag Selector */
 /*##################################################*/
 /* Unique Div: titleNavBarBox */
 /*##################################################*/
+
+$navbarAnimeSpeed: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+$navLinkAnimateSpeed: all 6000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+$navLinkHoverSpeed: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+$navTitleHoverSpeed: all 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+$navTogglerHover: all 750ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
 
 .titleBar {
   padding: 0;
@@ -102,7 +104,7 @@ body {  /* Tag Selector */
 }
 
 .navbar {
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  transition: $navbarAnimeSpeed;
   background-color: $mainWhite!important;
 }
 
@@ -136,57 +138,42 @@ body {  /* Tag Selector */
   border-bottom: 1px gainsboro solid;
 }
 
-/*--------------------------------------------*/
-/* navbar Logo Responsive Section */
-/*--------------------------------------------*/
-
-/* 4K viewport (>1441px) */
-@media (min-width: 1441px) {
-  .myLogo {  /* Tag + Class Selector affecting the top side links. */
-    font-size: 2.5vw;   /* (50px font-size / 2560px width */
+//--------------------------------------------//
+// navbar Logo Responsive Section //
+//--------------------------------------------//
+.myLogo {  // Tag + Class Selector affecting the top side links. //
+  // 4K viewport (>1441px) //
+  @media (min-width: 1441px) {
+    font-size: 2.5vw;
+  }
+  // Laptop L viewport (1440px - 1025px) and Laptop viewport (1024px - 769px) //
+  @media (max-width: 1440px) and (min-width: 769px){
+    font-size: 2vw;
+  }
+  // Tablet viewport (768px - 426px) //
+  @media (max-device-width: 768px) and (min-device-width: 426px){
+    font-size: 3vw;
+  }
+  // Mobile L viewport (425px - 376px) //
+  @media (max-device-width: 425px) and (min-device-width: 376px) {
+    font-size: 5vw;
+  }
+  // Mobile M viewport (375px - 321px) and Mobile S viewport (>320px) //
+  @media (max-device-width: 375px) and (min-device-width: 0px) {
+    font-size: 6vw;
   }
 }
 
-/* Laptop L viewport (1440px - 1025px) and Laptop viewport (1024px - 769px) */
-@media (max-width: 1440px) and (min-width: 769px){
-  .myLogo {  /* Tag + Class Selector affecting the top side links. */
-    font-size: 2vw;  /* (18px font-size / 2560px width */
-  }
-}
 
-/* Tablet viewport (768px - 426px) */
-@media (max-device-width: 768px) and (min-device-width: 426px){
-  .myLogo {  /* Tag + Class Selector affecting the top side links. */
-    font-size: 3vw;  /* (18px font-size / 2560px width */
-  }
-}
-
-/* Mobile L viewport (425px - 376px) */
-@media (max-device-width: 425px) and (min-device-width: 376px) {
-  .myLogo {  /* Tag + Class Selector affecting the top side links. */
-    font-size: 5vw;  /* (18px font-size / 2560px width */
-  }
-}
-
-/* Mobile M viewport (375px - 321px) and Mobile S viewport (>320px) */
-@media (max-device-width: 375px) and (min-device-width: 0px) {
-  .myLogo {  /* Tag + Class Selector affecting the top side links. */
-    font-size: 6vw;  /* (18px font-size / 2560px width */
-  }
-}
-
-/*  */
-
-
-/*--------------------------------------------*/
-/* navbar Logo Animation */
-/*--------------------------------------------*/
+//--------------------------------------------//
+// navbar Logo Animation //
+//--------------------------------------------//
 .title-A, .textAlter {
-  transition: all 750ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+  transition: $navTitleHoverSpeed;
 }
 
 .myLogo.offblink {
-  color: $mainBlack;  /* This affects logo's first color*/
+  color: $mainBlack;  // This affects logo's first color
   max-height: 0;
 }
 
@@ -206,21 +193,9 @@ body {  /* Tag Selector */
 
 .myLogo.blink {
   max-height: 100px;
-  color: $mainWhite;
+  color: $SecondaryColor;
 
   .title-A {
-    text-shadow:
-    1px 0 white,
-    2px 0 white,
-    3px 0 $mainBlack,
-    4px 0 white,
-    5px 0 $mainBlack,
-    6px 0 white,
-    7px 0 $mainBlack,
-    8px 0 white;
-  }
-
-  .textAlter {
     text-shadow:
     1px 0 white,
     2px 0 white,
@@ -229,21 +204,28 @@ body {  /* Tag Selector */
     5px 0 $PrimaryColor,
     6px 0 white,
     7px 0 $PrimaryColor,
-    8px 0 white,
-    9px 0 $PrimaryColor,
-    10px 0 white,
-    11px 0 $PrimaryColor,
-    12px 0 $PrimaryColor,
-    13px 0 $PrimaryColor,
-    14px 0 $PrimaryColor;
+    8px 0 white;
+  }
+
+  .textAlter {
+    text-shadow:
+    1px 0 $PrimaryColor,
+    2px 0 $PrimaryColor,
+    3px 0 $SecondaryColor,
+    4px 0 white,
+    5px 0 $SecondaryColor,
+    6px 0 $PrimaryColor,
+    7px 0 $PrimaryColor,
+    8px 0 $PrimaryColor,
+    9px 0 $PrimaryColor;
   }
 }
 
-/*--------------------------------------------*/
-/* Links */
-/*--------------------------------------------*/
+//--------------------------------------------//
+// Links //
+//--------------------------------------------//
 
-/* navbar links Basic Layout Section */
+// navbar links Basic Layout Section //
 .navbar-light .navbar-nav .nav-link {
   color: $mainBlack;
 }
@@ -252,12 +234,12 @@ body {  /* Tag Selector */
   color: $PrimaryColor;
 }
 
-a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-  transition: all 50ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+a.Links:link{  // Tag + Class Selector affecting the top side links. //
   border: 0 $PrimaryColor solid;
   border-width: 0;
-} a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
-  border-width: 1px 0;  /* top right bottom left */
+  transition: $navLinkHoverSpeed;
+} a.Links:hover {  // Class Selector: Color changes (both link box and text) when the mouse hovers over the link box //
+  border-width: 1px 0;  // top/bottom  right/left //
 }
 
 /*--------------------------------------------*/
@@ -265,7 +247,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 /*--------------------------------------------*/
 
 .titleBar li {
-  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: $navLinkAnimateSpeed;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -281,7 +263,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 .navbar-nav {
 
   .btn-secondary{
-    transition: all 500ms linear; /* custom */
+    transition: all 500ms linear;
     color: white;
     background-color: $PrimaryColor;
     border-color: white;
@@ -303,7 +285,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   border: 0 solid #08d9d6;
   border-radius: 50px;
   overflow: hidden;
-  transition: all 750ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: $navTogglerHover;
 } .navbar-toggler:hover {
   transform: rotate(360deg);
   border: 0px solid #08d9d6;
@@ -335,8 +317,6 @@ $hoverFactor: 1.09;
   } a.Links:hover {  // Class Selector: Color changes (both link box and text) when the mouse hovers over the link box
     font-size: 1.05vw;
   }
-
-
   .navbar-nav {
     .btn-secondary {
       font-size: 1.1vw;
@@ -345,10 +325,8 @@ $hoverFactor: 1.09;
       font-size: ($hoverFactor * 1.1)vw;
     }
   }
-
 }
-
-// Laptop L viewport (1440px - 1025px) and Laptop viewport (1024px - 769px)
+// Laptop L viewport to before toggler appears (1440px - 1200px)
 @media (max-width: 1440px) and (min-width: 1200px){
   a.Links:link {
     padding: 10px 2px 14px;
@@ -356,7 +334,6 @@ $hoverFactor: 1.09;
   } a.Links:hover {
     font-size: 1.05vw;
   }
-
   .navbar-nav {
     .btn-secondary {
       font-size: 1.1vw;
@@ -365,9 +342,8 @@ $hoverFactor: 1.09;
       font-size: ($hoverFactor * 1.1)vw;
     }
   }
-
 }
-
+// Toggler to laptop viewport (1199px - 769px)
 @media (max-width: 1199px) and (min-width: 769px){
   a.Links:link {
     padding: 10px 2px 14px;
@@ -375,7 +351,6 @@ $hoverFactor: 1.09;
   } a.Links:hover {
     font-size: 1.05vw;
   }
-
   .navbar-nav {
     .btn-secondary {
       margin: 15px 0 0;
@@ -385,12 +360,10 @@ $hoverFactor: 1.09;
       font-size: ($hoverFactor * 1.1)vw;
     }
   }
-
   .navbar-toggler {
     font-size: 2.5vw;
   }
 }
-
 // Tablet viewport (768px - 426px)
 @media (max-device-width: 768px) and (min-device-width: 426px){
   a.Links:link {
@@ -399,7 +372,6 @@ $hoverFactor: 1.09;
   } a.Links:hover {
     font-size: 1.5vw;
   }
-
   .navbar-nav {
     .btn-secondary {
       margin: 15px 0 0;
@@ -409,12 +381,10 @@ $hoverFactor: 1.09;
       font-size: ($hoverFactor * 1.4)vw;
     }
   }
-
   .navbar-toggler {
     font-size: 3vw;
   }
 }
-
 // Mobile L viewport (425px - 376px)
 @media (max-device-width: 425px) and (min-device-width: 376px) {
   a.Links:link {
@@ -423,7 +393,6 @@ $hoverFactor: 1.09;
   } a.Links:hover {
     font-size: 2.1vw;
   }
-
   .navbar-nav {
     .btn-secondary {
       margin: 25px 0 0;
@@ -433,12 +402,10 @@ $hoverFactor: 1.09;
       font-size: ($hoverFactor * 2)vw;
     }
   }
-
   .navbar-toggler {
     font-size: 5vw;
   }
 }
-
 // Mobile M viewport (375px - 321px) and Mobile S viewport (>320px)
 @media (max-device-width: 375px) and (min-device-width: 0px) {
   a.Links:link {
@@ -447,7 +414,6 @@ $hoverFactor: 1.09;
   } a.Links:hover {
     font-size: 2.1vw;
   }
-
   .navbar-nav {
     .btn-secondary {
       margin: 25px 0 0;
@@ -457,7 +423,6 @@ $hoverFactor: 1.09;
       font-size: ($hoverFactor * 3)vw;
     }
   }
-
   .navbar-toggler {
     font-size: 5vw;
   }
@@ -479,14 +444,14 @@ $hoverFactor: 1.09;
     background-color: $mainBlack;
     overflow: hidden;
     z-index: 4;
-    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+    transition: $sideWipeSpeed;
   }
   .leftSideWipe {  // When the bar is on the left side, we want it to switch to the right side instantly.
     transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
     left: -27%;
   }
   .rightSideWipe {  // Then the bar is on the right side, we want it to switch to the left side slowly.
-    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); // custom
+    transition: $sideWipeSpeed; // custom
     left: 126%;
   }
 }
@@ -510,25 +475,6 @@ $hoverFactor: 1.09;
   filter: hue-rotate(90deg);
 }
 
-/*--------------------------------------------*/
-/* Large Image Container animation  */
-/*--------------------------------------------*/
-
-/* The basic transition animation speeds */
-.transition1 {
-  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .transition2 {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
-}
-
-/* Large Image Container Responsive Section */
-@media (min-width: 1441px) {
-  .lgContainerDiv .container-fluid {
-    height: 55rem;
-  }
-}
-
-
 // ################################################## //
 // Unique Div: RevealCard Div //
 // ################################################## //
@@ -539,9 +485,6 @@ $hoverFactor: 1.09;
 /*##################################################*/
 /* Unique Div: Large Image Container Div (index.html) */
 /*##################################################*/
-$indexImage: "../images/001_IndexImages/MountainMosaic4.jpg";
-$pg2Image: "../images/002_Images/spaceImage4.jpg";
-$imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
 @import 'lgContainer';
 
 //--------------------------------------------//
@@ -742,8 +685,8 @@ $imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
   max-width: 100%;
   background-size: cover;
   background-attachment: fixed;
-  margin: 7% auto;  /* top/bottom right/left */
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+  margin: 7% auto;  // top/bottom right/left
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
   .FeatPgh {
     margin: 10% 25% 2% 10%;
     color: $PrimaryColor;
@@ -752,7 +695,7 @@ $imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
     font-size: 2rem;
     background-color: rgba(255, 255, 255, 1);
     padding: 1%;
-    transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+    transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
     white-space: normal;
   }
   .btn {
@@ -841,10 +784,10 @@ $imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
   text-align: left;
 }
 
-.myLogo_bottom {  /* Class Selector */
+.myLogo_bottom {  // Class Selector
   color: #08d9d6;
-  padding: 0;  /* top right bottom left */
-  font-size: 2rem;   /* (50px font-size / 2560px width */
+  padding: 0;  // top right bottom left
+  font-size: 2rem;
 }
 
 .middleLine_bottom {
@@ -861,7 +804,7 @@ $imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
     font-size: 1.25rem;
   }
 
-  .myLogo_bottom {  /* Class Selector */
+  .myLogo_bottom {  // Class Selector
     font-size: 1.8rem;
   }
 
@@ -876,9 +819,9 @@ $imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
 /* 002.html: MY RELEVANT EXPERIENCES */
 /*##################################################*/
 
-/*--------------------------------------------*/
-/* indexQuote parallax quote  */
-/*--------------------------------------------*/
+//--------------------------------------------//
+// boxQuote parallax quote  //
+//--------------------------------------------//
 
 .pg2LgContainer {
   .widthZero {
@@ -941,40 +884,34 @@ $imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
     ;
   }
 
-  @media (min-width: 1441px) {
-    .boxQuote .card-title {
-      font-size: 3.5rem;
-    }
-    .boxQuote {
+  .boxQuote {
+    @media (min-width: 1441px) {
+      .card-title {
+        font-size: 3.5rem;
+      }
       right: 5%;
       width: 35%;
     }
-  }
-  @media (max-width: 1199px) {
-    .boxQuote .card-title {
-      font-size: 2.25rem;
-    }
-    .boxQuote {
+    @media (max-width: 1199px) {
+      .card-title {
+        font-size: 2.25rem;
+      }
       right: 5%;
       width: 50%;
     }
-  }
-  @media (max-width: 991px) {
-  }
-  @media (max-width: 767px) {
-    .boxQuote .card-title {
-      font-size: 2rem;
+    @media (max-width: 991px) {
     }
-    .boxQuote {
+    @media (max-width: 767px) {
+      .card-title {
+        font-size: 2rem;
+      }
       right: 10%;
       width: 59%;
     }
-  }
-  @media (max-width: 575px) {
-    .boxQuote .card-title {
-      font-size: 2rem;
-    }
-    .boxQuote {
+    @media (max-width: 575px) {
+      .card-title {
+        font-size: 2rem;
+      }
       right: 10%;
       width: 75%;
     }
@@ -988,80 +925,64 @@ $imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
   margin-top: 100px;
   margin-bottom: 150px;
   transition: all 1000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-}
-
-.FourBlock .container-fluid {
-  margin: 100px auto;
-  width: 100%;
-}
-
-@media (min-width: 1441px) {
-  .FourBlock .col-md-6 {
-    padding: 25px 150px;
+  .container-fluid {
+    margin: 100px auto;
+    width: 100%;
   }
-
-  .FourBlock .card-title {
-    font-size: 5.375rem;
+  @media (min-width: 1441px) {
+    .col-md-6 {
+      padding: 25px 150px;
+    }
+    .card-title {
+      font-size: 5.375rem;
+    }
+    .card-text {
+      font-size: 1.5rem;
+    }
   }
-
-  .FourBlock .card-text {
-    font-size: 1.5rem;
+  @media (max-width: 1440px) {
+    .col-md-6 {
+      padding: 25px 100px;
+    }
+    .card-title {
+      font-size: 3.375rem;
+    }
+    .card-text {
+      font-size: 1.25rem;
+    }
   }
-}
-
-@media (max-width: 1440px) {
-  .FourBlock .col-md-6 {
-    padding: 25px 100px;
+  @media (max-width: 1199px) {
+    .col-md-6 {
+      padding: 25px 75px;
+    }
+    .card-title {
+      font-size: 5.375rem;
+    }
+    .card-text {
+      font-size: 1rem;
+    }
   }
-
-  .FourBlock .card-title {
-    font-size: 3.375rem;
+  @media (max-width: 991px) {
+    .col-md-6 {
+      padding: 25px 50px;
+    }
+    .card-title {
+      font-size: 4.375rem;
+    }
+    .card-text {
+      font-size: 1rem;
+    }
   }
-
-  .FourBlock .card-text {
-    font-size: 1.25rem;
-  }
-}
-
-@media (max-width: 1199px) {
-  .FourBlock .col-md-6 {
-    padding: 25px 75px;
-  }
-
-  .FourBlock .card-title {
-    font-size: 5.375rem;
-  }
-
-  .FourBlock .card-text {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 991px) {
-  .FourBlock .col-md-6 {
-    padding: 25px 50px;
-  }
-
-  .FourBlock .card-title {
-    font-size: 4.375rem;
-  }
-
-  .FourBlock .card-text {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .FourBlock .col-md-6 {
-    padding: 25px 40px;
-  }
-
-  .FourBlock .card-title {
-    font-size: 3.375rem;
-  }
-
-  .FourBlock .card-text {
-    font-size: 1rem;
+  @media (max-width: 767px) {
+    .col-md-6 {
+      padding: 25px 40px;
+    }
+    .card-title {
+      font-size: 3.375rem;
+    }
+    .card-text {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -1073,40 +994,10 @@ $imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
 /* 003.html: MY EDUCATION & SKILLS */
 /*##################################################*/
 
-/*--------------------------------------------*/
-/* Large Image Container Div specific animation */
-/*--------------------------------------------*/
-
-.pg3LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
-}
-
-.pg3LgContainer .container-fluid {
-  transition: all 6000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-}
-
-.pg3LgContainer .lgContainerInit {
-  background-image: url("../images/003_Images/FlowerMod5.jpg");
-  background-size: 100% 159%;
-  background-attachment: fixed;
-  background-position: bottom;
-  filter: brightness(60%);
-  border-radius: 50%;
-}
-
-.pg3LgContainer .lgContainerFinal {
-  background-image: url("../images/003_Images/FlowerMod5.jpg");
-  background-size: 100% 159%;
-  background-attachment: fixed;
-  background-position: center right;
-  filter: brightness(100%);
-  border-radius: 0%;
-}
-
-.pg3LgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .pg3LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
-}
+$FirstImg: "../images/003_Images/TreesMod.jpg";
+$SecondImg: "../images/003_Images/carousel2_1.jpg";
+$ThirdImg: "../images/003_Images/Carousel3.jpg";
+$FeaturedUsersTransition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 
 .FeaturedUsers {
   max-width: 100%;
@@ -1114,19 +1005,19 @@ $imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
   background-attachment: fixed;
   height: 500px;
   margin: auto;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  transition: $FeaturedUsersTransition;
 }
 
 .FeaturedUsers.First {
-  background-image: url("../images/003_Images/TreesMod.jpg");
+  background-image: url($FirstImg);
 }
 
 .FeaturedUsers.Second {
-  background-image: url("../images/003_Images/carousel2_1.jpg");
+  background-image: url($SecondImg);
 }
 
 .FeaturedUsers.Third {
-  background-image: url("../images/003_Images/Carousel3.jpg");
+  background-image: url($ThirdImg);
   background-position: center;
 }
 
@@ -1142,7 +1033,7 @@ $imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
   color: $mainBlack;
   margin-top: 100px;
   font-size: 5.375rem;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+  transition: $FeaturedUsersTransition;
 }
 
 .FeatPghUsers {
@@ -1153,7 +1044,7 @@ $imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
   font-size: 1.75rem;
   background-color: rgba(255, 255, 255, 1);
   padding: 1%;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+  transition: $FeaturedUsersTransition;
 }
 
 .FeaturedUsers .btn {
@@ -1161,104 +1052,19 @@ $imgTransition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
   width: 30%;
   margin: auto;
   margin-top: 10px;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+  transition: $FeaturedUsersTransition;
 }
 
 @media (max-width: 767px) {
   .FeatTitleUsers {
     font-size: 6.375rem;
   }
-
   .FeatPghUsers {
     font-size: 1rem;
   }
-
   .FeaturedUsers .btn {
     font-size: 0.9rem;
   }
-}
-
-/*##################################################*/
-/* 004.html: MY DRIVE & PHILOSOPHY */
-/*##################################################*/
-
-/*--------------------------------------------*/
-/* Large Image Container Div specific animation */
-/*--------------------------------------------*/
-
-.pg4LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
-}
-
-.pg4LgContainer .container-fluid {
-  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-  transition: all 6000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-}
-
-.pg4LgContainer .lgContainerInit {
-  background-image: url("../images/004_Images/NatureNew.jpg");
-  background-size: 1000% 1000%;
-  background-position: top left;
-  filter: contrast(1000%) brightness(75%) saturate(50%) hue-rotate(180deg) rotate(720deg);
-  background-attachment: fixed;
-  border-radius: 50%;
-}
-
-.pg4LgContainer .lgContainerFinal {
-  background-image: url("../images/004_Images/NatureNew1.jpg");
-  background-size: 120% 191%;
-  background-position: bottom center;
-  filter: contrast(100%) brightness(100%) saturate(100%) hue-rotate(0deg) rotate(0deg);
-  background-attachment: fixed;
-  border-radius: 0%;
-}
-
-.pg4LgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .pg4LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
-}
-
-/*--------------------------------------------*/
-/* Large Image Container Div specific animation */
-/*--------------------------------------------*/
-
-.FeaturedImgPg4  {
-  background-image: url("004_Images/EarthMod1.jpg");
-  background-position: bottom;
-}
-
-/*##################################################*/
-/* 005.html: MY INTERESTS */
-/*##################################################*/
-
-.pg5LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
-}
-
-.pg5LgContainer .container-fluid {
-  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-}
-
-.pg5LgContainer .lgContainerInit {
-  background-image: url('005-Images/books1Art6.jpg');
-  background-size: 1000% 1000%;
-  background-position: bottom;
-  filter: contrast(10000%) brightness(1000%);
-  border-radius: 50%;
-}
-
-.pg5LgContainer .lgContainerFinal {
-  background-image: url('005-Images/books1Art6.jpg');
-  background-size: 120% 191%;
-  background-position: center;
-  filter: contrast(1000%) brightness(1000%);
-  border-radius: 0%;
-}
-
-.pg5LgContainer .transition1 {
-  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .pg5LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
 
 /*##################################################*/
