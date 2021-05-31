@@ -775,13 +775,6 @@ a.Links:hover {
 .pg6LgContainer {
   /* Class Selector: Outer Div containing Purpose text boxes */
 }
-
-.pg6LgContainer .container-fluid {
-  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
 .pg6LgContainer .lgContainerInit {
   background-image: url("../images/006-Images/ProfilePic1.jpg");
   background-size: 4%;
@@ -789,7 +782,6 @@ a.Links:hover {
   filter: contrast(100%) brightness(100%) saturate(100%) blur(10px);
   border-radius: 100%;
 }
-
 .pg6LgContainer .lgContainerFinal {
   background-image: url("../images/006-Images/ProfilePic1.jpg");
   background-size: 20%;
@@ -799,12 +791,9 @@ a.Links:hover {
   filter: contrast(100%) brightness(100%) saturate(100%) blur(0px);
   border-radius: 0%;
 }
-
 .pg6LgContainer .transition1 {
   transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
 }
-
 .pg6LgContainer .transition2 {
   transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
   /* custom */
