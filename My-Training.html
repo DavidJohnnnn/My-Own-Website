@@ -181,7 +181,13 @@ https://www.flickr.com/photos/132795455@N08/16662196134
 
     <!-- Bootstrap Carousel containing Skills listing -->
     <section style="margin: 250px 0 100px;">
-      <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-ride="carousel">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
         <div class="carousel-inner">
           <div class="carousel-item active" data-interval="5000">
             <div class="card FeaturedUsers First">
@@ -203,11 +209,19 @@ https://www.flickr.com/photos/132795455@N08/16662196134
               </p>
             </div>
           </div>
-          <div class="carousel-item" data-interval="2000">
+          <div class="carousel-item">
             <div class="card FeaturedUsers Third">
               <h2 class="FeatTitleUsers">Other Relevant University Courses</h2>
               <p class="FeatPghUsers">
                 Introduction to Databases, Computer Networks, Internetworking, Algorithms and Data Structures, Leadership in Project Management, The Art of Ethical & Equitable Decision Making in Engineering
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card FeaturedUsers Fourth">
+              <h2 class="FeatTitleUsers">Certifications</h2>
+              <p class="FeatPghUsers">
+                Certified PEGA System Architect 8.6 (passed August 23, 2021), Certified PEGA Senior System Architect 8.6 (passed March 14, 2022)
               </p>
             </div>
           </div>

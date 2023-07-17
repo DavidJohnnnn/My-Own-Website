@@ -1256,6 +1256,11 @@ a.Links:hover {
   background-position: center;
 }
 
+.FeaturedUsers.Fourth {
+  background-image: url("../images/004_Images/NatureNew1.jpg");
+  background-position: center;
+}
+
 .FeatTitleUsers {
   text-shadow: 2px 2px #eeeeee, 3px 3px #eeeeee, 4px 4px #eeeeee, 5px 5px #eeeeee, 6px 6px #eeeeee, 7px 7px #222831, 8px 8px #eeeeee;
   color: #222831;
