@@ -124,10 +124,10 @@ boxshadowEff(4600);
 
 setInterval(function() {
   titleSparkle(0);
-  boxshadowEff(8000);
-  linksAnimate(2000);
-  sideWipe(2000);
-}, 12000);
+  //boxshadowEff(8000);
+  linksAnimate(6000);
+  sideWipe(12000);
+}, 15000);
 
 
 /*##################################################*/
