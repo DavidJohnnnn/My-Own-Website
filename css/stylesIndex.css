@@ -1359,6 +1359,44 @@ a.Links:hover {
   transition: all 3000ms cubic-bezier(0.785, 0.135, 0.15, 0.86), top 300ms cubic-bezier(0.25, 0.46, 0, 1);
 }
 
+
+/*##################################################*/
+/* Revealing Items classes 2 */
+/*##################################################*/
+/* Revealing RevealCardPrjt on scroll */
+
+.RevealCardPrjt * {
+  transition: all 500ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0;
+}
+
+.revealImg img {
+  object-fit: cover;
+}
+
+.imgClassReveal {
+  max-height: 1000px;
+  overflow: visible;
+}
+
+.imgClassHide {
+  max-height: 0px;
+  overflow: hidden;
+
+}
+
+.descriptionClassReveal {
+  max-height: 1000px;
+  overflow: visible;
+  opacity: 100%;
+}
+
+.descriptionClassHide {
+  max-height: 0px;
+  overflow: hidden;
+  opacity: 0;
+}
+
 /**/
 
 /*# sourceMappingURL=stylesIndex.css.map */
