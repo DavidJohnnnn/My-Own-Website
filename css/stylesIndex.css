@@ -865,7 +865,7 @@ a.Links:hover {
 }
 .pg6LgContainer .lgContainerInit {
   background-image: url("../images/006-Images/ProfilePic1.jpg");
-  background-size: 4%;
+  background-size: 100%;
   background-position: top;
   filter: contrast(100%) brightness(100%) saturate(100%) blur(10px);
   border-radius: 100%;
