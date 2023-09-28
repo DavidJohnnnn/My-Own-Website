@@ -86,34 +86,34 @@ $("body").css({
   "max-width": winWidth
 });
 
-setTimeout(function () {
-  $(".myLogo").removeClass("hiddenPadding offblink").addClass("expandPadding onLink");
-}, offset + 1000);
+// setTimeout(function () {
+//   $(".myLogo").removeClass("hiddenPadding offblink").addClass("expandPadding onLink");
+// }, offset + 1000);
 
 
 // Reveal the links and navbar toggler when opening the website
-var i;
-for (i=0; i< 7; i++) {
-  linkReveal(offset + 1200, i);
-}
+// var i;
+// for (i=0; i< 7; i++) {
+//   linkReveal(offset + 1200, i);
+// }
 
-setTimeout(function () {
-  $(".titleBar").removeClass("offblink").addClass("onLink");
-  $(".navbar").removeClass("offblink").addClass("onLink");
-  $(".titleBar .navbar-toggler").removeClass("offblink").addClass("onLink");
-}, offset + 1200);
+// setTimeout(function () {
+//   $(".titleBar").removeClass("offblink").addClass("onLink");
+//   $(".navbar").removeClass("offblink").addClass("onLink");
+//   $(".titleBar .navbar-toggler").removeClass("offblink").addClass("onLink");
+// }, offset + 1200);
 
-sideWipe(2200);
+// sideWipe(2200);
 
 // Animate the Quote revealing for each page when it is necessary to reveal
-setTimeout(function () {
-  $(".IndexLgContainer div.indexQuote").removeClass("displayNone").addClass("displayQuote");
-  $(".pg2LgContainer div.boxQuote").removeClass("displayNone").addClass("displayQuote");
-  $(".pg2LgContainer div.boxQuote").removeClass("displayNone").addClass("displayQuote");
-}, 1500);
+// setTimeout(function () {
+//   $(".IndexLgContainer div.indexQuote").removeClass("displayNone").addClass("displayQuote");
+//   $(".pg2LgContainer div.boxQuote").removeClass("displayNone").addClass("displayQuote");
+//   $(".pg2LgContainer div.boxQuote").removeClass("displayNone").addClass("displayQuote");
+// }, 1500);
 
 // Animate the box shadow for the Quote for each page
-boxshadowEff(4600);
+// boxshadowEff(4600);
 
 
 /*##################################################*/
@@ -122,12 +122,12 @@ boxshadowEff(4600);
 
 // The title, links bar, Quote box shadow and side wipes (vertical lines) used throughout will go on interval.
 
-setInterval(function() {
-  titleSparkle(0);
-  //boxshadowEff(8000);
-  linksAnimate(6000);
-  sideWipe(12000);
-}, 15000);
+// setInterval(function() {
+//   titleSparkle(0);
+//   //boxshadowEff(8000);
+//   linksAnimate(6000);
+//   sideWipe(12000);
+// }, 15000);
 
 
 /*##################################################*/
@@ -135,20 +135,20 @@ setInterval(function() {
 /*##################################################*/
 
 // The title will animate if the mouse moves over it.
-$(".myLogo span").hover(function () {
-  titleSparkle(100);
-});
+// $(".myLogo span").hover(function () {
+//   titleSparkle(100);
+// });
 
-// The Quotes box shadow will animate if the mouse moves over it.
-$(".pg2LgContainer .boxQuote").hover(function () {
-  boxshadowEff(100);
-});
-$(".IndexLgContainer .indexQuote").hover(function () {
-  boxshadowEff(100);
-});
-$(".pg2LgContainer .boxQuote").hover(function () {
-  boxshadowEff(100);
-});
+// // The Quotes box shadow will animate if the mouse moves over it.
+// $(".pg2LgContainer .boxQuote").hover(function () {
+//   boxshadowEff(100);
+// });
+// $(".IndexLgContainer .indexQuote").hover(function () {
+//   boxshadowEff(100);
+// });
+// $(".pg2LgContainer .boxQuote").hover(function () {
+//   boxshadowEff(100);
+// });
 
 
 /*##################################################*/
@@ -265,19 +265,19 @@ function imageFilt(offset) {
   }, offset + 3000);
 }
 
-function linksAnimate(offset) {
-  setTimeout(function () {
-    $(".titleBar .navbar-toggler").removeClass("onLink").addClass("offblink");
-  }, offset);
+// function linksAnimate(offset) {
+//   setTimeout(function () {
+//     $(".titleBar .navbar-toggler").removeClass("onLink").addClass("offblink");
+//   }, offset);
 
-  setTimeout(function () {
-    $(".titleBar .navbar-toggler").removeClass("offblink").addClass("onLink");
-  }, offset + 5000); // offset + 1000);
+//   setTimeout(function () {
+//     $(".titleBar .navbar-toggler").removeClass("offblink").addClass("onLink");
+//   }, offset + 5000); // offset + 1000);
 
-  for (i=0; i< 7; i++) {
-    linkBlink(offset, i);
-  }
-}
+//   for (i=0; i< 7; i++) {
+//     linkBlink(offset, i);
+//   }
+// }
 
 function linkBlink(offset, i) {
   setTimeout(function () {
