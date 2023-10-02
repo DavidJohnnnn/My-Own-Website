@@ -1367,7 +1367,6 @@ a.Links:hover {
 
 .RevealCardPrjt * {
   transition: all 500ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: 0;
 }
 
 .revealImg img {
@@ -1375,24 +1374,27 @@ a.Links:hover {
 }
 
 .imgClassReveal {
-  max-height: 1000px;
-  overflow: visible;
-}
-
-.imgClassHide {
-  max-height: 0px;
   overflow: hidden;
-
-}
-
-.descriptionClassReveal {
-  max-height: 1000px;
-  overflow: visible;
+  max-height: 500px;
   opacity: 100%;
 }
 
+.imgClassHide {
+  max-height: 500px; 
+  display: none;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.descriptionClassReveal {
+  overflow: hidden;
+  opacity: 100%;
+  max-height: 500px;
+}
+
 .descriptionClassHide {
-  max-height: 0px;
+  max-height: 500px;
+  display: none;
   overflow: hidden;
   opacity: 0;
 }
