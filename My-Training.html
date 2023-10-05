@@ -34,8 +34,8 @@ https://www.flickr.com/photos/132795455@N08/16662196134
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap Import -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- Bootstrap Import (latest version: 5.3.x) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <script src="https://kit.fontawesome.com/5a26093337.js" crossorigin="anonymous"></script>
 
@@ -47,10 +47,21 @@ https://www.flickr.com/photos/132795455@N08/16662196134
 
   <body id="003-Page">
 
-    <!-- Bootstrap script lines -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <!-- Bootstrap script lines (latest version: 5.3.x) -->
+    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js",
+        "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.esm.min.js"
+      }
+    }
+    </script>
+    <script type="module">
+      import * as bootstrap from 'bootstrap'
+
+      new bootstrap.Popover(document.getElementById('popoverButton'))
+    </script>
 
     <!-- Titlebar div (used for all pages) -->
     <section class="titleBar">
@@ -67,7 +78,7 @@ https://www.flickr.com/photos/132795455@N08/16662196134
             <ul class="navbar-nav mx-auto">
 
               <li class="nav-item active onLink">
-                <a class="nav-link Links onLink" href="index.html" aria-label="Home Page"><i class="fas fa-home"></i> <span class="sr-only">(current)</span></a>
+                <a class="nav-link Links onLink" href="index.html" aria-label="Home Page"><i class="fas fa-home"></i> <span class="sr-only"></span></a>
               </li>
               <li class="nav-item onLink">
                 <a class="nav-link Links onLink" href="My-History.html">MY RELEVANT EXPERIENCES</a>
@@ -181,13 +192,13 @@ https://www.flickr.com/photos/132795455@N08/16662196134
 
     <!-- Bootstrap Carousel containing Skills listing -->
     <section style="margin: 250px 0 100px;">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" title="Carousel containing information about my skills">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-        </ol>
+      <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-ride="carousel" title="Carousel containing information about my skills">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-interval="5000">
             <div class="card FeaturedUsers First" title="Abstract Green Forest Art">
