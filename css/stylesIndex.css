@@ -99,6 +99,7 @@ body {
   /* Navbar Logo Class Selector */
   color: #222831;
   font-size: 2rem;
+  margin-left: 20px; /* 5.3.x migration */
   /* (50px font-size / 2560px width */
   overflow: hidden;
 }
@@ -190,6 +191,10 @@ body {
   color: #00adb5;
 }
 
+.navbar-nav.mx-auto {
+  translate: -90px 0;
+}
+
 a.Links:link {
   border: 0 #00adb5 solid;
   border-width: 0;
@@ -231,6 +236,10 @@ a.Links:hover {
   background-color: white;
   border-color: #00adb5;
   border-radius: 50%;
+}
+
+.nav-item.linkedIn {
+  margin-right: 20px; /* 5.3.x migration */
 }
 
 /*--------------------------------------------*/
