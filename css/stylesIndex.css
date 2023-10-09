@@ -88,7 +88,7 @@ body {
 }
 
 .navbar {
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  /* transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86); */
   background-color: #eeeeee !important;
 }
 
@@ -157,7 +157,7 @@ body {
 }
 
 .title-A, .textAlter {
-  transition: all 2500ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  /* transition: all 2500ms cubic-bezier(0.785, 0.135, 0.15, 0.86); */
 }
 
 .myLogo.offblink {
