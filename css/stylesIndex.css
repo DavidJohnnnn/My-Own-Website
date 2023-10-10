@@ -203,7 +203,7 @@ a.Links:hover {
 
 @media (min-width: 1441px) {
   .navbar-nav.mx-auto {
-    translate: -90px 0;
+    translate: -250px 0;
   }
 }
 @media (max-width: 1440px) and (min-width: 1025px) {
@@ -1446,7 +1446,20 @@ a.Links:hover {
     max-height: 400px;
   }
 }
-@media (max-width: 1440px) and (min-width: 769px) {
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .RevealCardPrjt {
+    min-height: 500px;
+  }
+  .imgClassReveal {
+    max-height: 400px;
+  }
+  .descriptionClassReveal {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
   .RevealCardPrjt {
     min-height: 500px;
   }
@@ -1459,35 +1472,35 @@ a.Links:hover {
 }
 @media (max-device-width: 768px) and (min-device-width: 426px) {
   .RevealCardPrjt {
-    min-height: 500px;
+    min-height: 550px;
   }
   .imgClassReveal {
-    max-height: 400px;
+    max-height: 525px;
   }
   .descriptionClassReveal {
-    max-height: 400px;
+    max-height: 525px;
   }
 }
 @media (max-device-width: 425px) and (min-device-width: 376px) {
   .RevealCardPrjt {
-    min-height: 500px;
+    min-height: 550px;
   }
   .imgClassReveal {
-    max-height: 400px;
+    max-height: 525px;
   }
   .descriptionClassReveal {
-    max-height: 400px;
+    max-height: 525px;
   }
 }
 @media (max-device-width: 375px) and (min-device-width: 0px) {
   .RevealCardPrjt {
-    min-height: 500px;
+    min-height: 550px;
   }
   .imgClassReveal {
-    max-height: 400px;
+    max-height: 525px;
   }
   .descriptionClassReveal {
-    max-height: 400px;
+    max-height: 525px;
   }
 }
 
