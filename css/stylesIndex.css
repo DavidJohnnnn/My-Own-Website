@@ -1400,7 +1400,6 @@ a.Links:hover {
 /* Revealing RevealCardPrjt on scroll */
 
 .RevealCardPrjt {
-  min-height: 500px;
   overflow: hidden;
 }
 
@@ -1414,7 +1413,6 @@ a.Links:hover {
 
 .imgClassReveal {
   overflow: hidden;
-  max-height: 400px;
   opacity: 100%;
 }
 
@@ -1428,7 +1426,6 @@ a.Links:hover {
 .descriptionClassReveal {
   overflow: hidden;
   opacity: 100%;
-  max-height: 400px;
 }
 
 .descriptionClassHide {
@@ -1436,6 +1433,62 @@ a.Links:hover {
   /* display: none; */
   overflow: hidden;
   opacity: 0;
+}
+
+@media (min-width: 1441px) {
+  .RevealCardPrjt {
+    min-height: 500px;
+  }
+  .imgClassReveal {
+    max-height: 400px;
+  }
+  .descriptionClassReveal {
+    max-height: 400px;
+  }
+}
+@media (max-width: 1440px) and (min-width: 769px) {
+  .RevealCardPrjt {
+    min-height: 500px;
+  }
+  .imgClassReveal {
+    max-height: 400px;
+  }
+  .descriptionClassReveal {
+    max-height: 400px;
+  }
+}
+@media (max-device-width: 768px) and (min-device-width: 426px) {
+  .RevealCardPrjt {
+    min-height: 500px;
+  }
+  .imgClassReveal {
+    max-height: 400px;
+  }
+  .descriptionClassReveal {
+    max-height: 400px;
+  }
+}
+@media (max-device-width: 425px) and (min-device-width: 376px) {
+  .RevealCardPrjt {
+    min-height: 500px;
+  }
+  .imgClassReveal {
+    max-height: 400px;
+  }
+  .descriptionClassReveal {
+    max-height: 400px;
+  }
+}
+@media (max-device-width: 375px) and (min-device-width: 0px) {
+  .RevealCardPrjt {
+    min-height: 500px;
+  }
+  .imgClassReveal {
+    max-height: 400px;
+  }
+  .descriptionClassReveal {
+    max-height: 400px;
+  }
 }
 
 /**/
