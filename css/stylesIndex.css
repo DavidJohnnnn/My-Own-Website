@@ -631,14 +631,26 @@ a.Links:hover {
   }
 }
 @media (max-device-width: 768px) and (min-device-width: 426px) {
-  .RevealCard .container .card-title {
-    font-size: 5.375rem;
+  .RevealCard .container-fluid .card-title {
+    font-size: 5rem;
   }
-  .RevealCard .container .card .fas.fa-plus {
-    font-size: 0.65rem;
+  
+  .RevealCard .container-fluid .card .fas.fa-plus {
+    font-size: 1.1rem;
   }
-  .RevealCard .container .card .card-text {
-    font-size: 1.2rem;
+  
+  .RevealCard .container-fluid .card .card-text {
+    font-size: 1.1rem;
+  }
+
+  .RevealCard .container-fluid .card .card-text small {
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .RevealCard .container-fluid .card .card-text .btn {
+    font-size: 0.8rem;
   }
 }
 @media (max-device-width: 425px) and (min-device-width: 0px) {
