@@ -609,14 +609,26 @@ a.Links:hover {
   text-shadow: 2px 2px #222831, 3px 3px #222831, 4px 4px #222831;
 }
 @media (min-device-width: 1441px) {
-  .RevealCard .container .card-title {
-    font-size: 8.375rem;
+  .RevealCard .container-fluid .card-title {
+    font-size: 10rem;
   }
-  .RevealCard .container .card .fas.fa-plus {
-    font-size: 1rem;
+  
+  .RevealCard .container-fluid .card .fas.fa-plus {
+    font-size: 1.7rem;
   }
-  .RevealCard .container .card .card-text {
-    font-size: 1.35rem;
+  
+  .RevealCard .container-fluid .card .card-text {
+    font-size: 1.7rem;
+  }
+
+  .RevealCard .container-fluid .card .card-text small {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  .RevealCard .container-fluid .card .card-text .btn {
+    font-size: 1.4rem;
   }
 }
 @media (max-device-width: 1440px) and (min-device-width: 769px) {
