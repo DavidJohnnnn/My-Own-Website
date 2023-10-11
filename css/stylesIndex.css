@@ -608,7 +608,7 @@ a.Links:hover {
   color: #00adb5;
   text-shadow: 2px 2px #222831, 3px 3px #222831, 4px 4px #222831;
 }
-@media (min-device-width: 1199px) {
+@media (min-device-width: 1441px) {
   .RevealCard .container .card-title {
     font-size: 8.375rem;
   }
@@ -619,15 +619,27 @@ a.Links:hover {
     font-size: 1.35rem;
   }
 }
-@media (max-device-width: 1198px) and (min-device-width: 769px) {
-  .RevealCard .container .card-title {
-    font-size: 7.375rem;
+@media (max-device-width: 1440px) and (min-device-width: 769px) {
+  .RevealCard .container-fluid .card-title {
+    font-size: 5.8rem;
   }
-  .RevealCard .container .card .fas.fa-plus {
+  
+  .RevealCard .container-fluid .card .fas.fa-plus {
+    font-size: 1rem;
+  }
+  
+  .RevealCard .container-fluid .card .card-text {
+    font-size: 1rem;
+  }
+
+  .RevealCard .container-fluid .card .card-text small {
+    display: block;
     font-size: 0.8rem;
+    line-height: 1.5;
   }
-  .RevealCard .container .card .card-text {
-    font-size: 1.3rem;
+
+  .RevealCard .container-fluid .card .card-text .btn {
+    font-size: 0.8rem;
   }
 }
 @media (max-device-width: 768px) and (min-device-width: 426px) {
