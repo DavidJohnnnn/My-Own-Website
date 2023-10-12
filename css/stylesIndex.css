@@ -1492,9 +1492,9 @@ a.Links:hover {
     font-size: 2.5rem;
   }
 
-  .RevealCardPrjt .card-text {
+  /* .RevealCardPrjt .card-text {
     font-size: 10rem;
-  }
+  } */
 
   .RevealCardPrjt {
     min-height: 800px;
