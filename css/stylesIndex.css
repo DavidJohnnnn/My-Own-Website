@@ -1484,14 +1484,26 @@ a.Links:hover {
 }
 
 @media (min-width: 1441px) {
+  .RevealCardPrjt .card-title {
+    font-size: 3rem;
+  }
+  
+  .RevealCardPrjt .card-subtitle {
+    font-size: 2.5rem;
+  }
+
+  .RevealCardPrjt .card-text {
+    font-size: 10rem;
+  }
+
   .RevealCardPrjt {
-    min-height: 500px;
+    min-height: 800px;
   }
   .imgClassReveal {
-    max-height: 400px;
+    max-height: 750px;
   }
   .descriptionClassReveal {
-    max-height: 400px;
+    max-height: 750px;
   }
 }
 
