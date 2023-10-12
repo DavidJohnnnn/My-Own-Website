@@ -1485,25 +1485,29 @@ a.Links:hover {
 
 @media (min-width: 1441px) {
   .RevealCardPrjt .card-title {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   
   .RevealCardPrjt .card-subtitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
-  /* .RevealCardPrjt .card-text {
-    font-size: 10rem;
-  } */
+  .RevealCardPrjt .card-text {
+    font-size: 1.7rem;
+  }
+
+  .RevealCardPrjt ul li {
+    font-size: 1.7rem;
+  }
 
   .RevealCardPrjt {
-    min-height: 800px;
+    min-height: 1000px;
   }
   .imgClassReveal {
-    max-height: 750px;
+    max-height: 950px;
   }
   .descriptionClassReveal {
-    max-height: 750px;
+    max-height: 950px;
   }
 }
 
