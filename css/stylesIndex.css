@@ -1605,14 +1605,33 @@ a.Links:hover {
   }
 }
 @media (max-device-width: 375px) and (min-device-width: 0px) {
+  .RevealCardPrjt .card-title {
+    font-size: 3rem;
+  }
+  .RevealCardPrjt .card-subtitle {
+    font-size: 2rem;
+  }
+  .RevealCardPrjt .card-text, .RevealCardPrjt ul li {
+    font-size: 1.8rem;
+  }
+  .revealImg img {
+    object-fit: cover;
+    object-position: 60% 60%;
+  }
+
+  .revealImg img.TechM {
+    object-position: 5px -120px;
+  }
+  
   .RevealCardPrjt {
-    min-height: 550px;
+    min-height: 500px;
   }
   .imgClassReveal {
-    max-height: 525px;
+    max-height: 400px;
   }
+  
   .descriptionClassReveal {
-    max-height: 525px;
+    max-height: 1700px;
   }
 }
 
