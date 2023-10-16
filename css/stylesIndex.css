@@ -1531,14 +1531,25 @@ a.Links:hover {
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
+  .RevealCardPrjt .card-title {
+    font-size: 2rem;
+  }
+  .RevealCardPrjt .card-subtitle {
+    font-size: 1.2rem;
+  }
+  .RevealCardPrjt .card-text, .RevealCardPrjt ul li {
+    font-size: 1.1rem;
+  }
+  .revealImg img {
+    object-fit: cover;
+    object-position: 60% 60%;
+  }
+  
   .RevealCardPrjt {
-    min-height: 500px;
+    min-height: 600px;
   }
-  .imgClassReveal {
-    max-height: 400px;
-  }
-  .descriptionClassReveal {
-    max-height: 400px;
+  .imgClassReveal, .descriptionClassReveal {
+    max-height: 550px;
   }
 }
 @media (max-device-width: 768px) and (min-device-width: 426px) {
