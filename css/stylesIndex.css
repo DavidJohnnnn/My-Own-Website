@@ -264,6 +264,7 @@ a.Links:hover {
 @media (max-device-width: 1024px) {
   .nav-item.linkedIn {
     margin-right: 0; /* 5.3.x migration */
+    transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
   }
 }
 
@@ -1506,7 +1507,6 @@ a.Links:hover {
     max-height: 950px;
   }
 }
-
 @media (max-width: 1440px) and (min-width: 1025px) {
   .RevealCardPrjt .card-title {
     font-size: 2rem;
@@ -1529,7 +1529,6 @@ a.Links:hover {
     max-height: 450px;
   }
 }
-
 @media (max-width: 1024px) and (min-width: 769px) {
   .RevealCardPrjt .card-title {
     font-size: 2rem;
