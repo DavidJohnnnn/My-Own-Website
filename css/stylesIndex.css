@@ -1553,25 +1553,55 @@ a.Links:hover {
   }
 }
 @media (max-device-width: 768px) and (min-device-width: 426px) {
+  .RevealCardPrjt .card-title {
+    font-size: 2rem;
+  }
+  .RevealCardPrjt .card-subtitle {
+    font-size: 1.2rem;
+  }
+  .RevealCardPrjt .card-text, .RevealCardPrjt ul li {
+    font-size: 0.95rem;
+  }
+  .revealImg img {
+    object-fit: cover;
+    object-position: 60% 60%;
+  }
+  
   .RevealCardPrjt {
-    min-height: 550px;
+    min-height: 600px;
   }
-  .imgClassReveal {
-    max-height: 525px;
-  }
-  .descriptionClassReveal {
-    max-height: 525px;
+  .imgClassReveal, .descriptionClassReveal {
+    max-height: 550px;
   }
 }
 @media (max-device-width: 425px) and (min-device-width: 376px) {
+  .RevealCardPrjt .card-title {
+    font-size: 3rem;
+  }
+  .RevealCardPrjt .card-subtitle {
+    font-size: 2rem;
+  }
+  .RevealCardPrjt .card-text, .RevealCardPrjt ul li {
+    font-size: 1.5rem;
+  }
+  .revealImg img {
+    object-fit: cover;
+    object-position: 60% 60%;
+  }
+
+  .revealImg img.TechM {
+    object-position: 5px -120px;
+  }
+  
   .RevealCardPrjt {
-    min-height: 550px;
+    min-height: 500px;
   }
   .imgClassReveal {
-    max-height: 525px;
+    max-height: 400px;
   }
+  
   .descriptionClassReveal {
-    max-height: 525px;
+    max-height: 1200px;
   }
 }
 @media (max-device-width: 375px) and (min-device-width: 0px) {
