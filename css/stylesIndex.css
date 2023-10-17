@@ -317,7 +317,7 @@ a.Links:hover {
     font-size: 1.199 vw;
   }
 }
-@media (max-width: 1440px) and (min-width: 1200px) {
+@media (max-width: 1440px) and (min-width: 1025px) {
   a.Links:link {
     padding: 10px 2px 14px;
     font-size: 0.95vw;
@@ -334,7 +334,7 @@ a.Links:hover {
     font-size: 1.199 vw;
   }
 }
-@media (max-width: 1199px) and (min-width: 769px) {
+@media (max-width: 1025px) and (min-width: 769px) {
   a.Links:link {
     padding: 10px 2px 14px;
     font-size: 0.95vw;
@@ -358,7 +358,7 @@ a.Links:hover {
 }
 @media (max-device-width: 768px) and (min-device-width: 426px) {
   a.Links:link {
-    padding: 10px 2px 14px;
+    padding: 10px 7px 14px;
     font-size: 1.4vw;
   }
 
@@ -380,7 +380,7 @@ a.Links:hover {
 }
 @media (max-device-width: 425px) and (min-device-width: 376px) {
   a.Links:link {
-    padding: 10px 2px 14px;
+    padding: 10px 12px 14px;
     font-size: 2vw;
   }
 
@@ -402,7 +402,7 @@ a.Links:hover {
 }
 @media (max-device-width: 375px) and (min-device-width: 0px) {
   a.Links:link {
-    padding: 10px 2px 14px;
+    padding: 10px 15px 14px;
     font-size: 2vw;
   }
 
