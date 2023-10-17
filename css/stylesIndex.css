@@ -1562,15 +1562,27 @@ a.Links:hover {
     font-size: 0.95rem;
   }
   .revealImg img {
-    object-fit: cover;
-    object-position: 60% 60%;
+    object-fit: fill;
+    object-position: 40% -40px;
+  }
+
+  .revealImg img.TechM {
+    object-position: 5px -60px;
+  }
+
+  .revealImg img.ieso {
+    object-position: 5px -60px;
   }
   
   .RevealCardPrjt {
-    min-height: 600px;
+    min-height: 400px;
   }
-  .imgClassReveal, .descriptionClassReveal {
-    max-height: 550px;
+  .imgClassReveal {
+    max-height: 300px;
+  }
+  
+  .descriptionClassReveal {
+    max-height: 1200px;
   }
 }
 @media (max-device-width: 425px) and (min-device-width: 376px) {
