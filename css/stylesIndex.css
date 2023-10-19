@@ -1590,7 +1590,7 @@ a.Links:hover {
   }
   .revealImg img {
     object-fit: cover;
-    object-position: 60% 60%;
+    object-position: 0px 50%;
   }
   
   .RevealCardPrjt {
@@ -1605,22 +1605,22 @@ a.Links:hover {
     font-size: 2rem;
   }
   .RevealCardPrjt .card-subtitle {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
   .RevealCardPrjt .card-text, .RevealCardPrjt ul li {
-    font-size: 0.95rem;
+    font-size: 1.6rem;
   }
   .revealImg img {
     object-fit: fill;
-    object-position: 40% -40px;
+    object-position: 0px -20px;
   }
 
   .revealImg img.TechM {
-    object-position: 5px -60px;
+    object-position: 0px -160px;
   }
 
   .revealImg img.ieso {
-    object-position: 5px -60px;
+    object-position: 0px -80px;
   }
   
   .RevealCardPrjt {
