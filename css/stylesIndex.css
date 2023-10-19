@@ -1132,16 +1132,13 @@ a.Links:hover {
 .FeaturedTextDiv .FeatPgh {
   margin: 10% 25% 2% 10%;
   color: #00adb5;
-  line-height: 35px;
   text-align: left;
-  font-size: 2rem;
   background-color: white;
   padding: 1%;
   transition: all 500ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   white-space: normal;
 }
 .FeaturedTextDiv .btn {
-  font-size: 1.5rem;
   width: 30%;
   margin: 10% 25% 10% 10%;
   margin-top: 10px;
@@ -1154,13 +1151,65 @@ a.Links:hover {
   background-image: url("../images/001_IndexImages/Abstract1Filt3.jpg");
 }
 
-@media (max-width: 767px) {
-  .FeatPgh {
+@media (min-width: 1441px) { 
+  .FeaturedTextDiv .FeatPgh {
+    font-size: 3rem;
+    line-height: 55px;
+  }
+
+  .FeaturedTextDiv .btn {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .FeaturedTextDiv .FeatPgh {
+    font-size: 2rem;
+    line-height: 35px;
+  }
+
+  .FeaturedTextDiv .btn {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  .FeaturedTextDiv .FeatPgh {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+
+  .FeaturedTextDiv .btn {
+    font-size: 1.2rem;
+  }
+}
+@media (max-device-width: 768px) and (min-device-width: 426px) {
+  .FeaturedTextDiv .FeatPgh {
     font-size: 1rem;
+    line-height: 25px;
   }
 
   .FeaturedTextDiv .btn {
     font-size: 0.9rem;
+  }
+}
+@media (max-device-width: 425px) and (min-device-width: 376px) {
+  .FeaturedTextDiv .FeatPgh {
+    font-size: 2.2rem;
+    line-height: 40px;
+  }
+
+  .FeaturedTextDiv .btn {
+    font-size: 2rem;
+  }
+}
+@media (max-device-width: 375px) and (min-device-width: 0px) {
+  .FeaturedTextDiv .FeatPgh {
+    font-size: 2.8rem;
+    line-height: 50px;
+    margin: 10% 15% 2% 10%;
+  }
+
+  .FeaturedTextDiv .btn {
+    font-size: 2.5rem;
   }
 }
 /*##################################################*/
