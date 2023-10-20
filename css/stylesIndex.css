@@ -1622,6 +1622,10 @@ a.Links:hover {
   .revealImg img.ieso {
     object-position: 0px -80px;
   }
+
+  .revealImg img.choam {
+    object-position: 5px -65px;
+  }
   
   .RevealCardPrjt {
     min-height: 400px;
@@ -1652,6 +1656,10 @@ a.Links:hover {
   .revealImg img.TechM {
     object-position: 5px -120px;
   }
+
+  .revealImg img.choam {
+    object-position: 0px -20px;
+  }
   
   .RevealCardPrjt {
     min-height: 500px;
@@ -1681,6 +1689,10 @@ a.Links:hover {
 
   .revealImg img.TechM {
     object-position: 5px -120px;
+  }
+
+  .revealImg img.choam {
+    object-position: 0px -20px;
   }
   
   .RevealCardPrjt {
