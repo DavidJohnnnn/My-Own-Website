@@ -1433,6 +1433,32 @@ a.Links:hover {
     font-size: 0.9rem;
   }
 }
+
+/* Education section */
+#Education .container-fluid {
+  text-align: left; 
+  margin: 100px auto; 
+  width: 90%;
+}
+
+#Education .container-fluid .card {
+  border-width: 3px; 
+  border-style: solid none;
+}
+
+#Education .container-fluid .card .card-body {
+  background-color: #eaeaea;
+}
+#Education .container-fluid .card .card-title {
+  font-size: 6rem;
+}
+#Education .container-fluid .card .card-text {
+  font-size: 1.25rem;
+}
+
+
+
+
 /*##################################################*/
 /* Revealing Items classes */
 /*##################################################*/
