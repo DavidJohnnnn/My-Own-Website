@@ -1467,16 +1467,36 @@ a.Links:hover {
   }
 }
 @media (max-width: 1024px) and (min-width: 769px) {
-  
+  #Education .card-title {
+    font-size: 3rem;
+  }
+  #Education .card-text, #Education ul li {
+    font-size: 1rem;
+  }
 }
 @media (max-device-width: 768px) and (min-device-width: 426px) {
-  
+  #Education .card-title {
+    font-size: 3rem;
+  }
+  #Education .card-text, #Education ul li {
+    font-size: 1.25rem;
+  }
 }
 @media (max-device-width: 425px) and (min-device-width: 376px) {
-  
+  #Education .card-title {
+    font-size: 4rem;
+  }
+  #Education .card-text, #Education ul li {
+    font-size: 2rem;
+  }
 }
 @media (max-device-width: 375px) and (min-device-width: 0px) {
-  
+  #Education .card-title {
+    font-size: 4rem;
+  }
+  #Education .card-text, #Education ul li {
+    font-size: 2rem;
+  }
 }
 
 
