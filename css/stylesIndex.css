@@ -1366,6 +1366,9 @@ a.Links:hover {
 /*##################################################*/
 /* 003.html: MY EDUCATION & SKILLS */
 /*##################################################*/
+
+/* Carousel section */
+
 .FeaturedUsers {
   max-width: 100%;
   background-size: cover;
@@ -1397,7 +1400,7 @@ a.Links:hover {
   text-shadow: 2px 2px #eeeeee, 3px 3px #eeeeee, 4px 4px #eeeeee, 5px 5px #eeeeee, 6px 6px #eeeeee, 7px 7px #222831, 8px 8px #eeeeee;
   color: #222831;
   margin-top: 100px;
-  font-size: 5.375rem;
+  /* font-size: 5.375rem; */
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
@@ -1405,22 +1408,56 @@ a.Links:hover {
   margin: 25px 100px 10px;
   color: #252a34;
   text-shadow: 1px 1px #393e46;
-  line-height: 25px;
-  font-size: 1.75rem;
+  /* font-size: 1.75rem; */
   background-color: white;
   padding: 1%;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-.FeaturedUsers .btn {
+/* .FeaturedUsers .btn {
   font-size: 1.5rem;
   width: 30%;
   margin: auto;
   margin-top: 10px;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+} */
+
+@media (min-width: 1441px) {
+  .FeatTitleUsers {
+    font-size: 5.375rem;
+  }
+
+  .FeatPghUsers {
+    font-size: 2rem;
+    line-height: 40px;
+  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .FeatTitleUsers {
+    font-size: 5.375rem;
+  }
+
+  .FeatPghUsers {
+    font-size: 1.75rem;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .FeatTitleUsers {
+    font-size: 3.375rem;
+  }
+
+  .FeatPghUsers {
+    font-size: 1rem;
+    line-height: 20px;
+  }
+}
+
+
+
+@media (max-device-width: 768px) and (min-device-width: 426px) {
   .FeatTitleUsers {
     font-size: 6.375rem;
   }
@@ -1428,10 +1465,14 @@ a.Links:hover {
   .FeatPghUsers {
     font-size: 1rem;
   }
+}
 
-  .FeaturedUsers .btn {
-    font-size: 0.9rem;
-  }
+@media (max-device-width: 425px) and (min-device-width: 376px) {
+
+}
+
+@media (max-device-width: 375px) and (min-device-width: 0px) {
+
 }
 
 /* Education section */
@@ -1499,8 +1540,11 @@ a.Links:hover {
   }
 }
 
+/* Carousel section */
 
+#Skills {
 
+}
 
 /*##################################################*/
 /* Revealing Items classes */
