@@ -1449,11 +1449,34 @@ a.Links:hover {
 #Education .container-fluid .card .card-body {
   background-color: #eaeaea;
 }
-#Education .container-fluid .card .card-title {
-  font-size: 6rem;
+
+@media (min-width: 1441px) { 
+  #Education .card-title {
+    font-size: 8rem;
+  }
+  #Education .card-text, #Education ul li {
+    font-size: 2rem;
+  }
 }
-#Education .container-fluid .card .card-text {
-  font-size: 1.25rem;
+@media (max-width: 1440px) and (min-width: 1025px) {
+  #Education .card-title {
+    font-size: 4rem;
+  }
+  #Education .card-text, #Education ul li {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  
+}
+@media (max-device-width: 768px) and (min-device-width: 426px) {
+  
+}
+@media (max-device-width: 425px) and (min-device-width: 376px) {
+  
+}
+@media (max-device-width: 375px) and (min-device-width: 0px) {
+  
 }
 
 
