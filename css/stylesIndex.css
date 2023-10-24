@@ -1373,7 +1373,6 @@ a.Links:hover {
   max-width: 100%;
   background-size: cover;
   background-attachment: fixed;
-  height: 500px;
   margin: auto;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
@@ -1422,48 +1421,62 @@ a.Links:hover {
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 } */
 
-@media (min-width: 1441px) {
-  .FeatTitleUsers {
-    font-size: 5.375rem;
-  }
+#Skills h5 {
+  text-align: right;
+}
 
-  .FeatPghUsers {
+@media (min-width: 1441px) {
+  .FeaturedUsers {
+    height: 600px;
+  } .FeatTitleUsers {
+    font-size: 5.375rem;
+  } .FeatPghUsers {
     font-size: 2rem;
     line-height: 40px;
+  } #Skills h5 {
+    font-size: 1.6rem;
   }
+
 }
 
 @media (max-width: 1440px) and (min-width: 1025px) {
-  .FeatTitleUsers {
+  .FeaturedUsers {
+    height: 500px;
+  } .FeatTitleUsers {
     font-size: 5.375rem;
-  }
-
-  .FeatPghUsers {
+  } .FeatPghUsers {
     font-size: 1.75rem;
     line-height: 30px;
+  } #Skills h5 {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
-  .FeatTitleUsers {
+  .FeaturedUsers {
+    height: 400px;
+  } .FeatTitleUsers {
     font-size: 3.375rem;
-  }
-
-  .FeatPghUsers {
-    font-size: 1rem;
-    line-height: 20px;
+  } .FeatPghUsers {
+    font-size: 1.25rem;
+    line-height: 25px;
+  } #Skills h5 {
+    font-size: 0.8rem;
   }
 }
 
 
 
 @media (max-device-width: 768px) and (min-device-width: 426px) {
-  .FeatTitleUsers {
-    font-size: 6.375rem;
-  }
-
-  .FeatPghUsers {
+  .FeaturedUsers {
+    height: 300px;
+  } .FeatTitleUsers {
+    font-size: 3.375rem;
+  } .FeatPghUsers {
     font-size: 1rem;
+    line-height: 20px;
+  } #Skills h5 {
+    font-size: 1.2rem;
   }
 }
 
