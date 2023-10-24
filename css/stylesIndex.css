@@ -1469,23 +1469,41 @@ a.Links:hover {
 
 @media (max-device-width: 768px) and (min-device-width: 426px) {
   .FeaturedUsers {
-    height: 300px;
+    height: 400px;
   } .FeatTitleUsers {
     font-size: 3.375rem;
   } .FeatPghUsers {
-    font-size: 1rem;
-    line-height: 20px;
+    font-size: 1.5rem;
+    line-height: 30px;
   } #Skills h5 {
     font-size: 1.2rem;
   }
 }
 
 @media (max-device-width: 425px) and (min-device-width: 376px) {
-
+  .FeaturedUsers {
+    height: 550px;
+  } .FeatTitleUsers {
+    font-size: 4rem;
+  } .FeatPghUsers {
+    font-size: 2rem;
+    line-height: 38px;
+  } #Skills h5 {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-device-width: 375px) and (min-device-width: 0px) {
-
+  .FeaturedUsers {
+    height: 580px;
+  } .FeatTitleUsers {
+    font-size: 4rem;
+  } .FeatPghUsers {
+    font-size: 2rem;
+    line-height: 40px;
+  } #Skills h5 {
+    font-size: 1.6rem;
+  }
 }
 
 /* Education section */
