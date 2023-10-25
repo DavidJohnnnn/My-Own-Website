@@ -1154,6 +1154,47 @@ a.Links:hover {
   }
 }
 
+@media (max-device-width: 768px) and (min-device-width: 426px) {
+  .TwoColSec .LeftColSide {
+    margin: 0;
+    padding: 7% 35% 15% 5%;
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .TwoColSec .RightColSide {
+    margin: 0;
+    padding: 7% 7% 15% 6%;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-device-width: 425px) and (min-device-width: 376px) {
+  .TwoColSec .LeftColSide {
+    margin: 0;
+    padding: 7% 35% 15% 5%;
+    font-size: 2.2rem;
+    line-height: 30px;
+  }
+  .TwoColSec .RightColSide {
+    margin: 0;
+    padding: 7% 7% 15% 6%;
+    font-size: 1.6rem;
+  }
+}
+@media (max-device-width: 375px) and (min-device-width: 0px) {
+  .TwoColSec .LeftColSide {
+    margin: 0;
+    padding: 7% 35% 15% 5%;
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .TwoColSec .RightColSide {
+    margin: 0;
+    padding: 7% 7% 15% 6%;
+    font-size: 1.6rem;
+  }
+}
+
 
 
 
